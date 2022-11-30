@@ -1,38 +1,22 @@
-let isMobile = {
-  Android: function () {
-    return navigator.userAgent.match(/Android/i);
-  },
-  BlackBerry: function () {
-    return navigator.userAgent.match(/BlackBerry/i);
-  },
-  iOS: function () {
-    return navigator.userAgent.match(/iPhone|iPad|iPod/i);
-  },
-  Opera: function () {
-    return navigator.userAgent.match(/Opera Mini/i);
-  },
-  Windows: function () {
-    return navigator.userAgent.match(/IEMobile/i);
-  },
-  any: function () {
-    return (
-      isMobile.Android() ||
-      isMobile.BlackBerry() ||
-      isMobile.iOS() ||
-      isMobile.Opera() ||
-      isMobile.Windows()
-    );
-  },
-};
+const menu = document.querySelector(".menu");
 
-let body = document.body;
-// if (isMobile.any()) {
-//   body.classList.add("touch");
-//   let arrow = document.querySelector(".arrow");
-//   arrow.forEach((item) => {
-//     let thisArrow = item;
-//   });
-// } else {
-//   body.classList.add("mouse");
-// }
-
+if (menu) {
+  document.addEventListener("click", (e) => {
+    e.preventDefault();
+    const self = e.target;
+    const subMenu = self.parentElement.querySelector(".sub-menu");
+    const arrow = self.parentElement.querySelector(".menu__arrow");
+    if (self.closest(".menu__item")) {
+      if (subMenu) {
+        subMenu.classList.toggle("active");
+        arrow.classList.toggle("active");
+      }
+    } else {
+      if (subMenu) {
+        console.log(self);
+        subMenu.classList.remove("active");
+        arrow.classList.remove("active");
+      }
+    }
+  });
+}

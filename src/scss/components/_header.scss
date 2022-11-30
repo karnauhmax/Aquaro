@@ -1,26 +1,35 @@
 .header {
   @include adaptiveValue(padding-top, 30, 12, 1920, 768, 1);
   @include adaptiveValue(padding-bottom, 30, 12, 1920, 768, 1);
-
-  @media screen and (max-width: $lg) {
-    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.06);
-    border-radius: 10px;
-  }
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.06);
+  border-radius: 10px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  background-color: var(--white);
 
   &__inner {
     display: grid;
     align-items: center;
-    grid-template-columns: minmax(auto, 197px) 2fr auto;
+    grid-template-columns: minmax(auto, 150px) 2fr auto min-content;
     @include adaptiveValue(column-gap, 30, 15, 1920, 360, 1);
 
     @media screen and (max-width: $lg) {
-      grid-template-columns: repeat(2, 1fr);
+      grid-template-columns: repeat(2, 1fr) min-content;
       @include adaptiveValue(row-gap, 16, 14, 1200, 768, 1);
     }
+
+    @media screen and (max-width: $sm) {
+      grid-template-columns: 80px 1fr min-content;
+    }
+
   }
 
   .logo {
     display: block;
+    z-index: 50;
 
     @media screen and (max-width: $sm) {
       max-width: 143px;
@@ -35,9 +44,25 @@
     row-gap: 15px;
     max-width: 330px;
     flex-wrap: wrap;
+    z-index: 50;
+
+    &-social {
+      width: 25px;
+      height: 25px;
+
+      @media screen and (max-width: $xxsm) {
+        width: 15px;
+        height: 15px;
+      }
+    }
+
 
     @media screen and (max-width: $lg) {
       justify-self: end;
+    }
+
+    @media screen and (max-width: $sm) {
+      justify-self: center;
     }
 
     &-phone {
@@ -48,11 +73,42 @@
       color: var(--text-secondary);
 
       @media screen and (max-width: $sm) {
-        font-size: rem(18);
+        font-size: rem(16);
+      }
+
+      @media screen and (max-width: $xxsm) {
+        font-size: rem(12);
       }
     }
+  }
 
-    &-link {}
+  &__burger {
+    width: rem(22);
+    height: rem(22);
+    display: block;
+    background-image: url("../img/svg/burger.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: 50;
+    display: none;
+
+    @media screen and (max-width: $sm) {
+      display: block;
+    }
+  }
+
+  &__cart {
+    width: 30px;
+    height: 30px;
+
+    @media screen and (max-width: $sm) {
+      display: none;
+    }
+
+    & svg {
+      width: 30px;
+      height: 30px;
+    }
   }
 }
 
@@ -61,8 +117,39 @@
 
   @media screen and (max-width: $lg) {
     grid-row: 2/3;
-    grid-column: span 2;
+    grid-column: span 3;
     justify-self: unset;
+  }
+
+  @media screen and (max-width: $sm) {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    visibility: hidden;
+    opacity: 0;
+    background-color: var(--white);
+    padding: rem(80) rem(20) rem(20) rem(20);
+    overflow: auto;
+    transition: opacity .5s ease;
+
+    &.menu--active {
+      visibility: visible;
+      opacity: 1;
+    }
+
+    &::before {
+      content: "";
+      width: 100%;
+      left: 0;
+      top: 0;
+      height: rem(49);
+      z-index: 5;
+      position: fixed;
+      box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.06);
+      background-color: var(--white);
+    }
   }
 
   &__list {
@@ -72,38 +159,36 @@
     flex-wrap: wrap;
     @include adaptiveValue(column-gap, 43, 20, 1920, 768, 1);
     row-gap: 15px;
-    // column-gap: rem(43);
-    // row-gap: rem(15);
 
     @media screen and (max-width: $lg) {
       justify-content: space-between;
       max-width: 100%;
     }
+
+    @media screen and (max-width: $sm) {
+      flex-direction: column-reverse;
+      align-items: flex-start;
+    }
   }
 
   &__item {
     display: grid;
-    grid-auto-flow: column;
+    grid-template-columns: repeat(2, auto);
     align-items: center;
     column-gap: 8px;
     cursor: pointer;
     position: relative;
 
-    // &:hover {
-    //   .menu__link {
-    //     color: var(--text-secondary);
-    //   }
+    @media screen and (max-width: $sm) {
+      width: 100%;
+      row-gap: rem(10);
+    }
 
-    //   .menu__arrow {
-    //     transform: rotate(45deg);
-    //   }
-
-    //   .sub-menu {
-    //     visibility: visible;
-    //     opacity: 1;
-    //     z-index: 1000;
-    //   }
-    // }
+    &:hover {
+      .menu__link {
+        color: var(--text-secondary);
+      }
+    }
   }
 
   &__link {
@@ -112,6 +197,11 @@
     font-family: var(--font-family-secondary);
     font-weight: 600;
     transition: color .5s ease;
+
+    @media screen and (max-width: $sm) {
+      font-size: rem(22);
+      max-width: 100%;
+    }
   }
 
   &__arrow {
@@ -120,7 +210,19 @@
     background-image: url("../img/menu-arrow.svg");
     background-repeat: no-repeat;
     transition: transform .2s ease;
+    grid-row: 1/2;
+    grid-column: 2/3;
+
+    @media screen and (max-width: $sm) {
+      justify-self: end;
+    }
+
+    &.active {
+      transform: rotate(45deg);
+    }
   }
+
+
 }
 
 .placeholder {
@@ -133,18 +235,23 @@
 .sub-menu {
   position: absolute;
   left: 0;
-  top: 10px;
+  top: 30px;
   width: 100%;
-  padding-top: 16px;
   min-width: 300px;
-  visibility: hidden;
-  opacity: 0;
+  display: none;
   transition: opacity .5s ease;
   z-index: 1000;
 
+  @media screen and (max-width: $sm) {
+    position: relative;
+    grid-row: 2/3;
+    top: 0;
+    grid-column: span 2;
+    min-width: unset;
+  }
+
   &.active {
-    visibility: visible;
-    opacity: 1;
+    display: block;
   }
 
   &__list {
@@ -167,6 +274,10 @@
     position: relative;
     font-size: rem(16);
 
+    @media screen and (max-width: $sm) {
+      font-size: rem(18);
+    }
+
     &::after {
       display: block;
       content: attr(data-content);
@@ -175,6 +286,10 @@
       overflow: hidden;
       visibility: hidden;
       font-size: rem(16);
+
+      @media screen and (max-width: $sm) {
+        font-size: rem(20);
+      }
     }
 
     &:hover {

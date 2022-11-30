@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru" class="page">
+<html lang="uk" class="page">
 
 @include('partials/head.html')
 
@@ -7,12 +7,52 @@
   <div class="site-container">
     @include('partials/header.html')
     <main class="main">
-      123123123
+      <section class="offer">
+        <div class="container">
+          <div class="offer__inner">
+            <div class="offer__content">
+              <div class="offer__info">
+                <h1 class="offer__title">Шукаєте рішення
+                  для фільтрації води?
+                </h1>
+                <p>Замовте безкоштовну консультацію і дізнайтеся про найкращий спосіб</p>
+              </div>
+              <picture>
+                <source media="(max-width:1200px)" srcset="img/woman-tablet.svg">
+                <source media="(max-width:768px)" srcset="img/woman-phone.svg">
+                <img class="offer__img" src="img/woman.svg" width="400" height="510">
+              </picture>
+            </div>
+            <form action="#" class="form offer__form">
+              <h2 class="form__title">
+                Отримайте найкращу пропозицію
+              </h2>
+              <p>
+                Залишіть нам свій номер і ми зателефонуємо Вам протягом 20 хвилин
+              </p>
+              <div class="form__inputs">
+                <label class="form__label  form__label-name">
+                  <input class="input-reset form__input form__input-name" type="text" name="Ім'я користувача"
+                    placeholder="Ваше ім’я">
+                </label>
+                <label class="form__label  form__label-phone">
+                  <input class="input-reset form__input form__input-phone" type="tel" name="Телефон користувача"
+                    placeholder="Ваш телефон">
+                </label>
+                <label class="form__label form__label-question">
+                  <input class="input-reset form__input form__input-question" type="text" name="Запитання користувача"
+                    placeholder="Ваше запитання">
+                </label>
+                <button type="submit" class="btn form__btn">Хочу консультацію</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
     </main>
 
     @include('partials/footer.html')
   </div>
-  <link rel="stylesheet" href="css/vendor.css">
 </body>
 
 </html>

@@ -1,0 +1,292 @@
+.footer {
+  background-color: var(--primary-dark);
+  @include adaptiveValue(padding-top, 56, 20, 1920, 360, 1);
+  @include adaptiveValue(padding-bottom, 173, 20, 1920, 360, 1);
+
+  &__inner {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: 50px minmax(rem(100), auto) minmax(auto, max-content);
+    column-gap: rem(50);
+    row-gap: rem(25);
+    align-items: start;
+
+    @media screen and (max-width: $md) {
+      column-gap: 15px;
+      grid-template-rows: 42px minmax(auto, max-content)minmax(auto, max-content);
+    }
+
+    @media screen and (max-width: $sm) {
+      row-gap: 15px;
+    }
+
+    @media screen and (max-width: $xsm) {
+      grid-template-columns: 1fr;
+      row-gap: 20px;
+    }
+  }
+
+  &__logo {
+    grid-column: 1/3;
+    grid-row: 1/2;
+
+    @media screen and (max-width: $md) {
+      grid-column: 1/4;
+    }
+
+    @media screen and (max-width: $xsm) {
+      grid-column: unset;
+      justify-self: center;
+      grid-row: unset;
+      max-width: 140px;
+    }
+  }
+
+  &__info {
+    display: grid;
+    grid-auto-flow: row;
+    grid-column: 1/4;
+    grid-row: 2/3;
+    row-gap: 15px;
+
+
+
+    @media screen and (max-width: $md) {
+      grid-row: 1/5;
+      grid-column: 7/12;
+    }
+
+    @media screen and (max-width: $xsm) {
+      grid-column: unset;
+      grid-row: unset;
+      grid-template-columns: repeat(2, auto);
+      justify-content: space-between;
+      column-gap: 15px;
+    }
+
+    @media screen and (max-width: 359px) {
+      grid-template-columns: 1fr;
+    }
+
+    &-link {
+      font-size: rem(18);
+      color: var(--white);
+      padding-left: 30px;
+      position: relative;
+      max-width: 300px;
+      word-break: break-all;
+      transition: .5s border-bottom ease;
+      border-bottom: 1px solid transparent;
+      justify-self: start;
+
+      &:hover {
+        border-bottom: 1px solid var(--white);
+      }
+
+      @media screen and (max-width: $sm) {
+        font-size: rem(16);
+      }
+
+      @media screen and (max-width: $xsm) {
+        font-size: rem(14);
+        padding-left: 20px;
+      }
+
+      &::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 20px;
+        height: 20px;
+        background-repeat: no-repeat;
+        background-size: cover;
+
+        @media screen and (max-width: $xsm) {
+          width: 15px;
+          height: 15px;
+        }
+      }
+    }
+
+    &-phone {
+      @media screen and (max-width: $xsm) {
+        order: -1;
+      }
+
+      &::before {
+        background-image: url("../img/svg/phone.svg");
+      }
+    }
+
+
+    &-mail {
+      @media screen and (max-width: $xsm) {
+        justify-self: end;
+      }
+
+      @media screen and (max-width: 359px) {
+        justify-self: start;
+      }
+
+      &::before {
+        background-image: url("../img/svg/mail.svg");
+      }
+    }
+
+
+    &-location {
+      @media screen and (max-width: $xsm) {
+        grid-column: span 2;
+        justify-self: center;
+        grid-row: 2/3;
+      }
+
+      @media screen and (max-width: 359px) {
+        grid-column: span 1;
+        justify-self: start;
+      }
+
+      &::before {
+        background-image: url("../img/svg/marker.svg");
+      }
+    }
+  }
+
+  &__socials {
+    display: flex;
+    column-gap: 10px;
+    max-width: 200px;
+    flex-wrap: wrap;
+    grid-column: 1/3;
+    grid-row: 3/4;
+
+    @media screen and (max-width: $md) {
+      grid-row: 2/3;
+    }
+
+    @media screen and (max-width: $xsm) {
+      grid-column: unset;
+      grid-row: unset;
+      justify-self: center;
+    }
+
+    @media screen and (max-width: 359px) {
+      justify-self: start;
+    }
+  }
+
+  &__lists {
+    display: flex;
+    @include adaptiveValue(column-gap, 120, 30, 1920, 768, 1);
+    grid-column: 4/10;
+    grid-row: span 3;
+
+    @media screen and (max-width: $md) {
+      display: none;
+    }
+
+    &-title {
+      font-family: var(--font-family-secondary);
+      font-weight: 900;
+      font-size: rem(24);
+      line-height: 1.3;
+      color: var(--white);
+    }
+
+    &-item {
+      display: grid;
+      grid-auto-flow: row;
+      row-gap: 17px;
+      grid-template-rows: min-content max-content;
+    }
+
+    ul {
+      display: grid;
+      grid-auto-flow: row;
+      row-gap: 15px;
+      align-self: start;
+    }
+
+    li {
+      max-width: rem(300);
+    }
+
+    a {
+      font-family: var(--font-family-secondary);
+      font-size: rem(18);
+      @include line-height(18, 24);
+      color: var(--white);
+      border-bottom: 1px solid transparent;
+      transition: border-bottom .5s ease;
+
+      &:hover {
+        border-bottom: 1px solid var(--white);
+      }
+    }
+  }
+
+  &__details {
+    display: grid;
+    grid-auto-flow: row;
+    row-gap: 30px;
+    grid-row: span 3;
+    grid-column: 10/12;
+    justify-self: center;
+    padding-top: 50px;
+
+    a {
+      font-size: rem(18);
+      border-bottom: 1px solid transparent;
+      transition: border-bottom .5s ease;
+      justify-self: start;
+
+      &:hover {
+        border-bottom: 1px solid var(--white);
+      }
+    }
+
+    @media screen and (max-width: $md) {
+      grid-row: 3/4;
+      grid-column: 1/6;
+      justify-self: start;
+      padding-top: 0;
+    }
+
+    @media screen and (max-width: $xsm) {
+      grid-column: unset;
+      grid-row: unset;
+      justify-self: center;
+    }
+
+    &-links {
+      display: grid;
+      grid-auto-flow: row;
+      row-gap: 20px;
+
+      @media screen and (max-width: $md) {
+        display: none;
+      }
+
+      a {
+        color: var(--white);
+        font-family: var(--font-family-secondary);
+      }
+    }
+
+    &-logos {
+      display: grid;
+      grid-auto-flow: row;
+      gap: 20px;
+
+      @media screen and (max-width: $md) {
+        grid-auto-flow: column;
+      }
+
+      @media screen and (max-width: $xsm) {
+        grid-column: unset;
+        grid-row: unset;
+      }
+    }
+  }
+}

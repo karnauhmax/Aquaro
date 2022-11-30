@@ -17,7 +17,7 @@ const htmlmin = require("gulp-htmlmin");
 const gulpif = require("gulp-if");
 const notify = require("gulp-notify");
 const image = require("gulp-imagemin");
-const webphtml = require("gulp-webp-html");
+const webphtml = require("gulp-webp-html-nosvg");
 const { readFileSync } = require("fs");
 const typograf = require("gulp-typograf");
 const webp = require("gulp-webp");
@@ -263,23 +263,21 @@ const avifImages = () => {
 };
 
 const htmlInclude = () => {
-  return (
-    src([`${srcFolder}/*.html`])
-      .pipe(
-        fileInclude({
-          prefix: "@",
-          basepath: "@file",
-        })
-      )
-      .pipe(
-        typograf({
-          locale: ["ru", "en-US"],
-        })
-      )
-      // .pipe(webphtml())
-      .pipe(dest(buildFolder))
-      .pipe(browserSync.stream())
-  );
+  return src([`${srcFolder}/*.html`])
+    .pipe(
+      fileInclude({
+        prefix: "@",
+        basepath: "@file",
+      })
+    )
+    .pipe(
+      typograf({
+        locale: ["ru", "en-US"],
+      })
+    )
+    .pipe(webphtml())
+    .pipe(dest(buildFolder))
+    .pipe(browserSync.stream());
 };
 
 const criticalCss = (done) => {

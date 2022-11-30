@@ -1,11 +1,16 @@
 // базовые подключения
+@import "vendor";
 @import "vars";
 @import "mixins";
 @import "fonts";
 @import "settings";
-@import "vendor";
 
 
 // подключения компонентов страницы
 @import "./components/header";
+@import "./components/footer";
+@import "./components/form";
 
+
+//подключения секций страницы
+@import "./sections/offer";
