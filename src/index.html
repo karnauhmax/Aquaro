@@ -7,6 +7,7 @@
   <div class="site-container">
     @include('partials/header.html')
     <main class="main">
+      <!-- offer -->
       <section class="offer">
         <div class="container">
           <div class="offer__inner">
@@ -18,9 +19,9 @@
                 <p>Замовте безкоштовну консультацію і дізнайтеся про найкращий спосіб</p>
               </div>
               <picture>
-                <source media="(max-width:1200px)" srcset="img/woman-tablet.svg">
-                <source media="(max-width:768px)" srcset="img/woman-phone.svg">
-                <img class="offer__img" src="img/woman.svg" width="400" height="510">
+                <source media="(max-width:1200px)" srcset="img/content/woman-tablet.svg">
+                <source media="(max-width:768px)" srcset="img/content/woman-phone.svg">
+                <img class="offer__img" src="img/content/woman.svg" width="400" height="510">
               </picture>
             </div>
             <form action="#" class="form offer__form">
@@ -40,8 +41,8 @@
                     placeholder="Ваш телефон">
                 </label>
                 <label class="form__label form__label-question">
-                  <input class="input-reset form__input form__input-question" type="text" name="Запитання користувача"
-                    placeholder="Ваше запитання">
+                  <textarea class="input-reset form__input form__input-question" type="text"
+                    name="Запитання користувача" placeholder="Ваше запитання"></textarea>
                 </label>
                 <button type="submit" class="btn form__btn">Хочу консультацію</button>
               </div>
@@ -49,6 +50,255 @@
           </div>
         </div>
       </section>
+      <!-- offer -->
+
+      <!-- catalog -->
+      <section class="catalog">
+        <div class="container">
+          <h2 class="catalog__title">
+            Каталог Товарів
+          </h2>
+          <div class="catalog__inner">
+            <div class="catalog__item catalog__item-column catalog__item-salt catalog__extended-horizontally">
+              <picture>
+                <source media="(max-width: 992px)" srcset="img/content/salt-mobile.png">
+                <source srcset="img/content/salt.webp" type="image/webp">
+                <img loading="lazy" src="img/content/salt.png" class="image" width="" height="" alt="">
+              </picture>
+              <div class="catalog__info">
+                <h3>
+                  Таблетована сіль для пом’якшувачів
+                </h3>
+                <p>
+                  сприяє підвищенню ефективності регенерації Вашого пом’якшуючого фільтру
+                </p>
+                <a href="#" class="arrow-link catalog__link">Детальніше</a>
+              </div>
+            </div>
+            <div
+              class="catalog__item catalog__item-membranes catalog__item-row catalog__extended-horizontally catalog__extended-vertically">
+              <div class="catalog__info">
+                <h3>
+                  Зворотньоосмотичні мембрани
+                </h3>
+                <p>
+                  основний елемент домашніх промислових фільтрів зворотного осмосу
+                </p>
+                <a href="#" class="arrow-link catalog__link">
+                  Детальніше
+                </a>
+              </div>
+              <picture>
+                <source media="(max-width: 767px)" srcset="img/content/membrane-mobile.png">
+                <source srcset="img/content/membrane.webp" type="image/webp">
+                <img loading="lazy" src="img/content/membrane.png" class="image" width="480" height="600"
+                  alt="Зворотнья мембрана">
+              </picture>
+            </div>
+            <div class="catalog__item catalog__item-small catalog__item-pumps catalog__extended-small">
+              <div class="catalog__info">
+                <h3>Помпи
+                  для систем зворотного осмосу
+                </h3>
+                <p>для збільшення діапазону робочих тисків Вашої системи</p>
+                <a href="#" class="arrow-link catalog__link">
+                  Детальніше
+                </a>
+              </div>
+              <img loading="lazy" src="img/content/pump.png" class="image" width="393" height="274" alt="Cartridges">
+
+            </div>
+            <div class="catalog__item catalog__item-small catalog__item-cartriges catalog__extended-small">
+              <div class="catalog__info">
+                <h3>Змінні картриджі
+                </h3>
+                <p>для продовження терміну ефективної експлуатації обладнання</p>
+                <a href="#" class="arrow-link catalog__link">
+                  Детальніше
+                </a>
+              </div>
+              <img loading="lazy" src="img/content/cartridges.png" class="image" width="287" height="356"
+                alt="Cartridges">
+
+            </div>
+            <div class="catalog__item  catalog__item-column catalog__item-machines catalog__extended-horizontally ">
+              <picture>
+                <source media="(max-width: 767px)" srcset="img/content/vodabox-mobile.webp">
+                <source media="(max-width: 767px)" srcset="img/content/vodabox-mobile.png">
+                <source media="(max-width: 992px)" srcset="img/content/vodabox-tablet.webp">
+                <source media="(max-width: 992px)" srcset="img/content/vodabox-tablet.png">
+                <source srcset="img/content/vodabox.webp" type="image/webp">
+                <img loading="lazy" src="img/content/vodabox.png" class="image" width="345" height="390" alt="Vodabox">
+              </picture>
+
+              <div class="catalog__info">
+                <h3>
+                  Автомати для розливу питної води
+
+                </h3>
+                <p>цілодобово забезпечують споживачів питною водою</p>
+                <a href="#" class="arrow-link catalog__link">
+                  Детальніше
+                </a>
+              </div>
+            </div>
+            <div class="catalog__item catalog__item-column catalog__item-installations catalog__extended-horizontally">
+              <picture>
+                <source media="(max-width: 992px)" srcset="img/content/installation-tablet.webp">
+                <source media="(max-width: 992px)" srcset="img/content/installation-tablet.webp">
+                <source media="(max-width: 767px)" srcset="img/content/installation-mobile.webp">
+                <source media="(max-width: 767px)" srcset="img/content/installation-mobile.png">
+                <source srcset="img/content/installation.webp" type="image/webp">
+                <img loading="lazy" src="img/content/installation.png" class="image" width="558" height="600"
+                  alt="Installation">
+              </picture>
+
+              <div class="catalog__info">
+                <h3>
+                  Вбудовані офісні інсталяції
+                  </h2>
+                  <p>
+                    стильне та сучасне рішення для Вашого офісу
+                  </p>
+                  <a href="#" class="arrow-link catalog__link">
+                    Детальніше
+                  </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- catalog -->
+
+      <!-- services -->
+
+      <!-- <section class="services">
+        <div class="container">
+          <div class="section-heading services__heading">
+            <h2>Наші послуги</h2>
+            <p>
+              Підберіть оптимальне рішення з очищення води
+            </p>
+          </div>
+          <div class="services__inner">
+            <div class="services__item">
+              <div class="services__image ibg">
+                <img loading="lazy" src="img/svg/washing.svg" width="101" height="269" alt="Washing">
+              </div>
+              <div class="services__info">
+                <h3>
+                  Промивання мембран зворотного осмосу
+                </h3>
+                <p>
+                  Своєчасне промивання мембрани продовжує термін її роботи, береже екологію планети та Ваші кошти
+                </p>
+              </div>
+              <img src="img/svg/big-arrow.svg" alt="Arrow" width="51" height="20">
+            </div>
+            <div class="services__item">
+              <div class="services__image ibg">
+                <img loading="lazy" src="img/svg/model.svg" width="148" height="250" alt="Washing">
+              </div>
+              <div class="services__info">
+                <h3>
+                  Розробка та моделювання водоочисних систем для побутових та промислових потреб
+                </h3>
+                <p>
+                  Своєчасне промивання мембрани продовжує термін її роботи, береже екологію планети та Ваші кошти
+                </p>
+              </div>
+              <img src="img/svg/big-arrow.svg" class="services__arrow" alt="Arrow" width="51" height="20">
+
+            </div>
+            <div class="services__item">
+              <div class="services__image ibg">
+                <img loading="lazy" src="img/svg/waterdrop.svg" width="137" height="265" alt="Washing">
+              </div>
+              <div class="services__info">
+                <h3>
+                  Розробка та моделювання водоочисних систем для побутових та промислових потреб
+                </h3>
+                <p>
+                  Своєчасне промивання мембрани продовжує термін її роботи, береже екологію планети та Ваші кошти
+                </p>
+              </div>
+              <img src="img/svg/big-arrow.svg" class="services__arrow" alt="Arrow" width="51" height="20">
+
+            </div>
+          </div>
+        </div>
+      </section> -->
+
+      <!-- services -->
+
+      <section class="benefits">
+        <div class="container">
+          <div class="section-heading benefits__heading">
+            <h2>пЕРЕВАГИ СПІВПРАЦІ З НАМИ</h2>
+            <p>Обираючи компанію - Ви обираєте якість води</p>
+          </div>
+          <div class="benefits__inner">
+            <img loading="lazy" src="img/svg/man.svg" class="benefits__img" width="632" height="788"
+              alt="Man drinking water">
+            <div class="benefits__item benefits__item-approach">
+              <img loading="lazy" src="img/svg/blue-checkmark.svg" class="benefits__item-img" width="60" height="47"
+                alt="Checkmark">
+              <h3>
+                Індивідуальний
+                підхід
+              </h3>
+              <p>Ми ретельно досліджуємо поставлене перед нами завдання і враховуємо всі побажання кожного клієнта</p>
+            </div>
+            <div class="benefits__item benefits__item-consultation">
+              <img loading="lazy" src="img/svg/blue-checkmark.svg" class="benefits__item-img" width="60" height="47"
+                alt="Checkmark">
+              <h3>
+                Безкоштовна
+                консультація
+              </h3>
+              <p>Завжди готові допомогти та відповісти на усі Ваші питання</p>
+            </div>
+            <div class="benefits__item benefits__item-service">
+              <img loading="lazy" src="img/svg/blue-checkmark.svg" class="benefits__item-img" width="60" height="47"
+                alt="Checkmark">
+              <h3>
+                Сервісне
+                обслуговування
+              </h3>
+              <p>Проводимо сервісне обслуговування усіх товарів, що представлені в нашому каталозі і не тільки</p>
+            </div>
+            <div class="benefits__item">
+              <img loading="lazy" src="img/svg/blue-checkmark.svg" class="benefits__item-img" width="60" height="47"
+                alt="Checkmark">
+              <h3>
+                Ціни від
+                постачальника
+              </h3>
+              <p>Ми працюємо без посередників і є прямими постачальниками продукції AquaRo в Україні</p>
+            </div>
+
+            <div class="benefits__item beneftis__item-">
+              <img loading="lazy" src="img/svg/blue-checkmark.svg" class="benefits__item-img" width="60" height="47"
+                alt="Checkmark">
+              <h3>
+                Десятирічний
+                досвід
+              </h3>
+              <p>Проєктуємо ефективні рішення для Вашого дому та бізнесу протягом десяти років</p>
+            </div>
+            <div class="benefits__item">
+              <img loading="lazy" src="img/svg/blue-checkmark.svg" class="benefits__item-img" width="60" height="47"
+                alt="Checkmark">
+              <h3>
+                Технічна
+                підтримка
+              </h3>
+              <p>Швидко допоможемо вирішити будь-яку технічну проблему Вашої системи</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
     </main>
 
     @include('partials/footer.html')

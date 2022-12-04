@@ -1,5 +1,6 @@
 .offer {
-  margin-top: 30px;
+  @include adaptiveValue(margin-top, 30, 21, 1920, 360, 1);
+  @include adaptiveValue(margin-bottom, 100, 30, 1920, 360, 1);
 
   &__inner {
     display: grid;
@@ -33,10 +34,10 @@
     }
   }
 
-  picture {
+  picture,
+  img {
     justify-self: end;
     align-self: end;
-    transform: translateY(5px);
 
     img {
       @include adaptiveValue(max-width, 400, 150, 1200, 360, 1);
@@ -88,10 +89,10 @@
     align-items: center;
     @include adaptiveValue(row-gap, 20, 10, 1920, 768, 1);
 
-    @include adaptiveValue(padding-right, 40, 20, 1920, 360, 1);
-    @include adaptiveValue(padding-left, 40, 20, 1920, 360, 1);
-    @include adaptiveValue(padding-top, 40, 20, 1920, 360, 1);
-    @include adaptiveValue(padding-bottom, 40, 20, 1920, 360, 1);
+    @include adaptiveValue(padding-right, 40, 20, 1200, 360, 1);
+    @include adaptiveValue(padding-left, 40, 20, 1200, 360, 1);
+    @include adaptiveValue(padding-top, 40, 20, 1200, 360, 1);
+    @include adaptiveValue(padding-bottom, 40, 20, 1200, 360, 1);
 
     @media screen and (max-width: $lg) {
       grid-column: unset;
@@ -110,6 +111,12 @@
     }
 
     .form__btn {
+      align-self: end;
+
+      @media screen and (max-width: $lg) {
+        align-self: start;
+      }
+
       @media screen and (max-width: $xsm) {
         font-size: 0;
         background-image: url("../img/svg/letter.svg");
@@ -122,14 +129,15 @@
       }
     }
 
-    @media screen and (max-width: $lg) {
-      .form__inputs {
-        grid-template-columns: repeat(2, 1fr);
+    .form__inputs {
+      height: 100%;
 
-        @media screen and (max-width: $xsm) {
-          grid-template-columns: 1fr 1fr;
-        }
+      @media screen and (max-width: $lg) {
+        grid-template-columns: repeat(2, 1fr);
       }
+    }
+
+    @media screen and (max-width: $lg) {
 
       .form__title {
         max-width: rem(580);

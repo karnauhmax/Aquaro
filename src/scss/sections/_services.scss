@@ -1,0 +1,73 @@
+.services {
+  @include adaptiveValue(padding-top, 100, 40, 1920, 360, 1);
+  @include adaptiveValue(padding-bottom, 100, 40, 1920, 360, 1);
+  @include adaptiveValue(margin-bottom, 100, 40, 1920, 360, 1);
+  background-color: #EEEFF3;
+
+  &__inner {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(505px, 1fr));
+    gap: rem(30);
+  }
+
+  &__heading {
+    @include adaptiveValue(margin-bottom, 70, 30, 1920, 360, 1);
+  }
+
+
+  &__image {
+    align-self: start;
+    width: 100%;
+    padding-bottom: 167%;
+    // height: 100%;
+  }
+
+  &__item {
+    display: grid;
+    grid-template-columns: 150px 3fr 51px;
+    align-items: center;
+    gap: rem(30);
+    background-color: var(--white);
+    border-radius: var(--radius-primary);
+    position: relative;
+    padding-right: 30px;
+    min-height: 250px;
+
+    h3 {
+      @include adaptiveValue(font-size, 24, 14, 1920, 360, 1);
+      font-weight: 900;
+      font-family: var(--font-family-secondary);
+      max-width: rem(438);
+      display: -webkit-box;
+      -webkit-line-clamp: 5;
+      -webkit-box-orient: vertical;
+      text-overflow: ellipsis;
+      overflow: hidden;
+    }
+
+    p {
+      @include adaptiveValue(font-size, 18, 16, 1920, 768, 1);
+      font-family: var(--font-family-secondary);
+      font-weight: 400;
+      color: var(--black);
+      display: -webkit-box;
+      -webkit-line-clamp: 4;
+      -webkit-box-orient: vertical;
+      text-overflow: ellipsis;
+      overflow: hidden;
+    }
+
+
+    &__arrow {
+      align-self: center;
+    }
+  }
+
+  &__info {
+    max-width: rem(470);
+    display: grid;
+    grid-auto-flow: row;
+    row-gap: rem(10);
+    align-self: center;
+  }
+}

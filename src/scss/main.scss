@@ -10,7 +10,12 @@
 @import "./components/header";
 @import "./components/footer";
 @import "./components/form";
+@import "./components/section-heading";
+
 
 
 //подключения секций страницы
 @import "./sections/offer";
+@import "./sections/catalog";
+@import "./sections/services";
+@import "./sections/benefits";

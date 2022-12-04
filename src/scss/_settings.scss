@@ -49,6 +49,7 @@ li {
   font-weight: 400;
   font-family: var(--font-family-primary), sans-serif;
   background-color: var(--white);
+  color: var(--text);
   @include adaptiveValue(padding-top, 102, 80, 1920, 1200, 1);
 
   @media screen and (max-width: $lg) {
@@ -69,6 +70,7 @@ img {
   height: auto;
   max-width: 100%;
   object-fit: cover;
+  display: block;
 }
 
 a {
@@ -172,4 +174,32 @@ a {
   display: inline-flex;
   justify-content: center;
   align-items: center;
+}
+
+.arrow-link {
+  font-weight: 900;
+  color: var(--text-secondary);
+  @include adaptiveValue(font-size, 18, 16, 1920, 360, 1);
+  max-width: rem(200);
+  position: relative;
+  padding-right: 25px;
+
+  &:hover {
+    &::before {
+      transform: translateX(5px);
+    }
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    right: 0;
+    width: 15px;
+    height: 10px;
+    top: em(6);
+    background-image: url("../img/svg/arrow.svg");
+    background-repeat: no-repeat;
+    transition: transform .5s ease;
+
+  }
 }
