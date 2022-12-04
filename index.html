@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="uk" class="page">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="theme-color" content="#111111">
+  <title>Marshall</title>
+  <link rel="stylesheet" href="css/main.css">
+  <script defer src="js/main.js"></script>
+</head>
+
+<body class="page__body">
+  <div class="site-container">
+    <header class="header">
+  <div class="container">
+    <div class="header__inner">
+      <a href="index.html" class="logo">
+        <picture><source srcset="img/logos/logo.webp" type="image/webp"><img loading="lazy" src="img/logos/logo.png" class="image" width="197" height="50" alt="Aquaro"></picture>
+      </a>
+      <nav class="menu" data-menu>
+        <ul class="menu__list">
+          <li class="menu__item">
+            <a href="#" class="menu__link">Про компанію</a>
+          </li>
+          <li class="menu__item">
+            <a href="#" class="menu__link">Каталог</a>
+            <span class="menu__arrow arrow"></span>
+            <div class="sub-menu">
+              <ul class="sub-menu__list">
+                <li class="sub-menu__item">
+                  <a href="#" class="sub-menu__link" data-content="Таблетована сіль для пом’якшувачів">Таблетована сіль
+                    для пом’якшувачів</a>
+                </li>
+                <li class="sub-menu__item">
+                  <a href="#" class="sub-menu__link" data-content="Змінні картриджі">Змінні картриджі</a>
+                </li>
+                <li class="sub-menu__item">
+                  <a href="#" class="sub-menu__link" data-content="Zvorotni membrani">Zvorotni membrani</a>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li class="menu__item">
+            <a href="#" class="menu__link">Рішення</a>
+          </li>
+          <li class="menu__item">
+            <a href="#" class="menu__link">Послуги</a>
+          </li>
+          <li class="menu__item">
+            <a href="#" class="menu__link">Контакти</a>
+          </li>
+        </ul>
+      </nav>
+      <div class="header__contact">
+        <a href="tel:380675776499" class="header__contact-link header__contact-phone">(067) 577-64-99</a>
+        <a href="#" class="header__contact-link header__contact-social">
+          <img loading="lazy" src="img/svg/viber.svg" class="image" width="30" height="30" alt="Viber">
+        </a>
+        <a href="#" class="header__contact-link  header__contact-social">
+          <img loading="lazy" src="img/svg/tg.svg" class="image" width="30" height="30" alt="Telegram">
+        </a>
+      </div>
+      <a href="#" class="cart header__cart">
+        <svg>
+          <svg width="26" height="25" viewBox="0 0 26 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M25.7767 4.198C25.5851 3.94947 25.2843 3.78379 24.9558 3.78379H6.12953L5.39066 0.800869C5.28129 0.331361 4.8707 0 4.37825 0H1.03987C0.465135 0 0 0.469508 0 1.04959C0 1.62968 0.465159 2.09919 1.03987 2.09919H3.5846L7.79872 19.4443C7.90809 19.9138 8.31868 20.2452 8.81113 20.2452H20.8238C21.3985 20.2452 21.8637 19.7757 21.8637 19.1956C21.8637 18.6155 21.3985 18.146 20.8238 18.146H9.60468L9.00267 15.6878H22.4656C22.9308 15.6878 23.3414 15.3565 23.478 14.9145L25.9682 5.08191C26.0505 4.77828 25.9684 4.4467 25.7767 4.19818V4.198Z"
+              fill="#2F4085" />
+            <path
+              d="M12.4233 22.7861C12.4233 23.7165 11.676 24.4707 10.7541 24.4707C9.83236 24.4707 9.08508 23.7165 9.08508 22.7861C9.08508 21.8556 9.83236 21.1013 10.7541 21.1013C11.676 21.1013 12.4233 21.8556 12.4233 22.7861Z"
+              fill="#2F4085" />
+            <path
+              d="M21.0428 22.7861C21.0428 23.7165 20.2956 24.4707 19.3737 24.4707C18.4517 24.4707 17.7045 23.7165 17.7045 22.7861C17.7045 21.8556 18.4517 21.1013 19.3737 21.1013C20.2956 21.1013 21.0428 21.8556 21.0428 22.7861Z"
+              fill="#2F4085" />
+          </svg>
+
+        </svg>
+      </a>
+      <button class="header__burger" aria-label="Открыть меню" aria-expanded="false" data-burger>
+        <span class="burger__line"></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+    <main class="main">
+      <!-- offer -->
+      <section class="offer">
+        <div class="container">
+          <div class="offer__inner">
+            <div class="offer__content">
+              <div class="offer__info">
+                <h1 class="offer__title">Шукаєте рішення
+                  для фільтрації води?
+                </h1>
+                <p>Замовте безкоштовну консультацію і дізнайтеся про найкращий спосіб</p>
+              </div>
+              <picture>
+                <source media="(max-width:1200px)" srcset="img/content/woman-tablet.svg">
+                <source media="(max-width:768px)" srcset="img/content/woman-phone.svg">
+                <img class="offer__img" src="img/content/woman.svg" width="400" height="510">
+              </picture>
+            </div>
+            <form action="#" class="form offer__form">
+              <h2 class="form__title">
+                Отримайте найкращу пропозицію
+              </h2>
+              <p>
+                Залишіть нам свій номер і ми зателефонуємо Вам протягом 20 хвилин
+              </p>
+              <div class="form__inputs">
+                <label class="form__label  form__label-name">
+                  <input class="input-reset form__input form__input-name" type="text" name="Ім'я користувача"
+                    placeholder="Ваше ім’я">
+                </label>
+                <label class="form__label  form__label-phone">
+                  <input class="input-reset form__input form__input-phone" type="tel" name="Телефон користувача"
+                    placeholder="Ваш телефон">
+                </label>
+                <label class="form__label form__label-question">
+                  <textarea class="input-reset form__input form__input-question" type="text"
+                    name="Запитання користувача" placeholder="Ваше запитання"></textarea>
+                </label>
+                <button type="submit" class="btn form__btn">Хочу консультацію</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+      <!-- offer -->
+
+      <!-- catalog -->
+      <section class="catalog">
+        <div class="container">
+          <h2 class="catalog__title">
+            Каталог Товарів
+          </h2>
+          <div class="catalog__inner">
+            <div class="catalog__item catalog__item-column catalog__item-salt catalog__extended-horizontally">
+              <picture>
+                <source media="(max-width: 992px)" srcset="img/content/salt-mobile.png">
+                <source srcset="img/content/salt.webp" type="image/webp">
+                <img loading="lazy" src="img/content/salt.png" class="image" width="" height="" alt="">
+              </picture>
+              <div class="catalog__info">
+                <h3>
+                  Таблетована сіль для пом’якшувачів
+                </h3>
+                <p>
+                  сприяє підвищенню ефективності регенерації Вашого пом’якшуючого фільтру
+                </p>
+                <a href="#" class="arrow-link catalog__link">Детальніше</a>
+              </div>
+            </div>
+            <div
+              class="catalog__item catalog__item-membranes catalog__item-row catalog__extended-horizontally catalog__extended-vertically">
+              <div class="catalog__info">
+                <h3>
+                  Зворотньоосмотичні мембрани
+                </h3>
+                <p>
+                  основний елемент домашніх промислових фільтрів зворотного осмосу
+                </p>
+                <a href="#" class="arrow-link catalog__link">
+                  Детальніше
+                </a>
+              </div>
+              <picture>
+                <source media="(max-width: 767px)" srcset="img/content/membrane-mobile.png">
+                <source srcset="img/content/membrane.webp" type="image/webp">
+                <img loading="lazy" src="img/content/membrane.png" class="image" width="480" height="600"
+                  alt="Зворотнья мембрана">
+              </picture>
+            </div>
+            <div class="catalog__item catalog__item-small catalog__item-pumps catalog__extended-small">
+              <div class="catalog__info">
+                <h3>Помпи
+                  для систем зворотного осмосу
+                </h3>
+                <p>для збільшення діапазону робочих тисків Вашої системи</p>
+                <a href="#" class="arrow-link catalog__link">
+                  Детальніше
+                </a>
+              </div>
+              <picture><source srcset="img/content/pump.webp" type="image/webp"><img loading="lazy" src="img/content/pump.png" class="image" width="393" height="274" alt="Cartridges"></picture>
+
+            </div>
+            <div class="catalog__item catalog__item-small catalog__item-cartriges catalog__extended-small">
+              <div class="catalog__info">
+                <h3>Змінні картриджі
+                </h3>
+                <p>для продовження терміну ефективної експлуатації обладнання</p>
+                <a href="#" class="arrow-link catalog__link">
+                  Детальніше
+                </a>
+              </div>
+              <img loading="lazy" src="img/content/cartridges.png" class="image" width="287" height="356"
+                alt="Cartridges">
+
+            </div>
+            <div class="catalog__item  catalog__item-column catalog__item-machines catalog__extended-horizontally ">
+              <picture>
+                <source media="(max-width: 767px)" srcset="img/content/vodabox-mobile.webp">
+                <source media="(max-width: 767px)" srcset="img/content/vodabox-mobile.png">
+                <source media="(max-width: 992px)" srcset="img/content/vodabox-tablet.webp">
+                <source media="(max-width: 992px)" srcset="img/content/vodabox-tablet.png">
+                <source srcset="img/content/vodabox.webp" type="image/webp">
+                <img loading="lazy" src="img/content/vodabox.png" class="image" width="345" height="390" alt="Vodabox">
+              </picture>
+
+              <div class="catalog__info">
+                <h3>
+                  Автомати для розливу питної води
+
+                </h3>
+                <p>цілодобово забезпечують споживачів питною водою</p>
+                <a href="#" class="arrow-link catalog__link">
+                  Детальніше
+                </a>
+              </div>
+            </div>
+            <div class="catalog__item catalog__item-column catalog__item-installations catalog__extended-horizontally">
+              <picture>
+                <source media="(max-width: 992px)" srcset="img/content/installation-tablet.webp">
+                <source media="(max-width: 992px)" srcset="img/content/installation-tablet.webp">
+                <source media="(max-width: 767px)" srcset="img/content/installation-mobile.webp">
+                <source media="(max-width: 767px)" srcset="img/content/installation-mobile.png">
+                <source srcset="img/content/installation.webp" type="image/webp">
+                <img loading="lazy" src="img/content/installation.png" class="image" width="558" height="600"
+                  alt="Installation">
+              </picture>
+
+              <div class="catalog__info">
+                <h3>
+                  Вбудовані офісні інсталяції
+                  </h2>
+                  <p>
+                    стильне та сучасне рішення для Вашого офісу
+                  </p>
+                  <a href="#" class="arrow-link catalog__link">
+                    Детальніше
+                  </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- catalog -->
+
+      <!-- services -->
+
+      <!-- <section class="services">
+        <div class="container">
+          <div class="section-heading services__heading">
+            <h2>Наші послуги</h2>
+            <p>
+              Підберіть оптимальне рішення з очищення води
+            </p>
+          </div>
+          <div class="services__inner">
+            <div class="services__item">
+              <div class="services__image ibg">
+                <img loading="lazy" src="img/svg/washing.svg" width="101" height="269" alt="Washing">
+              </div>
+              <div class="services__info">
+                <h3>
+                  Промивання мембран зворотного осмосу
+                </h3>
+                <p>
+                  Своєчасне промивання мембрани продовжує термін її роботи, береже екологію планети та Ваші кошти
+                </p>
+              </div>
+              <img src="img/svg/big-arrow.svg" alt="Arrow" width="51" height="20">
+            </div>
+            <div class="services__item">
+              <div class="services__image ibg">
+                <img loading="lazy" src="img/svg/model.svg" width="148" height="250" alt="Washing">
+              </div>
+              <div class="services__info">
+                <h3>
+                  Розробка та моделювання водоочисних систем для побутових та промислових потреб
+                </h3>
+                <p>
+                  Своєчасне промивання мембрани продовжує термін її роботи, береже екологію планети та Ваші кошти
+                </p>
+              </div>
+              <img src="img/svg/big-arrow.svg" class="services__arrow" alt="Arrow" width="51" height="20">
+
+            </div>
+            <div class="services__item">
+              <div class="services__image ibg">
+                <img loading="lazy" src="img/svg/waterdrop.svg" width="137" height="265" alt="Washing">
+              </div>
+              <div class="services__info">
+                <h3>
+                  Розробка та моделювання водоочисних систем для побутових та промислових потреб
+                </h3>
+                <p>
+                  Своєчасне промивання мембрани продовжує термін її роботи, береже екологію планети та Ваші кошти
+                </p>
+              </div>
+              <img src="img/svg/big-arrow.svg" class="services__arrow" alt="Arrow" width="51" height="20">
+
+            </div>
+          </div>
+        </div>
+      </section> -->
+
+      <!-- services -->
+
+      <section class="benefits">
+        <div class="container">
+          <div class="section-heading benefits__heading">
+            <h2>пЕРЕВАГИ СПІВПРАЦІ З НАМИ</h2>
+            <p>Обираючи компанію — Ви обираєте якість води</p>
+          </div>
+          <div class="benefits__inner">
+            <img loading="lazy" src="img/svg/man.svg" class="benefits__img" width="632" height="788"
+              alt="Man drinking water">
+            <div class="benefits__item benefits__item-approach">
+              <img loading="lazy" src="img/svg/blue-checkmark.svg" class="benefits__item-img" width="60" height="47"
+                alt="Checkmark">
+              <h3>
+                Індивідуальний
+                підхід
+              </h3>
+              <p>Ми ретельно досліджуємо поставлене перед нами завдання і враховуємо всі побажання кожного клієнта</p>
+            </div>
+            <div class="benefits__item benefits__item-consultation">
+              <img loading="lazy" src="img/svg/blue-checkmark.svg" class="benefits__item-img" width="60" height="47"
+                alt="Checkmark">
+              <h3>
+                Безкоштовна
+                консультація
+              </h3>
+              <p>Завжди готові допомогти та відповісти на усі Ваші питання</p>
+            </div>
+            <div class="benefits__item benefits__item-service">
+              <img loading="lazy" src="img/svg/blue-checkmark.svg" class="benefits__item-img" width="60" height="47"
+                alt="Checkmark">
+              <h3>
+                Сервісне
+                обслуговування
+              </h3>
+              <p>Проводимо сервісне обслуговування усіх товарів, що представлені в нашому каталозі і не тільки</p>
+            </div>
+            <div class="benefits__item">
+              <img loading="lazy" src="img/svg/blue-checkmark.svg" class="benefits__item-img" width="60" height="47"
+                alt="Checkmark">
+              <h3>
+                Ціни від
+                постачальника
+              </h3>
+              <p>Ми працюємо без посередників і є прямими постачальниками продукції AquaRo в Україні</p>
+            </div>
+
+            <div class="benefits__item beneftis__item-">
+              <img loading="lazy" src="img/svg/blue-checkmark.svg" class="benefits__item-img" width="60" height="47"
+                alt="Checkmark">
+              <h3>
+                Десятирічний
+                досвід
+              </h3>
+              <p>Проєктуємо ефективні рішення для Вашого дому та бізнесу протягом десяти років</p>
+            </div>
+            <div class="benefits__item">
+              <img loading="lazy" src="img/svg/blue-checkmark.svg" class="benefits__item-img" width="60" height="47"
+                alt="Checkmark">
+              <h3>
+                Технічна
+                підтримка
+              </h3>
+              <p>Швидко допоможемо вирішити будь-яку технічну проблему Вашої системи</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <footer class="footer">
+  <div class="container">
+    <div class="footer__inner">
+      <a href="/" class="logo footer__logo">
+        <picture><source srcset="img/logos/logo-footer.webp" type="image/webp"><img loading="lazy" src="img/logos/logo-footer.png" class="image" width="197" height="50" alt="Aquaro"></picture>
+      </a>
+      <div class="footer__info">
+        <a href="mailto:pvk.aquaro@gmail.com" class="footer__info-link footer__info-mail">
+          pvk.aquaro@gmail.com
+        </a>
+        <a href="tel:380675776499" class="footer__info-link footer__info-phone">
+          (067) 577-64-99
+        </a>
+        <a href="tel:380965315397" class="footer__info-link footer__info-location">
+          Василя Стуса, 35/37, оф. 101
+        </a>
+      </div>
+      <div class="footer__socials">
+        <a href="#" class="footer__social">
+          <img loading="lazy" src="img/svg/viber-footer.svg" class="image" width="30" height="30" alt="Viber">
+        </a>
+
+        <a href="#" class="footer__social">
+          <img loading="lazy" src="img/svg/tg-footer.svg" class="image" width="30" height="30" alt="Telegram">
+        </a>
+      </div>
+      <div class="footer__lists">
+        <div class="footer__lists-item">
+          <h3 class="footer__lists-title">
+            Каталог
+          </h3>
+          <ul class="footer__list">
+            <li>
+              <a href="#">
+                Таблетована сіль для пом’якшувачів
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                Зворотньосмотичні мембрани
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                Помпи для систем зворотнього осмосу
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                Змінні картриджі
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                Автомати для розливу питної води
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                Вбудовані офісні інсталяції
+              </a>
+            </li>
+
+          </ul>
+        </div>
+        <div class="footer__lists-item">
+          <h3 class="footer__lists-title">
+            Готові рішення
+          </h3>
+          <ul class="footer__list">
+            <li>
+              <a href="#">
+                Для оселі
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                Для готелів і ресторанів
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                Для медичних закладів
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                Для аграрного комплексу
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                Для ЖКГ, ОСББ та енергетики
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                Для автомийок
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                Автомати розливу води
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                Вбудовані офісні інсталяції
+              </a>
+            </li>
+
+          </ul>
+        </div>
+      </div>
+      <div class="footer__details">
+        <div class="footer__details-links">
+          <a href="#">Про компанію </a>
+          <a href="#">Технології</a>
+          <a href="#">Послуги</a>
+        </div>
+        <div class="footer__details-logos">
+          <a href="#" class="footer__details-logo">
+            <img loading="lazy" src="img/logos/vodabox.svg" class="image" width="149" height="34" alt="Vodabox">
+          </a>
+          <a href="#" class="footer__details-logo">
+            <picture><source srcset="img/logos/vodyanoi.webp" type="image/webp"><img loading="lazy" src="img/logos/vodyanoi.png" class="image" width="149 " height="28" alt="Vodyano"></picture>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+  </div>
+</body>
+
+</html>
