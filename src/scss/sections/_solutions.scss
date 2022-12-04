@@ -1,0 +1,111 @@
+.solutions {
+  &__heading {
+    max-width: rem(897);
+    @include adaptiveValue(margin-bottom, 34, 19, 1920, 360, 1);
+  }
+
+  &__inner {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: rem(30);
+
+    @media screen and (max-width: $lg) {
+      gap: rem(20);
+    }
+  }
+
+  &__info {
+    padding: 10px 20px 10px 0;
+    align-self: center;
+
+    h3 {
+      @include adaptiveValue(font-size, 24, 18, 1920, 360, 1);
+      font-weight: 900;
+    }
+  }
+
+  &__item {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    min-height: 280px;
+    grid-column: span 4;
+    column-gap: rem(20);
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.06);
+    border-radius: var(--radius-primary);
+
+    @media screen and (max-width: $lg) {
+      min-height: unset;
+    }
+
+    picture {
+      align-self: end;
+    }
+
+
+
+
+    &-house {
+      background-color: var(--bg-light);
+
+      @media screen and (max-width: $md) {
+        grid-column: span 7;
+      }
+    }
+
+    &-hotel {
+      @media screen and (max-width: $md) {
+        grid-column: span 5;
+      }
+    }
+
+    &-hospital {
+      background-color: var(--bg-grey);
+
+      @media screen and (max-width: $md) {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-column: span 5;
+        row-gap: rem(23);
+
+        picture {
+          order: 1;
+        }
+      }
+
+    }
+
+    &-energetics {
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+
+      img {
+        order: 2;
+        justify-self: end;
+      }
+
+      .solutions__info {
+        order: 1;
+        padding-left: 30px;
+        padding-right: 0;
+      }
+    }
+
+    &-carwashing {
+      background-color: var(--bg-light);
+    }
+
+
+  }
+
+  &__extended {
+    grid-column: span 6;
+  }
+
+  &__img {
+    align-self: end;
+
+    @media screen and (max-width: $lg) {
+      height: 100%;
+    }
+  }
+}

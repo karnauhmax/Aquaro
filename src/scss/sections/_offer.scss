@@ -22,7 +22,7 @@
     min-height: 590px;
     grid-column: 1/9;
     border-radius: var(--radius-primary);
-    background-color: #B4EBFF;
+    background-color: var(--bg-light);
 
     @media screen and (max-width: $lg) {
       grid-column: unset;

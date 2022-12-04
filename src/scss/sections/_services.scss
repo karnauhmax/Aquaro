@@ -2,7 +2,7 @@
   @include adaptiveValue(padding-top, 100, 40, 1920, 360, 1);
   @include adaptiveValue(padding-bottom, 100, 40, 1920, 360, 1);
   @include adaptiveValue(margin-bottom, 100, 40, 1920, 360, 1);
-  background-color: #EEEFF3;
+  background-color: var(--bg-grey);
 
   &__inner {
     display: grid;
@@ -19,12 +19,11 @@
     align-self: start;
     width: 100%;
     padding-bottom: 167%;
-    // height: 100%;
   }
 
   &__item {
     display: grid;
-    grid-template-columns: 150px 3fr 51px;
+    grid-template-columns: 1fr 3fr 51px;
     align-items: center;
     gap: rem(30);
     background-color: var(--white);

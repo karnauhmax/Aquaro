@@ -1,6 +1,12 @@
 .benefits {
+  @include adaptiveValue(margin-bottom, 100, 40, 1920, 360, 1);
+
   &__heading {
     @include adaptiveValue(margin-bottom, 72, 27, 1920, 360, 1);
+
+    @media screen and (max-width: $md) {
+      max-width: rem(500);
+    }
   }
 
   &__inner {
@@ -40,7 +46,7 @@
       grid-area: image;
 
       @media screen and (max-width: $sm) {
-        max-width: 40px;
+        max-width: 35px;
       }
     }
 
@@ -54,6 +60,8 @@
         "text text";
       align-items: center;
     }
+
+
 
 
     h3 {
@@ -72,6 +80,8 @@
       text-align: center;
       grid-area: text;
       max-width: rem(327);
+      color: var(--black);
+      line-height: 136%;
 
       @media screen and (max-width: $xsm) {
         max-width: 100%;
@@ -150,6 +160,10 @@
       grid-column: 1/3;
       grid-row: 1/2;
       max-width: 300px;
+    }
+
+    @media screen and (max-width: $xxsm) {
+      max-width: 270px;
     }
   }
 }
