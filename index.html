@@ -43,13 +43,13 @@
             </div>
           </li>
           <li class="menu__item">
-            <a href="#" class="menu__link">Рішення</a>
+            <a href="#" class="menu__link" data-goto=".solutions">Рішення</a>
           </li>
           <li class="menu__item">
-            <a href="#" class="menu__link">Послуги</a>
+            <a href="#" class="menu__link" data-goto=".services">Послуги</a>
           </li>
           <li class="menu__item">
-            <a href="#" class="menu__link">Контакти</a>
+            <a href="#" class="menu__link" data-goto=".footer">Контакти</a>
           </li>
         </ul>
       </nav>
@@ -100,7 +100,7 @@
               <picture>
                 <source media="(max-width:1200px)" srcset="img/content/woman-tablet.svg">
                 <source media="(max-width:768px)" srcset="img/content/woman-phone.svg">
-                <img class="offer__img" src="img/content/woman.svg" width="400" height="510">
+                <img class="offer__img" src="img/content/woman.svg" width="400" height="510" alt="Жінка">
               </picture>
             </div>
             <form action="#" class="form offer__form">
@@ -120,8 +120,8 @@
                     placeholder="Ваш телефон">
                 </label>
                 <label class="form__label form__label-question">
-                  <textarea class="input-reset form__input form__input-question" type="text"
-                    name="Запитання користувача" placeholder="Ваше запитання"></textarea>
+                  <textarea class="input-reset form__input form__input-question" name="Запитання користувача"
+                    placeholder="Ваше запитання"></textarea>
                 </label>
                 <button type="submit" class="btn form__btn">Хочу консультацію</button>
               </div>
@@ -131,39 +131,40 @@
       </section>
       <!-- offer -->
 
-      <!-- catalog -->
-      <section class="catalog">
+      <!-- catalog-preview -->
+      <section class="catalog-preview">
         <div class="container">
-          <h2 class="catalog__title">
+          <h2 class="catalog-preview__title">
             Каталог Товарів
           </h2>
-          <div class="catalog__inner">
-            <div class="catalog__item catalog__item-column catalog__item-salt catalog__extended-horizontally">
+          <div class="catalog-preview__inner">
+            <div
+              class="catalog-preview__item catalog-preview__item-column catalog-preview__item-salt catalog-preview__extended-horizontally">
               <picture>
                 <source media="(max-width: 992px)" srcset="img/content/salt-mobile.png">
                 <source srcset="img/content/salt.webp" type="image/webp">
-                <img loading="lazy" src="img/content/salt.png" class="image" width="" height="" alt="">
+                <img loading="lazy" src="img/content/salt.png" class="image" width="614" height="467" alt="Сіль">
               </picture>
-              <div class="catalog__info">
+              <div class="catalog-preview__info">
                 <h3>
                   Таблетована сіль для пом’якшувачів
                 </h3>
                 <p>
                   сприяє підвищенню ефективності регенерації Вашого пом’якшуючого фільтру
                 </p>
-                <a href="#" class="arrow-link catalog__link">Детальніше</a>
+                <a href="#" class="arrow-link catalog-preview__link">Детальніше</a>
               </div>
             </div>
             <div
-              class="catalog__item catalog__item-membranes catalog__item-row catalog__extended-horizontally catalog__extended-vertically">
-              <div class="catalog__info">
+              class="catalog-preview__item catalog-preview__item-membranes catalog-preview__item-row catalog-preview__extended-horizontally catalog-preview__extended-vertically">
+              <div class="catalog-preview__info">
                 <h3>
                   Зворотньоосмотичні мембрани
                 </h3>
                 <p>
                   основний елемент домашніх промислових фільтрів зворотного осмосу
                 </p>
-                <a href="#" class="arrow-link catalog__link">
+                <a href="#" class="arrow-link catalog-preview__link">
                   Детальніше
                 </a>
               </div>
@@ -174,25 +175,27 @@
                   alt="Зворотнья мембрана">
               </picture>
             </div>
-            <div class="catalog__item catalog__item-small catalog__item-pumps catalog__extended-small">
-              <div class="catalog__info">
+            <div
+              class="catalog-preview__item catalog-preview__item-small catalog-preview__item-pumps catalog-preview__extended-small">
+              <div class="catalog-preview__info">
                 <h3>Помпи
                   для систем зворотного осмосу
                 </h3>
                 <p>для збільшення діапазону робочих тисків Вашої системи</p>
-                <a href="#" class="arrow-link catalog__link">
+                <a href="#" class="arrow-link catalog-preview__link">
                   Детальніше
                 </a>
               </div>
               <picture><source srcset="img/content/pump.webp" type="image/webp"><img loading="lazy" src="img/content/pump.png" class="image" width="393" height="274" alt="Cartridges"></picture>
 
             </div>
-            <div class="catalog__item catalog__item-small catalog__item-cartriges catalog__extended-small">
-              <div class="catalog__info">
+            <div
+              class="catalog-preview__item catalog-preview__item-small catalog-preview__item-cartriges catalog-preview__extended-small">
+              <div class="catalog-preview__info">
                 <h3>Змінні картриджі
                 </h3>
                 <p>для продовження терміну ефективної експлуатації обладнання</p>
-                <a href="#" class="arrow-link catalog__link">
+                <a href="#" class="arrow-link catalog-preview__link">
                   Детальніше
                 </a>
               </div>
@@ -200,7 +203,8 @@
                 alt="Cartridges">
 
             </div>
-            <div class="catalog__item  catalog__item-column catalog__item-machines catalog__extended-horizontally ">
+            <div
+              class="catalog-preview__item  catalog-preview__item-column catalog-preview__item-machines catalog-preview__extended-horizontally ">
               <picture>
                 <source media="(max-width: 767px)" srcset="img/content/vodabox-mobile.webp">
                 <source media="(max-width: 767px)" srcset="img/content/vodabox-mobile.png">
@@ -210,18 +214,19 @@
                 <img loading="lazy" src="img/content/vodabox.png" class="image" width="345" height="390" alt="Vodabox">
               </picture>
 
-              <div class="catalog__info">
+              <div class="catalog-preview__info">
                 <h3>
                   Автомати для розливу питної води
 
                 </h3>
                 <p>цілодобово забезпечують споживачів питною водою</p>
-                <a href="#" class="arrow-link catalog__link">
+                <a href="#" class="arrow-link catalog-preview__link">
                   Детальніше
                 </a>
               </div>
             </div>
-            <div class="catalog__item catalog__item-column catalog__item-installations catalog__extended-horizontally">
+            <div
+              class="catalog-preview__item catalog-preview__item-column catalog-preview__item-installations catalog-preview__extended-horizontally">
               <picture>
                 <source media="(max-width: 992px)" srcset="img/content/installation-tablet.webp">
                 <source media="(max-width: 992px)" srcset="img/content/installation-tablet.webp">
@@ -232,14 +237,14 @@
                   alt="Installation">
               </picture>
 
-              <div class="catalog__info">
+              <div class="catalog-preview__info">
                 <h3>
                   Вбудовані офісні інсталяції
                 </h3>
                 <p>
                   стильне та сучасне рішення для Вашого офісу
                 </p>
-                <a href="#" class="arrow-link catalog__link">
+                <a href="#" class="arrow-link catalog-preview__link">
                   Детальніше
                 </a>
               </div>
@@ -247,7 +252,7 @@
           </div>
         </div>
       </section>
-      <!-- catalog -->
+      <!-- catalog-preview -->
 
       <!-- services -->
 
@@ -260,9 +265,9 @@
             </p>
           </div>
           <div class="services__inner">
-            <div class="services__item">
+            <a href="#" class="services__item">
               <div class="services__image ibg">
-                <img loading="lazy" src="img/svg/washing.svg" width="101" height="269" alt="Washing">
+                <img loading="lazy" src="img/svg/washing.svg" width="101" height="269" alt="Промивання">
               </div>
               <div class="services__info">
                 <h3>
@@ -272,11 +277,11 @@
                   Своєчасне промивання мембрани продовжує термін її роботи, береже екологію планети та Ваші кошти
                 </p>
               </div>
-              <img src="img/svg/big-arrow.svg" alt="Arrow" width="51" height="20">
-            </div>
-            <div class="services__item">
+              <img class="services__arrow" src="img/svg/big-arrow.svg" alt="Arrow" width="51" height="20">
+            </a>
+            <a href="#" class="services__item">
               <div class="services__image ibg">
-                <img loading="lazy" src="img/svg/е.svg" width="148" height="250" alt="Washing">
+                <img loading="lazy" src="img/svg/model2.svg" width="292" height="470" alt="Розробка">
               </div>
               <div class="services__info">
                 <h3>
@@ -288,22 +293,97 @@
               </div>
               <img src="img/svg/big-arrow.svg" class="services__arrow" alt="Arrow" width="51" height="20">
 
-            </div>
-            <div class="services__item">
+            </a>
+            <a href="#" class="services__item">
               <div class="services__image ibg">
-                <img loading="lazy" src="img/svg/waterdrop.svg" width="137" height="265" alt="Washing">
+                <img loading="lazy" src="img/svg/pipes.svg" width="292" height="470" alt="Washing">
               </div>
               <div class="services__info">
                 <h3>
-                  Розробка та моделювання водоочисних систем для побутових та промислових потреб
+                  Монтаж та введення в експлуатацію систем фільтрації води «під ключ»
                 </h3>
                 <p>
-                  Своєчасне промивання мембрани продовжує термін її роботи, береже екологію планети та Ваші кошти
+                  Наші інженери готові швидко реалізувати будь-який проєкт за Вашими вимогами з нуля
                 </p>
               </div>
               <img src="img/svg/big-arrow.svg" class="services__arrow" alt="Arrow" width="51" height="20">
 
-            </div>
+            </a>
+            <a href="#" class="services__item">
+              <div class="services__image ibg">
+                <img loading="lazy" src="img/svg/waterdrop.svg" width="421" height="657" alt="Washing">
+              </div>
+              <div class="services__info">
+                <h3>
+                  Виробництво автоматів розливу питної води та вбудованих офісних інсталяцій (кулерів)
+                </h3>
+                <p>
+                  Якісно очищена та збагачена питна вода — запорука Вашого здоров’я та здоров’я Ваших клієнтів
+                </p>
+              </div>
+              <img src="img/svg/big-arrow.svg" class="services__arrow" alt="Arrow" width="51" height="20">
+
+            </a>
+            <a href="#" class="services__item">
+              <div class="services__image ibg">
+                <img loading="lazy" src="img/svg/flask.svg" width="188" height="221" alt="Washing">
+              </div>
+              <div class="services__info">
+                <h3>
+                  Аналіз води за різною кількістю показників
+                </h3>
+                <p>
+                  Обов’язково дізнайтеся склад води для правильного підбору системи та більш ефективного водоочищення
+                </p>
+              </div>
+              <img src="img/svg/big-arrow.svg" class="services__arrow" alt="Arrow" width="51" height="20">
+
+            </a>
+
+            <a href="#" class="services__item">
+              <div class="services__image ibg">
+                <img loading="lazy" src="img/svg/tools.svg" width="198" height="257" alt="Washing">
+              </div>
+              <div class="services__info">
+                <h3>
+                  Діагностика та обслуговування систем водоочищення
+                </h3>
+                <p>
+                  Своєчасне сервісне обслуговування — запорука ефективної роботи будь-якого обладнання
+                </p>
+              </div>
+              <img src="img/svg/big-arrow.svg" class="services__arrow" alt="Arrow" width="51" height="20">
+
+            </a>
+            <a href="#" class="services__item">
+              <div class="services__image ibg">
+                <img loading="lazy" src="img/svg/bottles.svg" width="143" height="194" alt="Washing">
+              </div>
+              <div class="services__info">
+                <h3>
+                  Доставка питної води по Києву та області від 500 л
+                </h3>
+                <p>
+                  Доставляємо воду по оптовій ціні за Вашою адресою
+                </p>
+              </div>
+              <img src="img/svg/big-arrow.svg" class="services__arrow" alt="Arrow" width="51" height="20">
+            </a>
+            <a href="#" class="services__item">
+              <div class="services__image ibg">
+                <img loading="lazy" src="img/svg/filter.svg" width="146" height="231" alt="Washing">
+              </div>
+              <div class="services__info">
+                <h3>
+                  Реконструкція та переоснащення існуючих систем водопідготовки
+                </h3>
+                <p>
+                  Хочеться чогось новенького? Ми готові запропонувати і реалізувати сучасні інженерні рішення для
+                  задоволення усіх Ваших потреб
+                </p>
+              </div>
+              <img src="img/svg/big-arrow.svg" class="services__arrow" alt="Arrow" width="51" height="20">
+            </a>
           </div>
         </div>
       </section>
@@ -382,14 +462,14 @@
 
       <!-- benefits -->
 
-      <!-- <section class="solutions">
+      <section class="solutions">
         <div class="container">
           <div class="section-heading solutions__heading">
             <h2>
               Готові рішення
             </h2>
             <p>
-              Ми спроєктуємо систему враховуючи усі особливості Ваших потреб
+              Ми спроєктуємо систему враховуючи усі особливості Ваших потреб
             </p>
           </div>
           <div class="solutions__inner">
@@ -413,11 +493,10 @@
               </div>
             </div>
             <div class="solutions__item solutions__item-hospital">
-              <picture>
-                <source media="(max-width: 991px)" srcset="img/svg/hospital-tablet.svg">
-                <img loading="lazy" src="img/svg/hospital.svg" class="solutions__img" width="210" height="258"
-                  alt="Hospital">
-              </picture>
+
+              <img loading="lazy" src="img/svg/hospital.svg" class="solutions__img" width="210" height="258"
+                alt="Hospital">
+
               <div class="solutions__info">
                 <h3>
                   Для медичних
@@ -428,7 +507,7 @@
               </div>
             </div>
             <div class="solutions__item solutions__item-agrarian solutions__extended">
-              <img loading="lazy" src="img/svg/hangar.svg" class="solutions__img" width="210" height="258" alt="Hangar">
+              <img loading="lazy" src="img/svg/hangar.svg" class="solutions__img" width="500" height="259" alt="Hangar">
               <div class="solutions__info">
                 <h3>
                   Для аграрного
@@ -442,7 +521,7 @@
               <div class="solutions__info">
                 <h3>
                   Для ЖКГ, ОСББ
-                  та енергетики
+                  та енергетики
                 </h3>
               </div>
             </div>
@@ -457,7 +536,7 @@
               </div>
             </div>
             <div class="solutions__item solutions__item-watermachine">
-              <img loading="lazy" src="img/svg/water-machine.svg" class="solutions__img" width="217" height="280"
+              <img loading="lazy" src="img/svg/watermachine.svg" class="solutions__img" width="217" height="280"
                 alt="Water Machine">
               <div class="solutions__info">
                 <h3>
@@ -468,8 +547,8 @@
               </div>
             </div>
             <div class="solutions__item solutions__item-installation">
-              <img loading="lazy" src="img/svg/services__installation.svg" class="solutions__img" width="238"
-                height="280" alt="Installation">
+              <img loading="lazy" src="img/svg/installation2.svg" class="solutions__img" width="238" height="280"
+                alt="Installation">
               <div class="solutions__info">
                 <h3>
                   Автомати
@@ -480,7 +559,199 @@
             </div>
           </div>
         </div>
-      </section> -->
+      </section>
+
+      <section class="technologies">
+        <div class="container">
+          <div class="section-heading technologies__heading">
+            <h2>Технології очищення</h2>
+            <p>Ми готові обрати та скомбінувати технології очищення води аби вирішити будь-яке Ваше завдання</p>
+          </div>
+          <div class="technologies__inner">
+            <div class="technologies__item">
+              <p>
+                Зворотній осмос
+              </p>
+            </div>
+            <div class="technologies__item">
+              <p>
+                Механічне очищення
+              </p>
+            </div>
+            <div class="technologies__item">
+              <p>
+                Знезалізнення, деманганація
+
+              </p>
+            </div>
+            <div class="technologies__item">
+              <p>
+                Нанофільтрація
+
+              </p>
+            </div>
+            <div class="technologies__item">
+              <p>
+                Ультрафільтрація
+              </p>
+            </div>
+            <div class="technologies__item">
+              <p>
+                Пом’якшення
+              </p>
+            </div>
+            <div class="technologies__item">
+              <p>
+                Дехлорування
+              </p>
+            </div>
+            <div class="technologies__item">
+              <p>
+                Комплексна фільтрація
+              </p>
+            </div>
+            <div class="technologies__item">
+              <p>
+                Знесолювання
+              </p>
+            </div>
+            <div class="technologies__item">
+              <p>
+                Ультрафільтрація
+              </p>
+            </div>
+            <div class="technologies__img ibg">
+              <img loading="lazy" src="img/svg/technologie.svg" width="540" height="513" alt="Технологія">
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="individual">
+        <div class="container">
+          <div class="individual__item">
+            <div class="individual__info">
+              <h2>Отримайте індивідуальну пропозицію</h2>
+              <p>Наш консультант зв’яжеться з Вами і допоможе підібрати рішення для будь-якого завдання</p>
+            </div>
+            <form action="#" class="form individual__form">
+              <div class="form__inputs">
+                <label class="form__label">
+                  <input type="text" class="input-reset form__input form__input-phone" placeholder="Ваше ім’я"
+                    name="Ім'я користувача">
+                </label>
+                <label class="form__label">
+                  <input type="tel" class="input-reset form__input form__input-phone" placeholder="Ваш телефон"
+                    name="Телефон користувача">
+                </label>
+                <button class="btn form__btn" type="submit">Хочу консультацію</button>
+
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+
+      <section class="reviews">
+        <div class="container">
+          <div class="reviews__inner">
+            <div class="section-heading reviews__heading">
+              <h2>Відгуки</h2>
+              <p>
+                Що говорять про нас клієнти
+              </p>
+            </div>
+            <div class="splide reviews__slider">
+              <div class="splide__track ">
+                <ul class="splide__list ">
+                  <li class="splide__slide reviews__slide">
+                    <div class="reviews__item">
+                      <p class="reviews__name">
+                        Василь Михайленко
+                      </p>
+                      <p class="reviews__text">
+                        Давно користуюся послугами компанії, тільки
+                        тут замовляю змінні картриджі, якістю
+                        задоволений.
+                        Давно користуюся послугами компанії, тільки
+                        тут замовляю змінні картриджі, якістю
+                        задоволений.
+                      </p>
+                      <span class="reviews__date">
+                        12.05.2022
+                      </span>
+                    </div>
+                  </li>
+                  <li class="splide__slide reviews__slide">
+                    <div class="reviews__item">
+                      <p class="reviews__name">
+                        Василь Михайленко
+                      </p>
+                      <p class="reviews__text">
+                        Давно користуюся послугами компанії, тільки
+                        тут замовляю змінні картриджі, якістю
+                        задоволений.
+                        Давно користуюся послугами компанії, тільки
+                        тут замовляю змінні картриджі, якістю
+                        задоволений.
+                      </p>
+                      <span class="reviews__date">
+                        12.05.2022
+                      </span>
+                    </div>
+                  </li>
+                  <li class="splide__slide reviews__slide">
+                    <div class="reviews__item">
+                      <p class="reviews__name">
+                        Василь Михайленко
+                      </p>
+                      <p class="reviews__text">
+                        Давно користуюся послугами компанії, тільки
+                        тут замовляю змінні картриджі, якістю
+                        задоволений.
+                        Давно користуюся послугами компанії, тільки
+                        тут замовляю змінні картриджі, якістю
+                        задоволений.
+                      </p>
+                      <span class="reviews__date">
+                        12.05.2022
+                      </span>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <button class="btn reviews__btn" data-open-reviews>Залишити відклик</button>
+          </div>
+        </div>
+      </section>
+
+      <div class="modal" data-modal-reviews>
+  <div class="modal__wrapper">
+    <div class="modal__item">
+      <button class="modal__close" data-modal-close></button>
+      <p>Залишити відгук</p>
+      <form action="#" class="modal__form">
+        <div class="modal__inputs">
+          <label class="modal__label">
+            <input type="text" class="modal__input" placeholder="Ваше ім’я">
+          </label>
+          <label class="modal__label">
+            <input type="text" class="modal__input" placeholder="Ваше ім’я">
+          </label>
+          <label class="modal__label">
+            <input type="text" class="modal__input" placeholder="Ваше ім’я">
+          </label>
+          <label class="modal__label">
+            <textarea class="modal__textarea" placeholder="Ваш коментар"></textarea>
+          </label>
+        </div>
+        <button type="submit" class="btn modal__btn">Надіслати відгук</button>
+      </form>
+    </div>
+  </div>
+</div>
+
     </main>
 
     <footer class="footer">
@@ -600,8 +871,8 @@
       <div class="footer__details">
         <div class="footer__details-links">
           <a href="#">Про компанію </a>
-          <a href="#">Технології</a>
-          <a href="#">Послуги</a>
+          <a href="#" data-goto=".technologies">Технології</a>
+          <a href="#" data-goto=".services">Послуги</a>
         </div>
         <div class="footer__details-logos">
           <a href="#" class="footer__details-logo">
