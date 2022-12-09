@@ -12,8 +12,7 @@
   &__inner {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
-    grid-template-rows: repeat(3, minmax(150px, auto));
-    grid-auto-rows: minmax(150px, auto);
+    grid-template-rows: repeat(3, minmax(150px, min-content));
     @include adaptiveValue(column-gap, 59, 30, 1920, 992, 1);
     row-gap: rem(49);
 

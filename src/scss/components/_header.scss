@@ -3,12 +3,18 @@
   @include adaptiveValue(padding-bottom, 30, 12, 1920, 768, 1);
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.06);
   border-radius: 10px;
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   z-index: 1000;
   background-color: var(--white);
+
+  &.fixed {
+    position: fixed;
+    animation: headerFixed .3s linear;
+
+  }
 
   &__inner {
     display: grid;
@@ -298,4 +304,18 @@
     }
   }
 
+}
+
+// fixed header animation
+
+@keyframes headerFixed {
+  0% {
+    opacity: 0;
+    top: -70px;
+  }
+
+  100% {
+    opacity: 1;
+    top: 0;
+  }
 }

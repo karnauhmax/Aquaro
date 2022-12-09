@@ -1,4 +1,4 @@
-.catalog {
+.catalog-preview {
   @include adaptiveValue(margin-bottom, 80, 50, 1920, 360, 1);
 
   &__title {
@@ -59,6 +59,8 @@
 
 
   &__extended {
+
+    // тех.классы для манипуляции размерами внутри
     &-horizontally {
       grid-column: span 6;
     }
@@ -110,7 +112,7 @@
 
       }
 
-      .catalog__info {
+      .catalog-preview__info {
         display: grid;
         grid-auto-flow: row;
         max-width: rem(300);
@@ -143,7 +145,7 @@
       grid-auto-flow: row;
       grid-template-rows: repeat(2, min-content);
 
-      .catalog__info {
+      .catalog-preview__info {
         display: grid;
         grid-auto-flow: row;
         justify-items: center;
@@ -176,7 +178,7 @@
         align-self: end;
       }
 
-      .catalog__info {
+      .catalog-preview__info {
         grid-template-rows: repeat(3, min-content);
         padding-right: rem(20);
       }
@@ -184,7 +186,7 @@
       p {
         max-width: rem(274);
 
-        @media screen and (max-width: $sm) {
+        @media screen and (max-width: $md) {
           max-width: 100%;
         }
       }

@@ -29,3 +29,30 @@ import { Splide } from "@splidejs/splide";
 // mainSlider.sync(thumbnails);
 // mainSlider.mount();
 // thumbnails.mount();
+
+if (document.querySelector(".reviews__slider")) {
+  const reviewSlider = new Splide(".reviews__slider", {
+    perPage: 3,
+    perMove: 1,
+    gap: "1rem",
+    arrows: false,
+    pagination: false,
+    type: "loop",
+    breakpoints: {
+      991: {
+        perPage: 1,
+        padding: {
+          right: "200px",
+        },
+      },
+
+      767: {
+        padding: {
+          right: "0px",
+        },
+      },
+    },
+  });
+
+  reviewSlider.mount();
+}

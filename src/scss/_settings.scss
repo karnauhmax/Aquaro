@@ -35,7 +35,7 @@ li {
 }
 
 .page {
-  min-height: 100%;
+  height: 100%;
   font-family: var(--font-family, sans-serif);
   -webkit-text-size-adjust: 100%;
 }
@@ -44,7 +44,7 @@ li {
   padding: 0;
   margin: 0;
   min-width: 320px;
-  min-height: 100%;
+  height: 100%;
   font-size: 18px;
   font-weight: 400;
   font-family: var(--font-family-primary), sans-serif;
@@ -62,7 +62,6 @@ li {
 }
 
 main {
-  flex: 1 1 100%;
   margin-bottom: 100px;
 }
 
@@ -80,8 +79,9 @@ a {
 
 .site-container {
   height: 100%;
-  display: flex;
-  flex-direction: column; // если используете на сайте position: sticky - уберите эту настройку
+  display: grid;
+  grid-template-rows: 1fr auto;
+  grid-template-columns: 100%;
 }
 
 
@@ -174,6 +174,8 @@ a {
   display: inline-flex;
   justify-content: center;
   align-items: center;
+  border-radius: 5px;
+  font-weight: 900;
 }
 
 .arrow-link {

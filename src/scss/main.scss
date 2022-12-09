@@ -11,12 +11,16 @@
 @import "./components/footer";
 @import "./components/form";
 @import "./components/section-heading";
+@import "./components/reviews";
+@import "./components/modal";
 
 
 
 //подключения секций страницы
 @import "./sections/offer";
-@import "./sections/catalog";
+@import "./sections/catalog-preview";
 @import "./sections/services";
 @import "./sections/benefits";
 @import "./sections/solutions";
+@import "./sections/technologies";
+@import "./sections/individual";

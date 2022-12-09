@@ -11,12 +11,16 @@ class Modal {
     const openModal = () => {
       this.modalContainer.classList.add("modal__active");
       document.body.classList.add("locked");
-      console.log(123);
+      document.body.style.maxWidth = window.innerWidth - 17 + "px";
+      document.querySelector(".header").style.maxWidth =
+        window.innerWidth - 17 + "px";
     };
 
     const closeModal = () => {
       this.modalContainer.classList.remove("modal__active");
       document.body.classList.remove("locked");
+      document.body.style.maxWidth = null;
+      document.querySelector(".header").style.maxWidth = null;
     };
 
     this.modalOpen.forEach((e) => {

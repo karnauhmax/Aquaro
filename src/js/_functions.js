@@ -78,7 +78,10 @@ import { burger } from "./functions/burger";
 // validateForms('.form-1', rules1, afterForm);
 
 // Подключение ООП модалок
-// import Modal from "./functions/modals";
+import Modal from "./functions/modals";
+if (document.querySelector("[data-modal-reviews]")) {
+  new Modal("[data-modal-reviews]", "[data-open-reviews]").renderModal();
+}
 
 //Подключение ООП табов
 // import Tab from "./functions/tabs";
