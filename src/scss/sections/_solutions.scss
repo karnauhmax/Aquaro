@@ -1,5 +1,4 @@
 .solutions {
-  @include adaptiveValue(margin-bottom, 100, 40, 1920, 360, 1);
 
   &__heading {
     max-width: rem(897);
@@ -55,11 +54,11 @@
 
     img {
       @media screen and (max-width: $md) {
-        max-width: 200px;
+        max-width: rem(200);
       }
 
       @media screen and (max-width: $xsm) {
-        max-width: 140px;
+        max-width: rem(140);
       }
 
       @media screen and (max-width: $xxsm) {

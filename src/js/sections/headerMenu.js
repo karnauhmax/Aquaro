@@ -5,11 +5,11 @@ const header = document.querySelector(".header");
 //opening sub menu by click
 if (menu) {
   document.addEventListener("click", (e) => {
-    e.preventDefault();
     const self = e.target;
     const subMenu = self.parentElement.querySelector(".sub-menu");
     const arrow = self.parentElement.querySelector(".menu__arrow");
     if (self.closest(".menu__item")) {
+      e.preventDefault();
       if (subMenu) {
         subMenu.classList.toggle("active");
         arrow.classList.toggle("active");

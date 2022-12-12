@@ -1,0 +1,492 @@
+.cart {
+  @include adaptiveValue(padding-top, 60, 40, 1920, 360, 1, );
+
+  &__breadcrumbs {
+    margin-bottom: rem(16);
+  }
+
+  &__border-link {
+    display: inline-block;
+    @include adaptiveValue(margin-bottom, 40, 20, 1920, 360, 1);
+  }
+
+  &__title {
+    @include adaptiveValue(font-size, 36, 18, 1920, 360, 1);
+    font-weight: 900;
+    @include adaptiveValue(margin-bottom, 30, 15, 1920, 360, 1);
+  }
+
+  &__inner {
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: rem(30);
+    @include adaptiveValue(margin-bottom, 70, 25, 1920, 360, 1);
+  }
+
+
+
+  &__labels {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    font-weight: 700;
+    font-size: rem(16);
+
+    @media screen and (max-width: $md) {
+      display: none;
+    }
+
+    .cart__name {
+      grid-column: 3/5;
+    }
+
+    .cart__price {
+      grid-column: 6/8;
+    }
+
+    .cart__amount {
+      grid-column: 8/10;
+    }
+
+    .cart__total {
+      grid-column: 10/12;
+    }
+  }
+
+  &__name {
+    justify-self: center;
+
+    @media screen and (max-width: $xsm) {
+      justify-self: start;
+    }
+  }
+
+  &__price {
+    justify-self: center;
+
+    @media screen and (max-width: $xsm) {
+      justify-self: start;
+    }
+  }
+
+  &__amount {
+    justify-self: center;
+
+    @media screen and (max-width: $xsm) {
+      justify-self: start;
+    }
+  }
+
+  &__total {
+    justify-self: center;
+
+    @media screen and (max-width: $xsm) {
+      justify-self: start;
+    }
+  }
+
+  &__item {
+    display: grid;
+    grid-template-columns: minmax(auto, rem(150)) minmax(auto, rem(240)) minmax(auto, rem(110)) auto minmax(auto, rem(110)) min-content;
+    padding: rem(30);
+    @include adaptiveValue(column-gap, 122, 30, 1920, 576, 1);
+    align-items: center;
+    justify-items: center;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.06);
+    border-radius: var(--radius-primary);
+
+    @media screen and (max-width: $md) {
+      grid-template-columns: minmax(auto, rem(150)) 2fr minmax((auto, rem(110)));
+      padding: rem(20);
+    }
+
+    @media screen and (max-width: $xsm) {
+      grid-template-columns: minmax(auto, rem(150)) 1fr;
+      row-gap: rem(15);
+      column-gap: rem(15);
+    }
+
+    @media screen and (max-width: $xxsm) {
+      grid-template-columns: 1fr;
+    }
+
+    &:hover {
+      box-shadow: 0px 4px 15px rgba(33, 185, 229, 0.2);
+    }
+
+    &-spec {
+      @media screen and (max-width: $md) {
+        display: grid;
+        row-gap: rem(5);
+        justify-items: center;
+        font-weight: 700;
+        font-size: rem(16);
+        text-align: center;
+        align-items: center;
+      }
+
+      @media screen and (max-width: $xsm) {
+        justify-items: end;
+      }
+
+      @media screen and (max-width: $xxsm) {
+        grid-column: 1/2;
+      }
+    }
+
+    &-img {
+      padding-bottom: 72%;
+      width: 100%;
+    }
+
+    &-title {
+      a {
+        font-size: rem(16);
+      }
+
+      .cart__name {
+        display: none;
+
+        @media screen and (max-width: $md) {
+          display: block;
+        }
+      }
+    }
+
+    &-btn {
+      width: 30px;
+      height: 30px;
+
+      @media screen and (max-width: $md) {
+        grid-row: 1/2;
+        grid-column: 3/4;
+      }
+
+      @media screen and (max-width: $xsm) {
+        grid-row: unset;
+        grid-column: span 2;
+        justify-self: end;
+      }
+
+      path {
+        transition: .5s fill ease;
+      }
+
+      &:hover {
+        path {
+          fill: var(--text-secondary)
+        }
+      }
+    }
+
+    &-quantity {
+      @media screen and (max-width: $xsm) {
+        width: 100%;
+        grid-column: span 2;
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .cart__amount {
+        display: none;
+
+        @media screen and (max-width: $md) {
+          display: block;
+        }
+      }
+    }
+
+    &-quantity_inner {
+      display: flex;
+      align-items: center;
+      gap: rem(5);
+      max-width: 110px;
+      height: 40px;
+      border-radius: 4px;
+      border: 1px solid var(--text-secondary);
+      padding: rem(10);
+
+      input {
+        width: 100%;
+        text-align: center;
+        color: var(--text-secondary);
+        appearance: none;
+
+        &::placeholder {
+          color: var(--text-secondary);
+        }
+      }
+
+      .plus,
+      .minus {
+        width: 20px;
+        height: 20px;
+        display: inline-flex;
+        align-items: center;
+
+        &.active {
+          path {
+            fill: #21B9E5;
+          }
+        }
+      }
+
+    }
+
+    &-price,
+    &-summary {
+      span {
+        display: inline-flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        column-gap: 5px;
+        @include adaptiveValue(font-size, 20, 14, 1920, 360, 1);
+        font-weight: 700;
+        word-break: break-all;
+        text-align: center;
+
+        &::after {
+          content: "грн";
+        }
+      }
+    }
+
+    &-summary {
+      @media screen and (max-width: $xsm) {
+        width: 100%;
+        grid-column: span 2;
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .cart__total {
+        display: none;
+
+        @media screen and (max-width: $md) {
+          display: block;
+        }
+      }
+    }
+
+    &-price {
+      @media screen and (max-width: $xsm) {
+        width: 100%;
+        grid-column: span 2;
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .cart__price {
+        display: none;
+
+        @media screen and (max-width: $md) {
+          display: block;
+          font-size: rem(16);
+          font-weight: 700;
+        }
+      }
+    }
+  }
+
+  &__summary {
+    display: grid;
+    justify-self: center;
+    row-gap: rem(20);
+
+    &-item {
+      display: flex;
+      column-gap: rem(30);
+      align-items: center;
+    }
+
+    &-sum {
+      font-size: rem(16);
+      font-weight: 700;
+      position: relative;
+
+      &::after {
+        content: ":";
+        position: absolute;
+      }
+    }
+
+    &-price {
+      font-size: rem(21);
+      font-weight: 700;
+      display: inline-flex;
+      flex-wrap: wrap;
+      column-gap: rem(5);
+
+      &::after {
+        content: "грн";
+      }
+    }
+
+    &-btn {
+      justify-self: center;
+
+      @media screen and (max-width: $xsm) {
+        min-width: unset;
+        width: 100%;
+        max-width: 100%;
+      }
+    }
+  }
+
+  &__form {
+    display: grid;
+    row-gap: rem(30);
+    grid-template-columns: 1fr;
+
+    &-inner {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(rem(336), 1fr));
+      gap: rem(30);
+
+      @media screen and (max-width: $md) {
+        grid-template-columns: repeat(auto-fill, minmax(rem(349), 1fr));
+      }
+
+      @media screen and (max-width: $xsm) {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    &-item {
+      display: grid;
+      grid-auto-flow: row;
+      grid-template-rows: min-content 1fr;
+      row-gap: rem(20);
+      min-height: rem(310);
+      @include adaptiveValue(padding-top, 30, 20, 1920, 360, 1);
+      @include adaptiveValue(padding-right, 30, 20, 1920, 360, 1);
+      @include adaptiveValue(padding-left, 30, 20, 1920, 360, 1);
+      @include adaptiveValue(padding-bottom, 30, 20, 1920, 360, 1);
+      filter: drop-shadow(0px 4px 16px rgba(0, 0, 0, 0.06));
+      border-radius: var(--radius-secondary);
+
+      &:nth-child(odd) {
+        background-color: var(--white);
+      }
+
+      &:nth-child(even) {
+        background-color: var(--bg-grey);
+      }
+
+      @media screen and (max-width: $sm) {
+        min-height: unset;
+      }
+    }
+
+    &-heading {
+      @include adaptiveValue(font-size, 23, 18, 1920, 360, 1);
+      font-weight: 700;
+      color: var(--text-secondary);
+    }
+
+    textarea {
+      background-color: transparent;
+      resize: none;
+      border: 1px solid #C4C4C4;
+      border-radius: var(--radius-secondary);
+      height: 100%;
+      padding: rem(10);
+      font-size: rem(16);
+      font-weight: 400;
+      color: #C4C4C4;
+      transition: .2s box-shadow ease;
+
+      &:focus {
+        box-shadow: 0px 4px 4px rgb(0 0 0 / 25%);
+        outline: none;
+      }
+
+      &::placeholder {
+        opacity: 0.5;
+        font-size: rem(16);
+        font-weight: 400;
+      }
+
+      @media screen and (max-width: $sm) {
+        min-height: rem(80);
+      }
+    }
+
+    &-inputs {
+      display: grid;
+      row-gap: rem(10);
+      grid-auto-rows: min-content;
+    }
+
+    &-radios {
+      display: grid;
+      row-gap: rem(20);
+      grid-auto-rows: min-content;
+    }
+
+    &-radio {
+      position: relative;
+      padding-left: rem(20);
+      padding-bottom: rem(20);
+      @include adaptiveValue(font-size, 18, 16, 1920, 360, 1);
+
+      &:not(:last-child) {
+        border-bottom: 1px solid #F7F8F9;
+      }
+
+      input[type="radio"] {
+        appearance: none;
+        position: absolute;
+
+        &:checked+.radio {
+          background-image: url("../img/svg/checked-radio.svg");
+        }
+      }
+
+
+      .radio {
+        position: absolute;
+        width: 10px;
+        height: 10px;
+        background-image: url("../img/svg/radio.svg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        left: 0;
+        top: em(4);
+      }
+    }
+
+    &-label {
+      width: 100%;
+    }
+
+    &-input {
+      padding: rem(10);
+      border-radius: var(--radius-secondary);
+      border: 1px solid #C4C4C4;
+      width: 100%;
+      transition: .2s box-shadow ease;
+      color: #C4C4C4;
+      font-size: rem(16);
+
+
+      &:focus {
+        box-shadow: 0px 4px 4px rgb(0 0 0 / 25%);
+        outline: none;
+      }
+
+      &::placeholder {
+        opacity: 0.5;
+        font-size: rem(16);
+        font-weight: 400;
+      }
+    }
+
+    &-btn {
+      justify-self: center;
+
+      @media screen and (max-width: $xsm) {
+        min-width: unset;
+        width: 100%;
+        max-width: 100%;
+      }
+    }
+  }
+
+}

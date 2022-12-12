@@ -92,7 +92,7 @@
       border: 1px solid #68DDFF;
       padding: 20px;
       width: 100%;
-      border-radius: 5px;
+      border-radius: var(--radius-secondary);
       transition: box-shadow .5s ease;
 
       &:focus {

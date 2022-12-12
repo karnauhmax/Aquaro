@@ -1,5 +1,4 @@
 .benefits {
-  @include adaptiveValue(margin-bottom, 100, 40, 1920, 360, 1);
 
   &__heading {
     @include adaptiveValue(margin-bottom, 72, 27, 1920, 360, 1);

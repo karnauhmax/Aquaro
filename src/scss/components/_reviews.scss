@@ -26,7 +26,8 @@
     @include adaptiveValue(padding-left, 30, 20, 1920, 360, 1);
     box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.06);
     border-radius: var(--radius-primary);
-    min-height: 205px;
+    min-height: rem(205);
+    height: 100%;
   }
 
   &__name {
@@ -43,6 +44,7 @@
 
   &__date {
     font-size: rem(14);
+    margin-top: auto;
   }
 
   &__btn {

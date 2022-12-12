@@ -1,0 +1,39 @@
+.breadcrumbs {
+  &__list {
+    display: flex;
+    column-gap: rem(10);
+  }
+
+  &__item {
+    position: relative;
+    padding-right: rem(15);
+
+    &.active {
+      color: var(--text-secondary);
+      pointer-events: none;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      background-image: url("../img/svg/black-arrow.svg");
+      background-repeat: no-repeat;
+      background-size: contain;
+      width: rem(10);
+      height: rem(10);
+      right: 0;
+      top: em(7);
+      display: none;
+    }
+
+    &:not(:last-child) {
+      &::before {
+        display: block;
+      }
+    }
+  }
+
+  &__link {
+    font-size: rem(16);
+  }
+}

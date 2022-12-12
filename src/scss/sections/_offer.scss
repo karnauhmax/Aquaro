@@ -26,7 +26,7 @@
 
     @media screen and (max-width: $lg) {
       grid-column: unset;
-      min-height: 292px;
+      min-height: rem(292);
     }
 
     @media screen and (max-width: $sm) {

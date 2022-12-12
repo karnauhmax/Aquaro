@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="uk" class="page">
+@include('partials/head.html')
+
+<body class="page__body" data-section="cart">
+  <div class="site-container">
+    @include('partials/header.html')
+    <main class="main">
+      <!-- cart -->
+      <section class="cart">
+        <div class="container">
+          <nav class="breadcrumbs cart__breadcrumbs">
+            <ul class="breadcrumbs__list">
+              <li class="breadcrumbs__item">
+                <a href="index.html" class="breadcrumbs__link">Головна</a>
+              </li>
+              <li class="breadcrumbs__item active">
+                <a href="cart.html" class="breadcrumbs__link">Кошик</a>
+              </li>
+            </ul>
+          </nav>
+          <a href="catalog.html" class="border-link cart__border-link">
+            Назад до покупок
+          </a>
+          <h1 class="cart__title">
+            Кошик
+          </h1>
+          <div class="cart__inner">
+            <div class="cart__labels">
+              <p class="cart__name">Назва</p>
+              <p class="cart__price">Ціна за 1 шт</p>
+              <p class="cart__amount">Кількість</p>
+              <p class="cart__total">Сума</p>
+            </div>
+            <article class="cart__item">
+              <a href="#" class="cart__item-img ibg">
+                <img src="img/content/catalog-product.png" alt="Product">
+              </a>
+              <div class="cart__item-title cart__item-spec">
+                <a href="#">
+                  Помпи для систем зворотного осмосу
+                </a>
+              </div>
+              <div class="cart__item-price cart__item-spec">
+                <p class="cart__price">
+                  Ціна за 1 шт
+                </p>
+                <span>
+                  1450
+                </span>
+              </div>
+              <div class="cart__item-quantity cart__item-spec">
+                <p class="cart__amount">Кількість</p>
+                <div class="cart__item-quantity_inner">
+                  <button class="minus">
+                    <svg width="9" height="9" viewBox="0 0 6 3" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M5.84482 0.664928V2.58538H0.537997V0.664928H5.84482Z" fill="#D2CFCB" />
+                    </svg>
+                  </button>
+                  <input type="number" class="input-reset " value="1">
+                  <button class="plus active">
+                    <svg width="12" height="12" viewBox="0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M3.81499 8.77288V0.727427H5.84908V8.77288H3.81499ZM0.809304 5.7672V3.73311H8.85476V5.7672H0.809304Z"
+                        fill="#D2CFCB" />
+                    </svg>
+                  </button>
+                </div>
+              </div>
+              <div class="cart__item-summary cart__item-spec">
+                <p class="cart__total">Сума</p>
+                <span>1450</span>
+              </div>
+              <button class="cart__item-btn">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M7.375 2.44665H7.14062C7.26953 2.44665 7.375 2.3418 7.375 2.21364V2.44665H16.2812V2.21364C16.2812 2.3418 16.3867 2.44665 16.5156 2.44665H16.2812V4.54369H18.3906V2.21364C18.3906 1.18551 17.5498 0.349609 16.5156 0.349609H7.14062C6.10644 0.349609 5.26562 1.18551 5.26562 2.21364V4.54369H7.375V2.44665ZM22.1406 4.54369H1.51562C0.99707 4.54369 0.578125 4.96018 0.578125 5.47571V6.40772C0.578125 6.53588 0.683594 6.64073 0.8125 6.64073H2.58203L3.30566 21.8734C3.35254 22.8666 4.17871 23.65 5.17773 23.65H18.4785C19.4805 23.65 20.3037 22.8695 20.3506 21.8734L21.0742 6.64073H22.8437C22.9727 6.64073 23.0781 6.53588 23.0781 6.40772V5.47571C23.0781 4.96018 22.6592 4.54369 22.1406 4.54369ZM18.2529 21.553H5.40332L4.69434 6.64073H18.9619L18.2529 21.553Z"
+                    fill="#C4C4C4" />
+                </svg>
+
+              </button>
+            </article>
+            <div class="cart__summary">
+              <div class="cart__summary-item">
+                <p class="cart__summary-sum">
+                  Загальна вартість
+                </p>
+                <p class="cart__summary-price">
+                  1539.00
+                </p>
+              </div>
+              <button class="btn cart__summary-btn btn-primary">
+                Оформити замовлення
+              </button>
+            </div>
+          </div>
+          <form action="#" class="cart__form">
+            <div class="cart__form-inner">
+              <div class="cart__form-item  cart__form-delivery">
+                <p class="cart__form-heading">
+                  Доставка
+                </p>
+                <div class="cart__form-radios">
+                  <label class="cart__form-label cart__form-radio">
+                    <input type="radio" name="Вибір">
+                    Самовивіз із
+                    (м.
+                    <span class="radio"></span>
+                  </label>
+                  <label class="cart__form-label cart__form-radio">
+                    <input type="radio" name="Вибір">
+                    Повна передоплата
+                    <span class="radio"></span>
+                  </label>
+                  <label class="cart__form-label cart__form-radio">
+                    <input type="radio" name="Вибір">
+                    Служба доставки Нова Пошта
+                    <span class="radio"></span>
+                  </label>
+                </div>
+              </div>
+              <div class="cart__form-item cart__form-payment">
+                <p class="cart__form-heading">
+                  Оплата
+                </p>
+                <div class="cart__form-radios">
+                  <label class="cart__form-label cart__form-radio">
+                    <input type="radio" name="Вибір">
+                    Самовивіз із
+                    (м.
+                    <span class="radio"></span>
+                  </label>
+                  <label class="cart__form-label cart__form-radio">
+                    <input type="radio" name="Вибір">
+                    Повна передоплата
+                    <span class="radio"></span>
+                  </label>
+                </div>
+              </div>
+              <div class="cart__form-item cart__form-details">
+                <p class="cart__form-heading">
+                  Контактні дані
+                </p>
+                <div class="cart__form-inputs">
+                  <div class="cart__form-label">
+                    <input class="input-reset cart__form-input" type="text" name="Ім'я користувача"
+                      placeholder="Введіть ім’я">
+                  </div>
+                  <div class="cart__form-label">
+                    <input class="input-reset cart__form-input" type="text" name="Прізвище користувача"
+                      placeholder="Введіть прізвище">
+                  </div>
+                  <div class="cart__form-label">
+                    <input class="input-reset cart__form-input" type="tel" name="Телефон користувача"
+                      placeholder="+38(ХХX)ХХХ-ХХ-ХХ">
+                  </div>
+                  <div class="cart__form-label">
+                    <input class="input-reset cart__form-input" type="email" name="E-mail користувача"
+                      placeholder="Введіть E-mail">
+                  </div>
+                </div>
+              </div>
+              <div class="cart__form-item  cart__form-comment">
+                <p class="cart__form-heading">
+                  Ваш коментар
+                </p>
+                <textarea class="cart__form-textarea input-reset" placeholder="Ваш коментар"></textarea>
+              </div>
+            </div>
+            <button class="btn btn-primary cart__form-btn" type="submit">Підтвердити замовлення</button>
+          </form>
+        </div>
+      </section>
+      <!-- cart -->
+
+    </main>
+    @include('partials/footer.html')
+  </div>
+</body>
+
+</html>

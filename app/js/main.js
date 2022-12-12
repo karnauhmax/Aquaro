@@ -3901,6 +3901,12 @@ if (document.querySelector("[data-modal-reviews]")) {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _sections_headerMenu__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./sections/headerMenu */ "./src/js/sections/headerMenu.js");
 /* harmony import */ var _sections_headerMenu__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_sections_headerMenu__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _sections_catalog__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./sections/catalog */ "./src/js/sections/catalog.js");
+/* harmony import */ var _sections_catalog__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_sections_catalog__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _sections_cart__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./sections/cart */ "./src/js/sections/cart.js");
+/* harmony import */ var _sections_cart__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_sections_cart__WEBPACK_IMPORTED_MODULE_2__);
+
+
 
 
 /***/ }),
@@ -4185,6 +4191,71 @@ class Modal {
 
 /***/ }),
 
+/***/ "./src/js/sections/cart.js":
+/*!*********************************!*\
+  !*** ./src/js/sections/cart.js ***!
+  \*********************************/
+/***/ (() => {
+
+//counter
+const itemsCollection = document.querySelectorAll(".cart__item");
+const counterItems = document.querySelectorAll(".cart__quantity");
+counterItems.forEach(item => {
+  item.addEventListener("click", e => {
+    const self = e.currentTarget;
+    const target = e.target;
+    self.closest(".cart__item").preventDefault();
+  });
+});
+itemsCollection.forEach(el => {
+  el.addEventListener("click", e => {
+    if (e.target.closest(".minus")) {
+      const self = e.target;
+      const btn = self.closest(".minus");
+      const input = self.closest(".cart__item-quantity").querySelector("input");
+      if (input) {
+        let value = parseInt(input.value);
+        value > 2 ? value -= 1 : (value = 1, btn.classList.remove("active"));
+        input.value = value;
+      }
+    }
+    if (e.target.closest(".plus")) {
+      const self = e.target;
+      const btn = self.closest(".plus");
+      const btnMinus = self.closest(".cart__item-quantity").querySelector(".minus");
+      const input = self.closest(".cart__item-quantity").querySelector("input");
+      if (input) {
+        let value = parseInt(input.value);
+        value < 100 ? (value += 1, btnMinus.classList.add("active")) : (value = 100, btn.classList.remove("active"));
+        input.value = value;
+      }
+    }
+  });
+});
+
+/***/ }),
+
+/***/ "./src/js/sections/catalog.js":
+/*!************************************!*\
+  !*** ./src/js/sections/catalog.js ***!
+  \************************************/
+/***/ (() => {
+
+//filter
+
+const filter = document.querySelector(".filter");
+const filterItems = document.querySelectorAll(".filter__item");
+if (filter) {
+  filter.addEventListener("click", e => {
+    const target = e.target;
+    const item = target.closest(".filter__item");
+    const title = item.querySelector(".filter__title");
+    const details = item.querySelector(".filter__details");
+  });
+}
+
+/***/ }),
+
 /***/ "./src/js/sections/headerMenu.js":
 /*!***************************************!*\
   !*** ./src/js/sections/headerMenu.js ***!
@@ -4198,11 +4269,11 @@ const header = document.querySelector(".header");
 //opening sub menu by click
 if (menu) {
   document.addEventListener("click", e => {
-    e.preventDefault();
     const self = e.target;
     const subMenu = self.parentElement.querySelector(".sub-menu");
     const arrow = self.parentElement.querySelector(".menu__arrow");
     if (self.closest(".menu__item")) {
+      e.preventDefault();
       if (subMenu) {
         subMenu.classList.toggle("active");
         arrow.classList.toggle("active");
@@ -7376,6 +7447,14 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+
+//temporary
+
+// document.querySelectorAll(".cart__item").forEach((item) => {
+//   item.addEventListener("click", (e) => {
+//     e.preventDefault();
+//   });
+// });
 })();
 
 /******/ })()

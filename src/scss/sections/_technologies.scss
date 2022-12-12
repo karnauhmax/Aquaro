@@ -1,5 +1,4 @@
 .technologies {
-  @include adaptiveValue(margin-bottom, 100, 40, 1920, 360, 1);
 
   &__heading {
     max-width: rem(969);
@@ -54,6 +53,7 @@
     align-items: center;
     column-gap: rem(15);
     align-self: start;
+    max-width: 430px;
 
     p {
       @include adaptiveValue(font-size, 24, 18, 1920, 360, 1);

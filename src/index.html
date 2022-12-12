@@ -8,6 +8,7 @@
     @include('partials/header.html')
     <main class="main">
       <!-- offer -->
+
       <section class="offer">
         <div class="container">
           <div class="offer__inner">
@@ -50,9 +51,11 @@
           </div>
         </div>
       </section>
+
       <!-- offer -->
 
       <!-- catalog-preview -->
+
       <section class="catalog-preview">
         <div class="container">
           <h2 class="catalog-preview__title">
@@ -173,6 +176,7 @@
           </div>
         </div>
       </section>
+
       <!-- catalog-preview -->
 
       <!-- services -->
@@ -383,6 +387,8 @@
 
       <!-- benefits -->
 
+      <!-- solutions -->
+
       <section class="solutions">
         <div class="container">
           <div class="section-heading solutions__heading">
@@ -472,15 +478,19 @@
                 alt="Installation">
               <div class="solutions__info">
                 <h3>
-                  Автомати
-                  для розливу
-                  води
+                  Вбудовані
+                  офісні
+                  інсталяції
                 </h3>
               </div>
             </div>
           </div>
         </div>
       </section>
+
+      <!-- solutions -->
+
+      <!-- technologies -->
 
       <section class="technologies">
         <div class="container">
@@ -548,14 +558,18 @@
         </div>
       </section>
 
-      <section class="individual">
+      <!-- technologies -->
+
+      <!-- individual -->
+
+      <section class="individual contact-section">
         <div class="container">
-          <div class="individual__item">
-            <div class="individual__info">
+          <div class="contact-section__item individual__item">
+            <div class="contact-section__info individual__info">
               <h2>Отримайте індивідуальну пропозицію</h2>
               <p>Наш консультант зв’яжеться з Вами і допоможе підібрати рішення для будь-якого завдання</p>
             </div>
-            <form action="#" class="form individual__form">
+            <form action="#" class="form individual__form contact-section__form">
               <div class="form__inputs">
                 <label class="form__label">
                   <input type="text" class="input-reset form__input form__input-phone" placeholder="Ваше ім’я"
@@ -572,6 +586,10 @@
           </div>
         </div>
       </section>
+
+      <!-- individual -->
+
+      <!-- reviews -->
 
       <section class="reviews">
         <div class="container">
@@ -642,14 +660,21 @@
                 </ul>
               </div>
             </div>
-            <button class="btn reviews__btn" data-open-reviews>Залишити відклик</button>
+            <button class="btn reviews__btn btn-primary" data-open-reviews>Залишити відклик</button>
           </div>
         </div>
       </section>
 
+      <!-- individual -->
+
+      <!-- inserting modal  markup -->
+
       @include("partials/modal.html", {
       "data": "data-modal-reviews"
       })
+
+      <!-- inserting modal  markup -->
+
     </main>
 
     @include('partials/footer.html')
