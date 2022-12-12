@@ -10,7 +10,7 @@
   <script defer src="js/main.js"></script>
 </head>
 
-<body class="page__body">
+<body class="page__body" data-section="catalog">
   <div class="site-container">
     <header class="header">
   <div class="container">
@@ -36,7 +36,8 @@
                   <a href="#" class="sub-menu__link" data-content="Змінні картриджі">Змінні картриджі</a>
                 </li>
                 <li class="sub-menu__item">
-                  <a href="#" class="sub-menu__link" data-content="Zvorotni membrani">Zvorotni membrani</a>
+                  <a href="#" class="sub-menu__link" data-content="Зворотньосмотичні мембрани">Зворотньосмотичні
+                    мембрани</a>
                 </li>
               </ul>
             </div>
@@ -61,9 +62,9 @@
           <img loading="lazy" src="img/svg/tg.svg" class="image" width="30" height="30" alt="Telegram">
         </a>
       </div>
-      <a href="#" class="cart header__cart">
+      <a href="cart.html" class="header__cart">
         <svg>
-          <svg width="26" height="25" viewBox="0 0 26 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <svg width="30" height="30" viewBox="0 0 26 25" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path
               d="M25.7767 4.198C25.5851 3.94947 25.2843 3.78379 24.9558 3.78379H6.12953L5.39066 0.800869C5.28129 0.331361 4.8707 0 4.37825 0H1.03987C0.465135 0 0 0.469508 0 1.04959C0 1.62968 0.465159 2.09919 1.03987 2.09919H3.5846L7.79872 19.4443C7.90809 19.9138 8.31868 20.2452 8.81113 20.2452H20.8238C21.3985 20.2452 21.8637 19.7757 21.8637 19.1956C21.8637 18.6155 21.3985 18.146 20.8238 18.146H9.60468L9.00267 15.6878H22.4656C22.9308 15.6878 23.3414 15.3565 23.478 14.9145L25.9682 5.08191C26.0505 4.77828 25.9684 4.4467 25.7767 4.19818V4.198Z"
               fill="#2F4085" />
@@ -84,7 +85,520 @@
   </div>
 </header>
 
-    <main class="main"></main>
+    <main class="main">
+      <!-- catalog -->
+
+      <section class="catalog">
+        <div class="container">
+          <h1 class="catalog__title">
+            Каталог товарів
+          </h1>
+          <div class="catalog__inner">
+            <!-- filter -->
+
+            <div class="catalog__filter filter">
+              <div class="filter__heading">
+                <p>Каталог товарів</p>
+              </div>
+              <div class="filter__content">
+                <div class="filter__item">
+                  <p class="filter__title">Категорія 1</p>
+                  <span class="filter__arrow"></span>
+                  <div class="filter__details">
+                    <ul class="filter__list">
+                      <li>
+                        <button class="filter__btn">Підкатегорія 1</button>
+                      </li>
+                      <li>
+                        <button class="filter__btn">Підкатегорія 1</button>
+                      </li>
+                      <li>
+                        <button class="filter__btn">Підкатегорія 1</button>
+                      </li>
+                      <li>
+                        <button class="filter__btn">Підкатегорія 1</button>
+                      </li>
+
+                    </ul>
+                  </div>
+                </div>
+                <div class="filter__item">
+                  <p class="filter__title">Категорія 2</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- filter -->
+
+            <div class="catalog__products">
+              <h2 class="catalog__subtitle">Підкатегорія 4</h2>
+              <div class="catalog__products-inner">
+                <article class="catalog__product">
+                  <div class="catalog__img ibg">
+                    <img loading="lazy" src="img/content/catalog-product.png" class="image" width="285" height="185"
+                      alt="Продукт">
+                  </div>
+                  <h3 class="catalog__product-title">
+                    Помпи для систем зворотного осмосу
+                  </h3>
+                  <span class="catalog__price">220</span>
+                  <a href="#" class="btn catalog__btn">Купити</a>
+                  <div class="catalog__specs">
+                    <div class="catalog__specs-item">
+                      <div class="catalog__specs-title">
+                        Бренд
+                      </div>
+                      <div class="catalog__specs-content">
+                        Назва
+                      </div>
+                    </div>
+                    <div class="catalog__specs-item">
+                      <div class="catalog__specs-title">
+                        Бренд
+                      </div>
+                      <div class="catalog__specs-content">
+                        Назва
+                      </div>
+                    </div>
+                    <div class="catalog__specs-item">
+                      <div class="catalog__specs-title">
+                        Бренд
+                      </div>
+                      <div class="catalog__specs-content">
+                        Назва
+                      </div>
+                    </div>
+                    <div class="catalog__specs-item">
+                      <div class="catalog__specs-title">
+                        Бренд
+                      </div>
+                      <div class="catalog__specs-content">
+                        Назва
+                      </div>
+                    </div>
+                    <div class="catalog__specs-item">
+                      <div class="catalog__specs-title">
+                        Бренд
+                      </div>
+                      <div class="catalog__specs-content">
+                        Назва
+                      </div>
+                    </div>
+                    <div class="catalog__specs-item">
+                      <div class="catalog__specs-title">
+                        Бренд
+                      </div>
+                      <div class="catalog__specs-content">
+                        Назва
+                      </div>
+                    </div>
+                  </div>
+                </article>
+                <article class="catalog__product">
+                  <div class="catalog__img ibg">
+                    <img loading="lazy" src="img/content/catalog-product.png" class="image" width="285" height="185"
+                      alt="Продукт">
+                  </div>
+                  <h3 class="catalog__product-title">
+                    Помпи для систем зворотного осмосу
+                  </h3>
+                  <span class="catalog__price">220</span>
+                  <a href="#" class="btn catalog__btn">Купити</a>
+                  <div class="catalog__specs">
+                    <div class="catalog__specs-item">
+                      <div class="catalog__specs-title">
+                        Бренд
+                      </div>
+                      <div class="catalog__specs-content">
+                        Назва
+                      </div>
+                    </div>
+                    <div class="catalog__specs-item">
+                      <div class="catalog__specs-title">
+                        Бренд
+                      </div>
+                      <div class="catalog__specs-content">
+                        Назва
+                      </div>
+                    </div>
+                    <div class="catalog__specs-item">
+                      <div class="catalog__specs-title">
+                        Бренд
+                      </div>
+                      <div class="catalog__specs-content">
+                        Назва
+                      </div>
+                    </div>
+                    <div class="catalog__specs-item">
+                      <div class="catalog__specs-title">
+                        Бренд
+                      </div>
+                      <div class="catalog__specs-content">
+                        Назва
+                      </div>
+                    </div>
+                    <div class="catalog__specs-item">
+                      <div class="catalog__specs-title">
+                        Бренд
+                      </div>
+                      <div class="catalog__specs-content">
+                        Назва
+                      </div>
+                    </div>
+                    <div class="catalog__specs-item">
+                      <div class="catalog__specs-title">
+                        Бренд
+                      </div>
+                      <div class="catalog__specs-content">
+                        Назва
+                      </div>
+                    </div>
+                  </div>
+                </article>
+                <article class="catalog__product">
+                  <div class="catalog__img ibg">
+                    <img loading="lazy" src="img/content/catalog-product.png" class="image" width="285" height="185"
+                      alt="Продукт">
+                  </div>
+                  <h3 class="catalog__product-title">
+                    Помпи для систем зворотного осмосу
+                  </h3>
+                  <span class="catalog__price">220</span>
+                  <a href="#" class="btn catalog__btn">Купити</a>
+                  <div class="catalog__specs">
+                    <div class="catalog__specs-item">
+                      <div class="catalog__specs-title">
+                        Бренд
+                      </div>
+                      <div class="catalog__specs-content">
+                        Назва
+                      </div>
+                    </div>
+                    <div class="catalog__specs-item">
+                      <div class="catalog__specs-title">
+                        Бренд
+                      </div>
+                      <div class="catalog__specs-content">
+                        Назва
+                      </div>
+                    </div>
+                    <div class="catalog__specs-item">
+                      <div class="catalog__specs-title">
+                        Бренд
+                      </div>
+                      <div class="catalog__specs-content">
+                        Назва
+                      </div>
+                    </div>
+                    <div class="catalog__specs-item">
+                      <div class="catalog__specs-title">
+                        Бренд
+                      </div>
+                      <div class="catalog__specs-content">
+                        Назва
+                      </div>
+                    </div>
+                    <div class="catalog__specs-item">
+                      <div class="catalog__specs-title">
+                        Бренд
+                      </div>
+                      <div class="catalog__specs-content">
+                        Назва
+                      </div>
+                    </div>
+                    <div class="catalog__specs-item">
+                      <div class="catalog__specs-title">
+                        Бренд
+                      </div>
+                      <div class="catalog__specs-content">
+                        Назва
+                      </div>
+                    </div>
+                  </div>
+                </article>
+                <article class="catalog__product">
+                  <div class="catalog__img ibg">
+                    <img loading="lazy" src="img/content/catalog-product.png" class="image" width="285" height="185"
+                      alt="Продукт">
+                  </div>
+                  <h3 class="catalog__product-title">
+                    Помпи для систем зворотного осмосу
+                  </h3>
+                  <span class="catalog__price">220</span>
+                  <a href="#" class="btn catalog__btn">Купити</a>
+                  <div class="catalog__specs">
+                    <div class="catalog__specs-item">
+                      <div class="catalog__specs-title">
+                        Бренд
+                      </div>
+                      <div class="catalog__specs-content">
+                        Назва
+                      </div>
+                    </div>
+                    <div class="catalog__specs-item">
+                      <div class="catalog__specs-title">
+                        Бренд
+                      </div>
+                      <div class="catalog__specs-content">
+                        Назва
+                      </div>
+                    </div>
+                    <div class="catalog__specs-item">
+                      <div class="catalog__specs-title">
+                        Бренд
+                      </div>
+                      <div class="catalog__specs-content">
+                        Назва
+                      </div>
+                    </div>
+                    <div class="catalog__specs-item">
+                      <div class="catalog__specs-title">
+                        Бренд
+                      </div>
+                      <div class="catalog__specs-content">
+                        Назва
+                      </div>
+                    </div>
+                    <div class="catalog__specs-item">
+                      <div class="catalog__specs-title">
+                        Бренд
+                      </div>
+                      <div class="catalog__specs-content">
+                        Назва
+                      </div>
+                    </div>
+                    <div class="catalog__specs-item">
+                      <div class="catalog__specs-title">
+                        Бренд
+                      </div>
+                      <div class="catalog__specs-content">
+                        Назва
+                      </div>
+                    </div>
+                  </div>
+                </article>
+                <article class="catalog__product">
+                  <div class="catalog__img ibg">
+                    <img loading="lazy" src="img/content/catalog-product.png" class="image" width="285" height="185"
+                      alt="Продукт">
+                  </div>
+                  <h3 class="catalog__product-title">
+                    Помпи для систем зворотного осмосу
+                  </h3>
+                  <span class="catalog__price">220</span>
+                  <a href="#" class="btn catalog__btn">Купити</a>
+                  <div class="catalog__specs">
+                    <div class="catalog__specs-item">
+                      <div class="catalog__specs-title">
+                        Бренд
+                      </div>
+                      <div class="catalog__specs-content">
+                        Назва
+                      </div>
+                    </div>
+                    <div class="catalog__specs-item">
+                      <div class="catalog__specs-title">
+                        Бренд
+                      </div>
+                      <div class="catalog__specs-content">
+                        Назва
+                      </div>
+                    </div>
+                    <div class="catalog__specs-item">
+                      <div class="catalog__specs-title">
+                        Бренд
+                      </div>
+                      <div class="catalog__specs-content">
+                        Назва
+                      </div>
+                    </div>
+                    <div class="catalog__specs-item">
+                      <div class="catalog__specs-title">
+                        Бренд
+                      </div>
+                      <div class="catalog__specs-content">
+                        Назва
+                      </div>
+                    </div>
+                    <div class="catalog__specs-item">
+                      <div class="catalog__specs-title">
+                        Бренд
+                      </div>
+                      <div class="catalog__specs-content">
+                        Назва
+                      </div>
+                    </div>
+                    <div class="catalog__specs-item">
+                      <div class="catalog__specs-title">
+                        Бренд
+                      </div>
+                      <div class="catalog__specs-content">
+                        Назва
+                      </div>
+                    </div>
+                  </div>
+                </article>
+                <article class="catalog__product">
+                  <div class="catalog__img ibg">
+                    <img loading="lazy" src="img/content/catalog-product.png" class="image" width="285" height="185"
+                      alt="Продукт">
+                  </div>
+                  <h3 class="catalog__product-title">
+                    Помпи для систем зворотного осмосу
+                  </h3>
+                  <span class="catalog__price">220</span>
+                  <a href="#" class="btn catalog__btn">Купити</a>
+                  <div class="catalog__specs">
+                    <div class="catalog__specs-item">
+                      <div class="catalog__specs-title">
+                        Бренд
+                      </div>
+                      <div class="catalog__specs-content">
+                        Назва
+                      </div>
+                    </div>
+                  </div>
+                </article>
+
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- catalog -->
+
+      <!-- questions  form -->
+
+      <section class="questions contact-section">
+        <div class="container">
+          <div class="contact-section__item questions__item">
+            <div class="contact-section__info questions__info">
+              <h2>Виникли
+                запитання?</h2>
+              <p>Наш консультант зв’яжеться з Вами і допоможе підібрати рішення для будь-якого завдання</p>
+            </div>
+            <form action="#" class="form questions__form contact-section__form">
+              <div class="form__inputs">
+                <label class="form__label">
+                  <input type="text" class="input-reset form__input form__input-phone" placeholder="Ваше ім’я"
+                    name="Ім'я користувача">
+                </label>
+                <label class="form__label">
+                  <input type="tel" class="input-reset form__input form__input-phone" placeholder="Ваш телефон"
+                    name="Телефон користувача">
+                </label>
+                <button class="btn form__btn" type="submit">Хочу консультацію</button>
+
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+
+      <!-- questions  form -->
+
+      <section class="reviews">
+        <div class="container">
+          <div class="reviews__inner">
+            <div class="section-heading reviews__heading">
+              <h2>Відгуки</h2>
+              <p>
+                Що говорять про нас клієнти
+              </p>
+            </div>
+            <div class="splide reviews__slider">
+              <div class="splide__track ">
+                <ul class="splide__list ">
+                  <li class="splide__slide reviews__slide">
+                    <div class="reviews__item">
+                      <p class="reviews__name">
+                        Василь Михайленко
+                      </p>
+                      <p class="reviews__text">
+                        Давно користуюся послугами компанії, тільки
+                        тут замовляю змінні картриджі, якістю
+                        задоволений.
+                        Давно користуюся послугами компанії, тільки
+                        тут замовляю змінні картриджі, якістю
+                        задоволений.
+                      </p>
+                      <span class="reviews__date">
+                        12.05.2022
+                      </span>
+                    </div>
+                  </li>
+                  <li class="splide__slide reviews__slide">
+                    <div class="reviews__item">
+                      <p class="reviews__name">
+                        Василь Михайленко
+                      </p>
+                      <p class="reviews__text">
+                        Давно користуюся послугами компанії, тільки
+                        тут замовляю змінні картриджі, якістю
+                        задоволений.
+                        Давно користуюся послугами компанії, тільки
+                        тут замовляю змінні картриджі, якістю
+                        задоволений.
+                      </p>
+                      <span class="reviews__date">
+                        12.05.2022
+                      </span>
+                    </div>
+                  </li>
+                  <li class="splide__slide reviews__slide">
+                    <div class="reviews__item">
+                      <p class="reviews__name">
+                        Василь Михайленко
+                      </p>
+                      <p class="reviews__text">
+                        Давно користуюся послугами компанії, тільки
+                        тут замовляю змінні картриджі, якістю
+                        задоволений.
+                        Давно користуюся послугами компанії, тільки
+                        тут замовляю змінні картриджі, якістю
+                        задоволений.
+                      </p>
+                      <span class="reviews__date">
+                        12.05.2022
+                      </span>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <button class="btn reviews__btn" data-open-reviews>Залишити відклик</button>
+          </div>
+        </div>
+      </section>
+      <div class="modal" data-modal-reviews>
+  <div class="modal__wrapper">
+    <div class="modal__item">
+      <button class="modal__close" data-modal-close></button>
+      <p>Залишити відгук</p>
+      <form action="#" class="modal__form">
+        <div class="modal__inputs">
+          <label class="modal__label">
+            <input type="text" class="modal__input" placeholder="Ваше ім’я">
+          </label>
+          <label class="modal__label">
+            <input type="text" class="modal__input" placeholder="Ваше ім’я">
+          </label>
+          <label class="modal__label">
+            <input type="text" class="modal__input" placeholder="Ваше ім’я">
+          </label>
+          <label class="modal__label">
+            <textarea class="modal__textarea" placeholder="Ваш коментар"></textarea>
+          </label>
+        </div>
+        <button type="submit" class="btn modal__btn">Надіслати відгук</button>
+      </form>
+    </div>
+  </div>
+</div>
+
+    </main>
     <footer class="footer">
   <div class="container">
     <div class="footer__inner">
