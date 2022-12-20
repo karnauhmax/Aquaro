@@ -1,0 +1,360 @@
+.product {
+  @include adaptiveValue(padding-top, 60, 20, 1920, 360, 1);
+
+  &__border-link {
+    @include adaptiveValue(margin-bottom, 40, 20, 1920, 360, 1);
+  }
+
+  //product item styles
+  &__item {
+    @include adaptiveValue(padding-top, 30, 10, 1920, 992, 1);
+    @include adaptiveValue(padding-bottom, 60, 30, 1920, 992, 1);
+    @include adaptiveValue(padding-right, 30, 10, 1920, 992, 1);
+    @include adaptiveValue(padding-left, 30, 10, 1920, 992, 1);
+    box-shadow: var(--boxshadow-primary);
+    border-radius: var(--radius-primary);
+  }
+
+  //product item inner layout
+  &__inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-auto-rows: min-content;
+    @include adaptiveValue(column-gap, 40, 20, 1920, 992, 1);
+    @include adaptiveValue(row-gap, 40, 20, 1920, 360, 1);
+
+    @media screen and (max-width: $md) {
+      grid-template-columns: 100%;
+    }
+  }
+
+  //product item image using padding hack
+  &__img {
+    width: 100%;
+    padding-bottom: 83%;
+
+    @media screen and (max-width: $md) {
+      padding-bottom: 65%;
+    }
+  }
+
+  //product sliders wrapper
+  &__slider {
+    display: flex;
+    align-items: center;
+    align-self: start;
+    column-gap: rem(50);
+    grid-row: 1/5;
+
+    @media screen and (max-width: $md) {
+      flex-direction: column-reverse;
+      grid-row: unset;
+    }
+  }
+
+  //product big slider
+  &__main-slider {
+    width: 100%;
+    flex: 0 1 80%;
+  }
+
+  //product thumbnail slider
+  &__thumbnail-slider {
+
+    .splide__track--nav>.splide__list>.splide__slide {
+      border: 1px solid transparent;
+      transition: .2s border ease;
+
+      &.is-active {
+        border: 1px solid var(--text-secondary);
+      }
+    }
+
+    .product__img {
+      height: 100%;
+    }
+  }
+
+  //product info styles, including title, state and code
+  &__info {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: rem(30);
+
+    @media screen and (max-width: $md) {
+      grid-row: 1/2;
+    }
+  }
+
+  //product title
+  &__title {
+    grid-column: span 2;
+    @include adaptiveValue(font-size, 36, 18, 1920, 360, 1);
+    color: var(--black);
+    max-width: rem(605);
+  }
+
+  //product code
+  &__code {
+    font-size: rem(16);
+    justify-self: end;
+  }
+
+  //product state base styles. other are depended by state
+  &__state {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    min-width: rem(150);
+    max-width: rem(200);
+    font-size: rem(16);
+    font-weight: 600;
+    padding: rem(10);
+    border-radius: var(--radius-secondary);
+  }
+
+  &__btn {
+    min-width: 210px;
+
+    @media screen and (max-width: $xsm) {
+      min-width: unset;
+      width: 100%;
+      max-width: 100%;
+    }
+  }
+
+  //product price wrapper, including price span and sale for amount of items
+  &__price {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+    gap: rem(30);
+
+    //price span
+    .price {
+      font-size: rem(24);
+      font-weight: 700;
+      justify-self: start;
+      display: inline-flex;
+      flex-wrap: wrap;
+      column-gap: rem(5);
+      justify-content: center;
+
+      //adding currency pseudo element
+      &::after {
+        content: " грн";
+      }
+    }
+
+    @media screen and (max-width: $xsm) {
+      grid-template-columns: 1fr;
+      row-gap: rem(10);
+    }
+
+
+  }
+
+  //product quantity including counter and btn
+  &__quantity {
+    display: grid;
+    grid-template-columns: rem(100) min-content;
+    align-items: center;
+    gap: rem(20);
+
+    .counter {
+      height: 60px;
+      box-shadow: 0px 4px 17px rgba(33, 185, 229, 0.3);
+    }
+
+    @media screen and (max-width: $xsm) {
+      grid-template-columns: rem(100) 1fr;
+    }
+  }
+
+  //product description
+  &__descr {
+    @include adaptiveValue(font-size, 18, 14, 1920, 360, 1);
+  }
+
+  //details block
+  &__details {
+    display: grid;
+    row-gap: rem(30);
+    grid-column: span 2;
+    grid-template-columns: 100%;
+
+    //details labels
+    &-labels {
+      display: grid;
+      grid-template-columns: repeat(6, auto);
+      justify-items: start;
+      align-items: center;
+      column-gap: rem(30);
+      max-width: rem(974);
+      padding-bottom: rem(20);
+      overflow-x: scroll;
+
+    }
+
+    @media screen and (max-width: $md) {
+      grid-column: span 1;
+      row-gap: rem(10);
+    }
+  }
+
+  //details label style
+  &__label {
+    font-size: rem(18);
+    color: var(--black);
+    white-space: nowrap;
+
+    &:not(:last-child) {
+      border-right: 1px solid var(--bg-grey);
+      padding-right: 30px;
+    }
+
+    p {
+      justify-self: start;
+    }
+
+  }
+
+  &__specs {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    @include adaptiveValue(column-gap, 130, 40, 1920, 992, 1);
+
+    @media screen and (max-width: $md) {
+      grid-template-columns: 1fr;
+      row-gap: rem(10);
+    }
+  }
+
+  //table styles
+  &__table {
+    border-collapse: collapse;
+    width: 100%;
+
+    tbody {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      row-gap: rem(10);
+    }
+
+    tr {
+      display: grid;
+      justify-content: space-between;
+      grid-template-columns: 1fr;
+      justify-items: start;
+      border-bottom: 1px solid var(--bg-grey);
+      padding-bottom: rem(10);
+
+      &:nth-child(odd) {
+        padding-right: 30px;
+      }
+    }
+
+    th {
+      font-size: rem(16);
+      color: var(--text);
+      font-weight: 400;
+      text-align: left;
+    }
+  }
+
+  &__descr {
+    max-width: rem(800);
+
+    &-item {
+      display: flex;
+      column-gap: rem(20);
+      border: 1px solid var(--bg-grey);
+      border-bottom: none;
+
+      @media screen and (max-width: $xsm) {
+        flex-direction: column;
+      }
+
+      &:last-of-type {
+        border-bottom: 1px solid var(--bg-grey);
+      }
+    }
+
+    &-info {
+      flex: 0 1 70%;
+      @include adaptiveValue(padding-top, 30, 10, 1920, 360, 1);
+      @include adaptiveValue(padding-right, 30, 10, 1920, 360, 1);
+      @include adaptiveValue(padding-left, 30, 10, 1920, 360, 1);
+      @include adaptiveValue(padding-bottom, 30, 10, 1920, 360, 1);
+
+      p {
+        max-width: rem(450);
+      }
+    }
+
+    &-img {
+      padding-bottom: 20%;
+      flex: 0 1 30%;
+      border-left: 1px solid var(--bg-grey);
+
+      @media screen and (max-width: $xsm) {
+        border-left: none;
+        border-top: 1px solid var(--bg-grey);
+        padding-bottom: 40%;
+      }
+
+      img {
+        object-fit: contain;
+      }
+    }
+  }
+}
+
+
+
+//using certain styles that depends on item stat
+
+//if item is in stock
+[data-availability="inStock"] {
+  .product__state {
+    color: var(--text-secondary);
+    background-color: var(--primary);
+    box-shadow: 0px 2px 10px rgba(95, 220, 255, 0.658);
+    border: 1px solid var(--text-secondary);
+  }
+}
+
+
+//if item is out of stock
+[data-availability="outOfStock"] {
+
+  .product__btn,
+  .counter {
+    opacity: 0.4;
+    pointer-events: none;
+  }
+
+  .product__state {
+    box-shadow: 0px 2px 10px rgba(241, 29, 29, 0.479);
+    border: 1px solid rgba(241, 29, 29, 0.479);
+    background-color: rgb(247, 225, 225);
+  }
+}
+
+
+//if item is currently waiting
+[data-availability="waitingForStock"] {
+
+  .product__btn,
+  .counter {
+    opacity: 0.4;
+    pointer-events: none;
+  }
+
+  .product__state {
+    box-shadow: 0px 2px 10px rgba(255, 202, 103, 0.479);
+    border: 1px solid rgba(250, 170, 49, 0.479);
+    background-color: rgba(247, 219, 169, 0.479);
+  }
+}

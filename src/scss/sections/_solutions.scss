@@ -1,10 +1,10 @@
 .solutions {
-
   &__heading {
     max-width: rem(897);
     @include adaptiveValue(margin-bottom, 34, 19, 1920, 360, 1);
   }
 
+  //solutions layout
   &__inner {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
@@ -23,6 +23,7 @@
     }
   }
 
+  //solutions info styling
   &__info {
     padding: 10px 20px 10px 0;
     align-self: center;
@@ -43,13 +44,14 @@
     }
   }
 
+  //solutions item styling
   &__item {
     display: grid;
     grid-template-columns: auto 1fr;
     min-height: rem(280);
     grid-column: span 4;
     column-gap: rem(20);
-    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.06);
+    box-shadow: var(--boxshadow-primary);
     border-radius: var(--radius-primary);
 
     img {
@@ -90,27 +92,16 @@
       grid-template-columns: 1fr;
     }
 
-
-    &-watermachine {}
-
-    &-installation {}
-
-
+    //styling certain elements by modificators
     &-house {
       background-color: var(--bg-light);
-
     }
-
-    &-hotel {}
 
     &-hospital {
       background-color: var(--bg-grey);
 
-
       @media screen and (max-width: $md) {}
-
     }
-
 
     &-energetics {
       display: grid;

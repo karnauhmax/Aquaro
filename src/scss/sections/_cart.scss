@@ -91,7 +91,7 @@
     @include adaptiveValue(column-gap, 122, 30, 1920, 576, 1);
     align-items: center;
     justify-items: center;
-    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.06);
+    box-shadow: var(--boxshadow-primary);
     border-radius: var(--radius-primary);
 
     @media screen and (max-width: $md) {
@@ -162,7 +162,6 @@
       }
 
       @media screen and (max-width: $xsm) {
-        grid-row: unset;
         grid-column: span 2;
         justify-self: end;
       }
@@ -194,42 +193,6 @@
       }
     }
 
-    &-quantity_inner {
-      display: flex;
-      align-items: center;
-      gap: rem(5);
-      max-width: 110px;
-      height: 40px;
-      border-radius: 4px;
-      border: 1px solid var(--text-secondary);
-      padding: rem(10);
-
-      input {
-        width: 100%;
-        text-align: center;
-        color: var(--text-secondary);
-        appearance: none;
-
-        &::placeholder {
-          color: var(--text-secondary);
-        }
-      }
-
-      .plus,
-      .minus {
-        width: 20px;
-        height: 20px;
-        display: inline-flex;
-        align-items: center;
-
-        &.active {
-          path {
-            fill: #21B9E5;
-          }
-        }
-      }
-
-    }
 
     &-price,
     &-summary {
@@ -425,6 +388,7 @@
       padding-left: rem(20);
       padding-bottom: rem(20);
       @include adaptiveValue(font-size, 18, 16, 1920, 360, 1);
+      cursor: pointer;
 
       &:not(:last-child) {
         border-bottom: 1px solid #F7F8F9;

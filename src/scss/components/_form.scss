@@ -3,6 +3,7 @@
   background-color: var(--primary-light);
   border-radius: var(--radius-primary);
 
+  //form title styling
   &__title {
     @include adaptiveValue(font-size, 36, 20, 1920, 360, 1);
     text-align: center;
@@ -12,12 +13,14 @@
     text-transform: uppercase;
   }
 
+  //inputs wrapper styling
   &__inputs {
     display: grid;
     gap: rem(10);
     width: 100%;
   }
 
+  //inputs and textareas styling
   input,
   textarea {
     width: 100%;
@@ -58,6 +61,7 @@
     }
   }
 
+  //form button styling
   &__btn {
     background-color: var(--white);
     min-width: 200px;

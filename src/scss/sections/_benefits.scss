@@ -1,5 +1,4 @@
 .benefits {
-
   &__heading {
     @include adaptiveValue(margin-bottom, 72, 27, 1920, 360, 1);
 
@@ -8,6 +7,7 @@
     }
   }
 
+  //benefits layout styling
   &__inner {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
@@ -27,6 +27,7 @@
     }
   }
 
+  //one benefits item styling
   &__item {
     display: grid;
     grid-auto-flow: row;
@@ -59,9 +60,6 @@
       align-items: center;
     }
 
-
-
-
     h3 {
       @include adaptiveValue(font-size, 36, 18, 1920, 360, 1);
       font-weight: 900;
@@ -92,9 +90,7 @@
 
       @media screen and (max-width: $md) {
         grid-column: unset;
-
       }
-
 
       @media screen and (max-width: $xsm) {
         grid-column: span 2;
@@ -142,7 +138,7 @@
   }
 
 
-
+  //benefits image styling
   &__img {
     grid-column: 1/7;
     grid-row: span 3;

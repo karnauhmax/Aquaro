@@ -7,18 +7,20 @@ if (menu) {
   document.addEventListener("click", (e) => {
     const self = e.target;
     const subMenu = self.parentElement.querySelector(".sub-menu");
-    const arrow = self.parentElement.querySelector(".menu__arrow");
     if (self.closest(".menu__item")) {
       e.preventDefault();
+      const item = self.closest(".menu__item");
+
       if (subMenu) {
-        subMenu.classList.toggle("active");
-        arrow.classList.toggle("active");
+        item.classList.toggle("sub-menu__active");
       }
     } else {
-      if (subMenu) {
-        console.log(self);
-        subMenu.classList.remove("active");
-        arrow.classList.remove("active");
+      if (document.querySelector(".sub-menu__active")) {
+        const subMenusCollection =
+          document.querySelectorAll(".sub-menu__active");
+        subMenusCollection.forEach((item) => {
+          item.classList.remove("sub-menu__active");
+        });
       }
     }
   });
@@ -71,4 +73,13 @@ if (header) {
   }, {});
 
   menuObserver.observe(header);
+}
+
+//cutting cart amount
+
+let amount = document.querySelector(".cart__amount");
+
+if (amount.textContent.length > 2) {
+  const cutted = `${amount.textContent.substring(0, 2)}+`;
+  amount.innerText = cutted;
 }

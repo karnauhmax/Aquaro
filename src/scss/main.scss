@@ -1,12 +1,12 @@
-// базовые подключения
-@import "vendor";
+//importing  base styles
+// @import "vendor";
 @import "vars";
 @import "mixins";
 @import "fonts";
 @import "settings";
 
 
-// подключения компонентов страницы
+// importing components styles
 @import "./components/header";
 @import "./components/footer";
 @import "./components/form";
@@ -16,10 +16,11 @@
 @import "./components/contact-section";
 @import "./components/filter";
 @import "./components/breadcrumbs";
+@import "./components/counter";
 
 
 
-//подключения секций страницы
+//importing sections styles
 @import "./sections/offer";
 @import "./sections/catalog-preview";
 @import "./sections/services";
@@ -29,3 +30,4 @@
 @import "./sections/individual";
 @import "./sections/catalog";
 @import "./sections/cart";
+@import "./sections/product";

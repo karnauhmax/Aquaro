@@ -7,20 +7,31 @@ class Modal {
   }
 
   renderModal() {
-    console.log();
+    const lockMarginValue =
+      window.innerWidth -
+      document.querySelector(".site-container").offsetWidth +
+      "px";
+
     const openModal = () => {
       this.modalContainer.classList.add("modal__active");
       document.body.classList.add("locked");
-      document.body.style.maxWidth = window.innerWidth - 17 + "px";
-      document.querySelector(".header").style.maxWidth =
-        window.innerWidth - 17 + "px";
+      pageMarginAdd();
     };
 
     const closeModal = () => {
       this.modalContainer.classList.remove("modal__active");
       document.body.classList.remove("locked");
-      document.body.style.maxWidth = null;
-      document.querySelector(".header").style.maxWidth = null;
+      pageMarginRemove();
+    };
+
+    const pageMarginAdd = () => {
+      document.body.style.marginRight = lockMarginValue;
+      document.querySelector("header").style.paddingRight = lockMarginValue;
+    };
+
+    const pageMarginRemove = () => {
+      document.body.style.marginRight = null;
+      document.querySelector("header").style.paddingRight = null;
     };
 
     this.modalOpen.forEach((e) => {
@@ -33,6 +44,15 @@ class Modal {
 
     this.modalContainer.addEventListener("click", (e) => {
       if (e.target == this.modalWrapper) {
+        closeModal();
+      }
+    });
+
+    document.addEventListener("keydown", (e) => {
+      if (
+        e.code == "Escape" &&
+        this.modalContainer.classList.contains("modal__active")
+      ) {
         closeModal();
       }
     });

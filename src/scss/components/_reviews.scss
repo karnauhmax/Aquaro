@@ -1,6 +1,6 @@
 .reviews {
 
-
+  // sliders adaptive margin
   &__slider {
     @include adaptiveValue(margin-bottom, 42, 20, 1920, 360, 1);
   }
@@ -15,6 +15,7 @@
     @include adaptiveValue(margin-bottom, 60, 30, 1920, 360, 1);
   }
 
+  //styling reviews one item
   &__item {
     display: grid;
     grid-auto-flow: row;
@@ -24,7 +25,7 @@
     @include adaptiveValue(padding-bottom, 30, 20, 1920, 360, 1);
     @include adaptiveValue(padding-right, 30, 20, 1920, 360, 1);
     @include adaptiveValue(padding-left, 30, 20, 1920, 360, 1);
-    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.06);
+    box-shadow: var(--boxshadow-primary);
     border-radius: var(--radius-primary);
     min-height: rem(205);
     height: 100%;
@@ -57,6 +58,7 @@
     }
   }
 
+  //adding paddings to li element, for avoiding box shadow cutting
   &__slide {
     padding: 5px 5px 15px 5px;
   }

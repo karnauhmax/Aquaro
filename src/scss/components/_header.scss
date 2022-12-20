@@ -1,7 +1,7 @@
 .header {
   @include adaptiveValue(padding-top, 30, 12, 1920, 768, 1);
   @include adaptiveValue(padding-bottom, 30, 12, 1920, 768, 1);
-  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.06);
+  box-shadow: var(--boxshadow-primary);
   border-radius: 10px;
   position: absolute;
   top: 0;
@@ -13,9 +13,9 @@
   &.fixed {
     position: fixed;
     animation: headerFixed .3s linear;
-
   }
 
+  //styling header inner layout
   &__inner {
     display: grid;
     align-items: center;
@@ -42,6 +42,7 @@
     }
   }
 
+  //phone and viber/tg block styling
   &__contact {
     display: flex;
     align-items: center;
@@ -88,6 +89,7 @@
     }
   }
 
+  //burger menu styling
   &__burger {
     width: rem(22);
     height: rem(22);
@@ -103,9 +105,27 @@
     }
   }
 
+  //cart incon
   &__cart {
     width: 30px;
     height: 30px;
+    position: relative;
+
+    &.active {
+      path {
+        fill: var(--text-secondary);
+      }
+    }
+
+    & .amount {
+      position: absolute;
+      color: var(--white);
+      font-size: rem(10);
+      z-index: 3;
+      top: em(13);
+      left: 60%;
+      transform: translateX(-60%);
+    }
 
     @media screen and (max-width: $sm) {
       display: none;
@@ -118,6 +138,7 @@
   }
 }
 
+//menu
 .menu {
   justify-self: center;
 
@@ -153,7 +174,7 @@
       height: rem(49);
       z-index: 5;
       position: fixed;
-      box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.06);
+      box-shadow: var(--boxshadow-primary);
       background-color: var(--white);
     }
   }
@@ -195,6 +216,16 @@
         color: var(--text-secondary);
       }
     }
+
+    &.sub-menu__active {
+      .sub-menu {
+        display: block;
+      }
+
+      .menu__arrow {
+        transform: rotate(45deg);
+      }
+    }
   }
 
   &__link {
@@ -222,22 +253,12 @@
     @media screen and (max-width: $sm) {
       justify-self: end;
     }
-
-    &.active {
-      transform: rotate(45deg);
-    }
   }
 
 
 }
 
-.placeholder {
-  width: 30px;
-  height: 30px;
-  background-color: grey;
-  border-radius: 50%;
-}
-
+//sub menu styling
 .sub-menu {
   position: absolute;
   left: 0;
@@ -256,17 +277,13 @@
     min-width: unset;
   }
 
-  &.active {
-    display: block;
-  }
-
   &__list {
     width: 100%;
     display: grid;
     grid-auto-flow: row;
     row-gap: 10px;
     background-color: var(--white);
-    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.06);
+    box-shadow: var(--boxshadow-primary);
     border-radius: var(--radius-primary);
     padding: 20px;
   }

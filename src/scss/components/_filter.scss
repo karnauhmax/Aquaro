@@ -1,8 +1,9 @@
 .filter {
   border-radius: var(--radius-primary);
   background-color: var(--white);
-  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.06);
+  box-shadow: var(--boxshadow-primary);
 
+  //filter wrapper styling
   &__content {
     display: flex;
     flex-direction: column;
@@ -10,6 +11,7 @@
     padding: 0 rem(20);
   }
 
+  //one filter item styling
   &__item {
     display: grid;
     grid-template-columns: 1fr min-content;
@@ -24,6 +26,7 @@
     }
   }
 
+  //filter list stylng
   &__list {
     padding-left: rem(15);
     display: flex;
@@ -60,6 +63,7 @@
     background-position: center center;
   }
 
+  //filter title styling
   &__title {
     font-size: rem(18);
     line-height: 135%;
@@ -72,6 +76,7 @@
     }
   }
 
+  //filter heading styling
   &__heading {
     padding: rem(10);
     background-color: var(--text-secondary);

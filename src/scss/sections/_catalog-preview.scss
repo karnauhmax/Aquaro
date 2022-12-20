@@ -81,7 +81,7 @@
   &__item {
     border-radius: var(--radius-primary);
     display: grid;
-    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.06);
+    box-shadow: var(--boxshadow-primary);
     transition: box-shadow .5s ease;
 
     @media screen and (max-width: $sm) {

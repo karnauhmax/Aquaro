@@ -1,0 +1,706 @@
+<!DOCTYPE html>
+<html lang="uk" class="page">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="theme-color" content="#111111">
+  <title>Marshall</title>
+  <link rel="stylesheet" href="css/vendor.css">
+  <link rel="stylesheet" href="css/main.css">
+
+  <script defer src="js/main.js"></script>
+</head>
+
+<body class="page__body">
+  <div class="site-container">
+    <header class="header">
+  <div class="container">
+    <div class="header__inner">
+      <a href="index.html" class="logo">
+        <picture><source srcset="img/logos/logo.webp" type="image/webp"><img loading="lazy" src="img/logos/logo.png" class="image" width="197" height="50" alt="Aquaro"></picture>
+      </a>
+      <nav class="menu" data-menu>
+        <ul class="menu__list">
+          <li class="menu__item">
+            <a href="#" class="menu__link">Про компанію</a>
+          </li>
+          <li class="menu__item">
+            <a href="#" class="menu__link">Каталог</a>
+            <span class="menu__arrow arrow"></span>
+            <div class="sub-menu">
+              <ul class="sub-menu__list">
+                <li class="sub-menu__item">
+                  <a href="#" class="sub-menu__link" data-content="Таблетована сіль для пом’якшувачів">Таблетована сіль
+                    для пом’якшувачів</a>
+                </li>
+                <li class="sub-menu__item">
+                  <a href="#" class="sub-menu__link" data-content="Змінні картриджі">Змінні картриджі</a>
+                </li>
+                <li class="sub-menu__item">
+                  <a href="#" class="sub-menu__link" data-content="Зворотньосмотичні мембрани">Зворотньосмотичні
+                    мембрани</a>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li class="menu__item">
+            <a href="#" class="menu__link" data-goto=".solutions">Рішення</a>
+          </li>
+          <li class="menu__item">
+            <a href="#servicesSection" class="menu__link" data-goto=".services">Послуги</a>
+          </li>
+          <li class="menu__item">
+            <a href="#" class="menu__link" data-goto=".footer">Контакти</a>
+          </li>
+        </ul>
+      </nav>
+      <div class="header__contact">
+        <a href="tel:380675776499" class="header__contact-link header__contact-phone">(067) 577-64-99</a>
+        <a href="#" class="header__contact-link header__contact-social">
+          <img loading="lazy" src="img/svg/viber.svg" class="image" width="30" height="30" alt="Viber">
+        </a>
+        <a href="#" class="header__contact-link  header__contact-social">
+          <img loading="lazy" src="img/svg/tg.svg" class="image" width="30" height="30" alt="Telegram">
+        </a>
+      </div>
+      <a href="cart.html" class="header__cart active">
+        <svg width="30" height="30" viewBox="0 0 26 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M25.7767 4.198C25.5851 3.94947 25.2843 3.78379 24.9558 3.78379H6.12953L5.39066 0.800869C5.28129 0.331361 4.8707 0 4.37825 0H1.03987C0.465135 0 0 0.469508 0 1.04959C0 1.62968 0.465159 2.09919 1.03987 2.09919H3.5846L7.79872 19.4443C7.90809 19.9138 8.31868 20.2452 8.81113 20.2452H20.8238C21.3985 20.2452 21.8637 19.7757 21.8637 19.1956C21.8637 18.6155 21.3985 18.146 20.8238 18.146H9.60468L9.00267 15.6878H22.4656C22.9308 15.6878 23.3414 15.3565 23.478 14.9145L25.9682 5.08191C26.0505 4.77828 25.9684 4.4467 25.7767 4.19818V4.198Z"
+            fill="#2F4085" />
+          <path
+            d="M12.4233 22.7861C12.4233 23.7165 11.676 24.4707 10.7541 24.4707C9.83236 24.4707 9.08508 23.7165 9.08508 22.7861C9.08508 21.8556 9.83236 21.1013 10.7541 21.1013C11.676 21.1013 12.4233 21.8556 12.4233 22.7861Z"
+            fill="#2F4085" />
+          <path
+            d="M21.0428 22.7861C21.0428 23.7165 20.2956 24.4707 19.3737 24.4707C18.4517 24.4707 17.7045 23.7165 17.7045 22.7861C17.7045 21.8556 18.4517 21.1013 19.3737 21.1013C20.2956 21.1013 21.0428 21.8556 21.0428 22.7861Z"
+            fill="#2F4085" />
+        </svg>
+        <p class="amount cart__amount">1</p>
+      </a>
+      <button class="header__burger" aria-label="Открыть меню" aria-expanded="false" data-burger>
+        <span class="burger__line"></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+    <main class="main">
+      <section class="product">
+        <div class="container">
+          <a href="catalog.html" class="border-link product__border-link">
+            Назад до каталогу
+          </a>
+          <div class="product__item" data-availability="inStock">
+            <div class="product__inner">
+              <div class="product__slider">
+                <div class="splide product__thumbnail-slider">
+                  <div class="splide__track">
+                    <ul class="splide__list">
+                      <li class="splide__slide">
+                        <div class="product__img ibg">
+                          <img loading="lazy" src="img/content/catalog-product.png" width="60" height="60"
+                            alt="Помпа для систем зворотнього осмосу">
+                        </div>
+                      </li>
+                      <li class="splide__slide">
+                        <div class="product__img ibg">
+                          <img loading="lazy" src="img/content/catalog-product.png" width="60" height="60"
+                            alt="Помпа для систем зворотнього осмосу">
+                        </div>
+                      </li>
+                      <li class="splide__slide">
+                        <div class="product__img ibg">
+                          <img loading="lazy" src="img/content/catalog-product.png" width="60" height="60"
+                            alt="Помпа для систем зворотнього осмосу">
+                        </div>
+                      </li>
+                      <li class="splide__slide">
+                        <div class="product__img ibg">
+                          <img loading="lazy" src="img/content/catalog-product.png" width="60" height="60"
+                            alt="Помпа для систем зворотнього осмосу">
+                        </div>
+                      </li>
+                      <li class="splide__slide">
+                        <div class="product__img ibg">
+                          <img loading="lazy" src="img/content/catalog-product.png" width="60" height="60"
+                            alt="Помпа для систем зворотнього осмосу">
+                        </div>
+                      </li>
+                      <li class="splide__slide">
+                        <div class="product__img ibg">
+                          <img loading="lazy" src="img/content/catalog-product.png" width="60" height="60"
+                            alt="Помпа для систем зворотнього осмосу">
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="splide product__main-slider">
+                  <div class="splide__track ">
+                    <ul class="splide__list">
+                      <li class="splide__slide">
+                        <div class="product__img ibg">
+                          <img loading="lazy" src="img/content/catalog-product.png" width="536" height="444"
+                            alt="Помпа для систем зворотнього осмосу">
+                        </div>
+                      </li>
+                      <li class="splide__slide">
+                        <div class="product__img ibg">
+                          <img loading="lazy" src="img/content/catalog-product.png" width="536" height="444"
+                            alt="Помпа для систем зворотнього осмосу">
+                        </div>
+                      </li>
+                      <li class="splide__slide">
+                        <div class="product__img ibg">
+                          <img loading="lazy" src="img/content/catalog-product.png" width="536" height="444"
+                            alt="Помпа для систем зворотнього осмосу">
+                        </div>
+                      </li>
+                      <li class="splide__slide">
+                        <div class="product__img ibg">
+                          <img loading="lazy" src="img/content/catalog-product.png" width="536" height="444"
+                            alt="Помпа для систем зворотнього осмосу">
+                        </div>
+                      </li>
+                      <li class="splide__slide">
+                        <div class="product__img ibg">
+                          <img loading="lazy" src="img/content/catalog-product.png" width="536" height="444"
+                            alt="Помпа для систем зворотнього осмосу">
+                        </div>
+                      </li>
+                      <li class="splide__slide">
+                        <div class="product__img ibg">
+                          <img loading="lazy" src="img/content/catalog-product.png" width="536" height="444"
+                            alt="Помпа для систем зворотнього осмосу">
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="product__info">
+                <h1 class="product__title">
+                  Помпа для систем зворотнього осмосу 8806
+                </h1>
+                <div class="product__state">
+                  Є в наявності
+                </div>
+                <div class="product__code">
+                  Код: 32253935
+                </div>
+              </div>
+              <div class="product__price">
+                <span class="price">1450</span>
+                <p>При покупці від 5 штук:
+                  1000 грн</p>
+              </div>
+              <div class="product__quantity">
+                <div class="counter">
+                  <button class="minus">
+                    <svg width="9" height="9" viewBox="0 0 6 3" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M5.84482 0.664928V2.58538H0.537997V0.664928H5.84482Z" fill="#D2CFCB" />
+                    </svg>
+                  </button>
+                  <input type="number" class="input-reset " value="1">
+                  <button class="plus active">
+                    <svg width="12" height="12" viewBox="0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M3.81499 8.77288V0.727427H5.84908V8.77288H3.81499ZM0.809304 5.7672V3.73311H8.85476V5.7672H0.809304Z"
+                        fill="#D2CFCB" />
+                    </svg>
+                  </button>
+                </div>
+                <button class="product__btn btn btn-primary">
+                  Купити
+                </button>
+              </div>
+              <p class="product__text">
+                Помпа призначена для використання в системах зворотного осмосу з метою підвищення тиску води. Помпа
+                працює абсолютно безшумно і споживає мало енергії
+              </p>
+              <div class="product__details">
+                <div class="product__details-labels">
+                  <div class="product__label">
+                    <button class="tabs__btn" data-tabs-path="descr">Опис</button>
+                  </div>
+                  <div class="product__label">
+                    <button class="tabs__btn tabs__btn-active" data-tabs-path="specs">Характеристики</button>
+                  </div>
+                  <div class="product__label">
+                    <button class="tabs__btn" data-tabs-path="reviews">Відгуки</button>
+                  </div>
+                  <div class="product__label">
+                    <button class="tabs__btn">Умови доставки</button>
+                  </div>
+                  <div class="product__label">
+                    <button class="tabs__btn" data-tabs-path="equipment">Комплектація</button>
+                  </div>
+                  <div class="product__label">
+                    <button class="tabs__btn">Обслуговування</button>
+                  </div>
+                </div>
+                <div class="product__details-content">
+                  <div class="product__details-item tabs__content tabs__content-active" data-tabs-target="specs">
+                    <div class="product__specs">
+                      <table class="product__table">
+                        <tbody>
+                          <tr>
+                            <th>Тип</th>
+                          </tr>
+                          <tr>
+                            <th>Помпа</th>
+                          </tr>
+                          <tr>
+                            <th>Функції</th>
+                          </tr>
+                          <tr>
+                            <th>Для підвищення тиску</th>
+                          </tr>
+                          <tr>
+                            <th>Додаткові характеристики</th>
+                          </tr>
+                          <tr>
+                            <th>0.8 л/хв</th>
+                          </tr>
+                          <tr>
+                            <th>Продуктивність</th>
+                          </tr>
+                          <tr>
+                            <th>0.05 м³/год</th>
+                          </tr>
+                          <tr>
+                            <th>Особливості</th>
+                          </tr>
+                          <tr>
+                            <th>Склад солі у води</th>
+                          </tr>
+                        </tbody>
+                      </table>
+                      <table class="product__table">
+                        <tbody>
+                          <tr>
+                            <th>Тип</th>
+                          </tr>
+                          <tr>
+                            <th>Помпа</th>
+                          </tr>
+                          <tr>
+                            <th>Функції</th>
+                          </tr>
+                          <tr>
+                            <th>Для підвищення тиску</th>
+                          </tr>
+                          <tr>
+                            <th>Додаткові характеристики</th>
+                          </tr>
+                          <tr>
+                            <th>0.8 л/хв</th>
+                          </tr>
+                          <tr>
+                            <th>Продуктивність</th>
+                          </tr>
+                          <tr>
+                            <th>0.05 м³/год</th>
+                          </tr>
+                          <tr>
+                            <th>Особливості</th>
+                          </tr>
+                          <tr>
+                            <th>Склад солі у води</th>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                  <div class="product__details-item tabs__content" data-tabs-target="equipment">
+                    <div class="product__equipment">
+                      Комплектація
+                    </div>
+                  </div>
+                  <div class="product__details-item tabs__content" data-tabs-target="reviews">
+                    <div class="splide reviews__specs-slider">
+                      <div class="splide__track ">
+                        <ul class="splide__list ">
+                          <li class="splide__slide reviews__slide">
+                            <div class="reviews__item">
+                              <p class="reviews__name">
+                                Василь Михайленко
+                              </p>
+                              <p class="reviews__text">
+                                Давно користуюся послугами компанії, тільки
+                                тут замовляю змінні картриджі, якістю
+                                задоволений.
+                                Давно користуюся послугами компанії, тільки
+                                тут замовляю змінні картриджі, якістю
+                                задоволений.
+                              </p>
+                              <span class="reviews__date">
+                                12.05.2022
+                              </span>
+                            </div>
+                          </li>
+                          <li class="splide__slide reviews__slide">
+                            <div class="reviews__item">
+                              <p class="reviews__name">
+                                Василь Михайленко
+                              </p>
+                              <p class="reviews__text">
+                                Давно користуюся послугами компанії, тільки
+                                тут замовляю змінні картриджі, якістю
+                                задоволений.
+                                Давно користуюся послугами компанії, тільки
+                                тут замовляю змінні картриджі, якістю
+                                задоволений.
+                              </p>
+                              <span class="reviews__date">
+                                12.05.2022
+                              </span>
+                            </div>
+                          </li>
+                          <li class="splide__slide reviews__slide">
+                            <div class="reviews__item">
+                              <p class="reviews__name">
+                                Василь Михайленко
+                              </p>
+                              <p class="reviews__text">
+                                Давно користуюся послугами компанії, тільки
+                                тут замовляю змінні картриджі, якістю
+                                задоволений.
+                                Давно користуюся послугами компанії, тільки
+                                тут замовляю змінні картриджі, якістю
+                                задоволений.
+                              </p>
+                              <span class="reviews__date">
+                                12.05.2022
+                              </span>
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                    <button class="btn reviews__btn btn-primary" data-open-reviews>Залишити відклик</button>
+                  </div>
+                  <div class="product__details-item tabs__content" data-tabs-target="descr">
+                    <div class="product__descr">
+                      <div class="product__descr-item">
+                        <div class="product__descr-info">
+                          <p>
+                            Помпа призначена для використання в системах зворотного осмосу з метою підвищення тиску
+                            води.
+                            Помпа працює абсолютно безшумно і споживає мало енергії
+                          </p>
+                        </div>
+                        <div class="product__descr-img ibg">
+                          <img loading="lazy" src="img/content/catalog-product.png" class="image" width="189"
+                            height="133" alt="Помпа для систем зворотнього осмосу 8806">
+                        </div>
+                      </div>
+                      <div class="product__descr-item">
+                        <div class="product__descr-info">
+                          <p>
+                            Помпа призначена для використання в системах зворотного осмосу з метою підвищення тиску
+                            води.
+                            Помпа працює абсолютно безшумно і споживає мало енергії
+                          </p>
+                        </div>
+                        <div class="product__descr-img ibg">
+                          <img loading="lazy" src="img/content/catalog-product.png" class="image" width="189"
+                            height="133" alt="Помпа для систем зворотнього осмосу 8806">
+                        </div>
+                      </div>
+                      <div class="product__descr-item">
+                        <div class="product__descr-info">
+                          <p>
+                            Помпа призначена для використання в системах зворотного осмосу з метою підвищення тиску
+                            води.
+                            Помпа працює абсолютно безшумно і споживає мало енергії
+                          </p>
+                        </div>
+                        <div class="product__descr-img ibg">
+                          <img loading="lazy" src="img/content/catalog-product.png" class="image" width="189"
+                            height="133" alt="Помпа для систем зворотнього осмосу 8806">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- questions form -->
+
+      <section class="questions contact-section">
+        <div class="container">
+          <div class="contact-section__item questions__item">
+            <div class="contact-section__info questions__info">
+              <h2>Виникли
+                запитання?</h2>
+              <p>Наш консультант зв’яжеться з Вами і допоможе підібрати рішення для будь-якого завдання</p>
+            </div>
+            <form action="#" class="form questions__form contact-section__form">
+              <div class="form__inputs">
+                <label class="form__label">
+                  <input type="text" class="input-reset form__input form__input-phone" placeholder="Ваше ім’я"
+                    name="Ім'я користувача">
+                </label>
+                <label class="form__label">
+                  <input type="tel" class="input-reset form__input form__input-phone" placeholder="Ваш телефон"
+                    name="Телефон користувача">
+                </label>
+                <button class="btn form__btn" type="submit">Хочу консультацію</button>
+
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+
+      <!-- questions form -->
+
+      <!-- reviews slider -->
+
+      <section class="reviews">
+        <div class="container">
+          <div class="reviews__inner">
+            <div class="section-heading reviews__heading">
+              <h2>Відгуки</h2>
+              <p>
+                Що говорять про нас клієнти
+              </p>
+            </div>
+            <div class="splide reviews__slider">
+              <div class="splide__track ">
+                <ul class="splide__list ">
+                  <li class="splide__slide reviews__slide">
+                    <div class="reviews__item">
+                      <p class="reviews__name">
+                        Василь Михайленко
+                      </p>
+                      <p class="reviews__text">
+                        Давно користуюся послугами компанії, тільки
+                        тут замовляю змінні картриджі, якістю
+                        задоволений.
+                        Давно користуюся послугами компанії, тільки
+                        тут замовляю змінні картриджі, якістю
+                        задоволений.
+                      </p>
+                      <span class="reviews__date">
+                        12.05.2022
+                      </span>
+                    </div>
+                  </li>
+                  <li class="splide__slide reviews__slide">
+                    <div class="reviews__item">
+                      <p class="reviews__name">
+                        Василь Михайленко
+                      </p>
+                      <p class="reviews__text">
+                        Давно користуюся послугами компанії, тільки
+                        тут замовляю змінні картриджі, якістю
+                        задоволений.
+                        Давно користуюся послугами компанії, тільки
+                        тут замовляю змінні картриджі, якістю
+                        задоволений.
+                      </p>
+                      <span class="reviews__date">
+                        12.05.2022
+                      </span>
+                    </div>
+                  </li>
+                  <li class="splide__slide reviews__slide">
+                    <div class="reviews__item">
+                      <p class="reviews__name">
+                        Василь Михайленко
+                      </p>
+                      <p class="reviews__text">
+                        Давно користуюся послугами компанії, тільки
+                        тут замовляю змінні картриджі, якістю
+                        задоволений.
+                        Давно користуюся послугами компанії, тільки
+                        тут замовляю змінні картриджі, якістю
+                        задоволений.
+                      </p>
+                      <span class="reviews__date">
+                        12.05.2022
+                      </span>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <button class="btn reviews__btn btn-primary" data-open-reviews>Залишити відклик</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- reviews slider -->
+
+      <div class="modal" data-modal-reviews>
+  <div class="modal__wrapper">
+    <div class="modal__item">
+      <button class="modal__close" data-modal-close></button>
+      <p>Залишити відгук</p>
+      <form action="#" class="modal__form">
+        <div class="modal__inputs">
+          <label class="modal__label">
+            <input type="text" class="modal__input" placeholder="Ваше ім’я">
+          </label>
+          <label class="modal__label">
+            <input type="text" class="modal__input" placeholder="Ваше ім’я">
+          </label>
+          <label class="modal__label">
+            <input type="text" class="modal__input" placeholder="Ваше ім’я">
+          </label>
+          <label class="modal__label">
+            <textarea class="modal__textarea" placeholder="Ваш коментар"></textarea>
+          </label>
+        </div>
+        <button type="submit" class="btn modal__btn">Надіслати відгук</button>
+      </form>
+    </div>
+  </div>
+</div>
+
+    </main>
+    <footer class="footer">
+  <div class="container">
+    <div class="footer__inner">
+      <a href="/" class="logo footer__logo">
+        <picture><source srcset="img/logos/logo-footer.webp" type="image/webp"><img loading="lazy" src="img/logos/logo-footer.png" class="image" width="197" height="50" alt="Aquaro"></picture>
+      </a>
+      <div class="footer__info">
+        <a href="mailto:pvk.aquaro@gmail.com" class="footer__info-link footer__info-mail">
+          pvk.aquaro@gmail.com
+        </a>
+        <a href="tel:380675776499" class="footer__info-link footer__info-phone">
+          (067) 577-64-99
+        </a>
+        <a href="tel:380965315397" class="footer__info-link footer__info-location">
+          Василя Стуса, 35/37, оф. 101
+        </a>
+      </div>
+      <div class="footer__socials">
+        <a href="#" class="footer__social">
+          <img loading="lazy" src="img/svg/viber-footer.svg" class="image" width="30" height="30" alt="Viber">
+        </a>
+
+        <a href="#" class="footer__social">
+          <img loading="lazy" src="img/svg/tg-footer.svg" class="image" width="30" height="30" alt="Telegram">
+        </a>
+      </div>
+      <div class="footer__lists">
+        <div class="footer__lists-item">
+          <h3 class="footer__lists-title">
+            Каталог
+          </h3>
+          <ul class="footer__list">
+            <li>
+              <a href="#">
+                Таблетована сіль для пом’якшувачів
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                Зворотньосмотичні мембрани
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                Помпи для систем зворотнього осмосу
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                Змінні картриджі
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                Автомати для розливу питної води
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                Вбудовані офісні інсталяції
+              </a>
+            </li>
+
+          </ul>
+        </div>
+        <div class="footer__lists-item">
+          <h3 class="footer__lists-title">
+            Готові рішення
+          </h3>
+          <ul class="footer__list">
+            <li>
+              <a href="#">
+                Для оселі
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                Для готелів і ресторанів
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                Для медичних закладів
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                Для аграрного комплексу
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                Для ЖКГ, ОСББ та енергетики
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                Для автомийок
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                Автомати розливу води
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                Вбудовані офісні інсталяції
+              </a>
+            </li>
+
+          </ul>
+        </div>
+      </div>
+      <div class="footer__details">
+        <div class="footer__details-links">
+          <a href="#">Про компанію </a>
+          <a href="#" data-goto=".technologies">Технології</a>
+          <a href="#" data-goto=".services">Послуги</a>
+        </div>
+        <div class="footer__details-logos">
+          <a href="#" class="footer__details-logo">
+            <img loading="lazy" src="img/logos/vodabox.svg" class="image" width="149" height="34" alt="Vodabox">
+          </a>
+          <a href="#" class="footer__details-logo">
+            <picture><source srcset="img/logos/vodyanoi.webp" type="image/webp"><img loading="lazy" src="img/logos/vodyanoi.png" class="image" width="149 " height="28" alt="Vodyano"></picture>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+  </div>
+</body>
+
+</html>

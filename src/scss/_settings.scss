@@ -57,11 +57,10 @@ li {
   }
 
   @media screen and (max-width: $sm) {
-    padding-top: 49px;
+    padding-top: rem(49);
   }
 }
 
-main {}
 
 img {
   height: auto;
@@ -236,4 +235,16 @@ section {
     background-color: var(--white);
     color: var(--text-secondary);
   }
+}
+
+.tabs__content {
+  display: none;
+
+  &-active {
+    display: block;
+  }
+}
+
+.tabs__btn-active {
+  color: var(--text-secondary);
 }

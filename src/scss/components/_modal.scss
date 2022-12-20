@@ -21,11 +21,14 @@
   &__wrapper {
     display: flex;
     justify-content: center;
-    align-items: center;
-    height: 100%;
-    padding: 350px 0;
+
+    @media screen and (min-height: 550px) {
+      align-items: center;
+      height: 100%;
+    }
   }
 
+  //modal close button
   &__close {
     width: 25px;
     height: 25px;
@@ -37,6 +40,7 @@
     background-repeat: no-repeat;
   }
 
+  //modal form button
   &__btn {
     background-color: var(--text-secondary);
     color: var(--white);
@@ -49,6 +53,7 @@
     }
   }
 
+  //modal item
   &__item {
     position: relative;
     padding: 35px;
@@ -76,6 +81,7 @@
     row-gap: rem(10);
   }
 
+  //modal form
   &__form {
     display: grid;
     grid-auto-flow: row;
