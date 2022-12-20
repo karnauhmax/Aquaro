@@ -3777,6 +3777,9 @@ var SplideRenderer = /*#__PURE__*/function () {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_sliders__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./components/sliders */ "./src/js/components/sliders.js");
 /* harmony import */ var _components_forms__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/forms */ "./src/js/components/forms.js");
+/* harmony import */ var _components_counter__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/counter */ "./src/js/components/counter.js");
+/* harmony import */ var _components_counter__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_components_counter__WEBPACK_IMPORTED_MODULE_2__);
+
 
 
 
@@ -3905,6 +3908,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _sections_catalog__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_sections_catalog__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _sections_cart__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./sections/cart */ "./src/js/sections/cart.js");
 /* harmony import */ var _sections_cart__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_sections_cart__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _sections_product__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./sections/product */ "./src/js/sections/product.js");
+
 
 
 
@@ -3928,6 +3933,44 @@ __webpack_require__.r(__webpack_exports__);
   htmlEl: document.documentElement,
   bodyEl: document.body
 });
+
+/***/ }),
+
+/***/ "./src/js/components/counter.js":
+/*!**************************************!*\
+  !*** ./src/js/components/counter.js ***!
+  \**************************************/
+/***/ (() => {
+
+//counter
+const counters = document.querySelectorAll(".counter");
+if (document.querySelector(".counter")) {
+  counters.forEach(counter => {
+    counter.addEventListener("click", e => {
+      if (e.target.closest(".minus")) {
+        const self = e.target;
+        const btn = self.closest(".minus");
+        const input = counter.querySelector("input");
+        if (input) {
+          let value = parseInt(input.value);
+          value > 2 ? value -= 1 : (value = 1, btn.classList.remove("active"));
+          input.value = value;
+        }
+      }
+      if (e.target.closest(".plus")) {
+        const self = e.target;
+        const btn = self.closest(".plus");
+        const btnMinus = counter.querySelector(".minus");
+        const input = counter.querySelector("input");
+        if (input) {
+          let value = parseInt(input.value);
+          value < 100 ? (value += 1, btnMinus.classList.add("active")) : (value = 100, btn.classList.remove("active"));
+          input.value = value;
+        }
+      }
+    });
+  });
+}
 
 /***/ }),
 
@@ -3968,35 +4011,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _splidejs_splide__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @splidejs/splide */ "./node_modules/@splidejs/splide/dist/js/splide.esm.js");
 
 
-// const mainSlider = new Splide(".main-slider", {
-//   // type: "fade",
-//   rewind: true,
-//   pagination: false,
-//   arrows: false,
-// });
-
-// const thumbnails = new Splide(".second-slider", {
-//   direction: "ttb",
-//   fixedWidth: 400,
-//   perPage: 4,
-//   height: "100%",
-//   gap: 10,
-//   rewind: true,
-//   pagination: false,
-//   perMove: 1,
-//   focus: "center",
-//   isNavigation: true,
-//   breakpoints: {
-//     600: {
-//       fixedWidth: 60,
-//       fixedHeight: 44,
-//     },
-//   },
-// });
-
-// mainSlider.sync(thumbnails);
-// mainSlider.mount();
-// thumbnails.mount();
+// reviews slider
 
 if (document.querySelector(".reviews__slider")) {
   const reviewSlider = new _splidejs_splide__WEBPACK_IMPORTED_MODULE_0__.Splide(".reviews__slider", {
@@ -4021,6 +4036,68 @@ if (document.querySelector(".reviews__slider")) {
     }
   });
   reviewSlider.mount();
+}
+if (document.querySelector(".reviews__specs-slider")) {
+  const reviewSlider = new _splidejs_splide__WEBPACK_IMPORTED_MODULE_0__.Splide(".reviews__specs-slider", {
+    perPage: 2,
+    perMove: 1,
+    gap: "1rem",
+    arrows: false,
+    pagination: false,
+    type: "loop",
+    breakpoints: {
+      991: {
+        perPage: 1,
+        padding: {
+          right: "200px"
+        }
+      },
+      767: {
+        padding: {
+          right: "0px"
+        }
+      }
+    }
+  });
+  reviewSlider.mount();
+}
+
+// product slider
+
+if (document.querySelector(".product__slider")) {
+  const thumbnailSlider = new _splidejs_splide__WEBPACK_IMPORTED_MODULE_0__.Splide(".product__thumbnail-slider", {
+    fixedWidth: 70,
+    fixedHeight: 60,
+    direction: "ttb",
+    isNavigation: true,
+    height: "100%",
+    pagination: false,
+    cover: true,
+    focus: "center",
+    gap: "1.25rem",
+    arrows: false,
+    drag: false,
+    breakpoints: {
+      991: {
+        direction: "rtl"
+      },
+      767: {
+        gap: "0.625rem"
+      },
+      576: {
+        width: 300
+      },
+      375: {
+        width: 250
+      }
+    }
+  });
+  const mainProductSlider = new _splidejs_splide__WEBPACK_IMPORTED_MODULE_0__.Splide(".product__main-slider", {
+    arrows: false,
+    pagination: false
+  });
+  mainProductSlider.sync(thumbnailSlider).mount();
+  thumbnailSlider.mount();
 }
 
 /***/ }),
@@ -4161,18 +4238,24 @@ class Modal {
     this.modalWrapper = this.modalContainer.querySelector(".modal__wrapper");
   }
   renderModal() {
-    console.log();
+    const lockMarginValue = window.innerWidth - document.querySelector(".site-container").offsetWidth + "px";
     const openModal = () => {
       this.modalContainer.classList.add("modal__active");
       document.body.classList.add("locked");
-      document.body.style.maxWidth = window.innerWidth - 17 + "px";
-      document.querySelector(".header").style.maxWidth = window.innerWidth - 17 + "px";
+      pageMarginAdd();
     };
     const closeModal = () => {
       this.modalContainer.classList.remove("modal__active");
       document.body.classList.remove("locked");
-      document.body.style.maxWidth = null;
-      document.querySelector(".header").style.maxWidth = null;
+      pageMarginRemove();
+    };
+    const pageMarginAdd = () => {
+      document.body.style.marginRight = lockMarginValue;
+      document.querySelector("header").style.paddingRight = lockMarginValue;
+    };
+    const pageMarginRemove = () => {
+      document.body.style.marginRight = null;
+      document.querySelector("header").style.paddingRight = null;
     };
     this.modalOpen.forEach(e => {
       e.addEventListener("click", openModal);
@@ -4185,9 +4268,59 @@ class Modal {
         closeModal();
       }
     });
+    document.addEventListener("keydown", e => {
+      if (e.code == "Escape" && this.modalContainer.classList.contains("modal__active")) {
+        closeModal();
+      }
+    });
   }
 }
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Modal);
+
+/***/ }),
+
+/***/ "./src/js/functions/tabs.js":
+/*!**********************************!*\
+  !*** ./src/js/functions/tabs.js ***!
+  \**********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+class Tab {
+  constructor(tabContainer) {
+    this.tabContainer = document.querySelector(tabContainer);
+    this.tabBtn = this.tabContainer.querySelectorAll(".tabs__btn");
+    this.tabContent = this.tabContainer.querySelectorAll(".tabs__content");
+  }
+  renderTab() {
+    this.tabContainer.addEventListener("click", e => {
+      if (e.target.classList.contains("tabs__btn")) {
+        const self = e.target;
+        const tabsPath = self.dataset.tabsPath;
+        const tabsHandler = path => {
+          this.tabBtn.forEach(button => {
+            button.classList.remove("tabs__btn-active");
+          });
+          if (path) {
+            document.querySelector(`[data-tabs-path=${path}]`).classList.add("tabs__btn-active");
+          }
+          this.tabContent.forEach(content => {
+            content.classList.remove("tabs__content-active");
+          });
+          if (path) {
+            document.querySelector(`[data-tabs-target=${path}]`).classList.add("tabs__content-active");
+          }
+        };
+        tabsHandler(tabsPath);
+      }
+    });
+  }
+}
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Tab);
 
 /***/ }),
 
@@ -4197,41 +4330,7 @@ class Modal {
   \*********************************/
 /***/ (() => {
 
-//counter
-const itemsCollection = document.querySelectorAll(".cart__item");
-const counterItems = document.querySelectorAll(".cart__quantity");
-counterItems.forEach(item => {
-  item.addEventListener("click", e => {
-    const self = e.currentTarget;
-    const target = e.target;
-    self.closest(".cart__item").preventDefault();
-  });
-});
-itemsCollection.forEach(el => {
-  el.addEventListener("click", e => {
-    if (e.target.closest(".minus")) {
-      const self = e.target;
-      const btn = self.closest(".minus");
-      const input = self.closest(".cart__item-quantity").querySelector("input");
-      if (input) {
-        let value = parseInt(input.value);
-        value > 2 ? value -= 1 : (value = 1, btn.classList.remove("active"));
-        input.value = value;
-      }
-    }
-    if (e.target.closest(".plus")) {
-      const self = e.target;
-      const btn = self.closest(".plus");
-      const btnMinus = self.closest(".cart__item-quantity").querySelector(".minus");
-      const input = self.closest(".cart__item-quantity").querySelector("input");
-      if (input) {
-        let value = parseInt(input.value);
-        value < 100 ? (value += 1, btnMinus.classList.add("active")) : (value = 100, btn.classList.remove("active"));
-        input.value = value;
-      }
-    }
-  });
-});
+
 
 /***/ }),
 
@@ -4247,10 +4346,25 @@ const filter = document.querySelector(".filter");
 const filterItems = document.querySelectorAll(".filter__item");
 if (filter) {
   filter.addEventListener("click", e => {
-    const target = e.target;
-    const item = target.closest(".filter__item");
-    const title = item.querySelector(".filter__title");
-    const details = item.querySelector(".filter__details");
+    if (e.target.closest(".filter__item")) {
+      const target = e.target;
+      const parent = e.currentTarget;
+      const item = target.closest(".filter__item");
+      const currentTitle = item.querySelector(".filter__title");
+      const allTitles = parent.querySelectorAll(".filter__title");
+      const currentDetails = item.querySelector(".filter__details");
+      const allDetails = parent.querySelectorAll(".filter__details");
+      allDetails.forEach(item => {
+        item.classList.remove("active");
+      });
+      allTitles.forEach(title => {
+        title.classList.remove("active");
+      });
+      if (currentDetails) {
+        currentDetails.classList.add("active");
+      }
+      currentTitle.classList.add("active");
+    }
   });
 }
 
@@ -4271,18 +4385,18 @@ if (menu) {
   document.addEventListener("click", e => {
     const self = e.target;
     const subMenu = self.parentElement.querySelector(".sub-menu");
-    const arrow = self.parentElement.querySelector(".menu__arrow");
     if (self.closest(".menu__item")) {
       e.preventDefault();
+      const item = self.closest(".menu__item");
       if (subMenu) {
-        subMenu.classList.toggle("active");
-        arrow.classList.toggle("active");
+        item.classList.toggle("sub-menu__active");
       }
     } else {
-      if (subMenu) {
-        console.log(self);
-        subMenu.classList.remove("active");
-        arrow.classList.remove("active");
+      if (document.querySelector(".sub-menu__active")) {
+        const subMenusCollection = document.querySelectorAll(".sub-menu__active");
+        subMenusCollection.forEach(item => {
+          item.classList.remove("sub-menu__active");
+        });
       }
     }
   });
@@ -4324,6 +4438,33 @@ if (header) {
     });
   }, {});
   menuObserver.observe(header);
+}
+
+//cutting cart amount
+
+let amount = document.querySelector(".cart__amount");
+if (amount.textContent.length > 2) {
+  const cutted = `${amount.textContent.substring(0, 2)}+`;
+  amount.innerText = cutted;
+}
+
+/***/ }),
+
+/***/ "./src/js/sections/product.js":
+/*!************************************!*\
+  !*** ./src/js/sections/product.js ***!
+  \************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _functions_tabs__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../functions/tabs */ "./src/js/functions/tabs.js");
+
+
+//tabs
+
+if (document.querySelector(".product__details")) {
+  new _functions_tabs__WEBPACK_IMPORTED_MODULE_0__["default"](".product__details").renderTab();
 }
 
 /***/ }),

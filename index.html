@@ -7,7 +7,9 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <meta name="theme-color" content="#111111">
   <title>Marshall</title>
+  <link rel="stylesheet" href="css/vendor.css">
   <link rel="stylesheet" href="css/main.css">
+
   <script defer src="js/main.js"></script>
 </head>
 
@@ -47,7 +49,7 @@
             <a href="#" class="menu__link" data-goto=".solutions">Рішення</a>
           </li>
           <li class="menu__item">
-            <a href="#" class="menu__link" data-goto=".services">Послуги</a>
+            <a href="#servicesSection" class="menu__link" data-goto=".services">Послуги</a>
           </li>
           <li class="menu__item">
             <a href="#" class="menu__link" data-goto=".footer">Контакти</a>
@@ -63,21 +65,19 @@
           <img loading="lazy" src="img/svg/tg.svg" class="image" width="30" height="30" alt="Telegram">
         </a>
       </div>
-      <a href="cart.html" class="header__cart">
-        <svg>
-          <svg width="30" height="30" viewBox="0 0 26 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path
-              d="M25.7767 4.198C25.5851 3.94947 25.2843 3.78379 24.9558 3.78379H6.12953L5.39066 0.800869C5.28129 0.331361 4.8707 0 4.37825 0H1.03987C0.465135 0 0 0.469508 0 1.04959C0 1.62968 0.465159 2.09919 1.03987 2.09919H3.5846L7.79872 19.4443C7.90809 19.9138 8.31868 20.2452 8.81113 20.2452H20.8238C21.3985 20.2452 21.8637 19.7757 21.8637 19.1956C21.8637 18.6155 21.3985 18.146 20.8238 18.146H9.60468L9.00267 15.6878H22.4656C22.9308 15.6878 23.3414 15.3565 23.478 14.9145L25.9682 5.08191C26.0505 4.77828 25.9684 4.4467 25.7767 4.19818V4.198Z"
-              fill="#2F4085" />
-            <path
-              d="M12.4233 22.7861C12.4233 23.7165 11.676 24.4707 10.7541 24.4707C9.83236 24.4707 9.08508 23.7165 9.08508 22.7861C9.08508 21.8556 9.83236 21.1013 10.7541 21.1013C11.676 21.1013 12.4233 21.8556 12.4233 22.7861Z"
-              fill="#2F4085" />
-            <path
-              d="M21.0428 22.7861C21.0428 23.7165 20.2956 24.4707 19.3737 24.4707C18.4517 24.4707 17.7045 23.7165 17.7045 22.7861C17.7045 21.8556 18.4517 21.1013 19.3737 21.1013C20.2956 21.1013 21.0428 21.8556 21.0428 22.7861Z"
-              fill="#2F4085" />
-          </svg>
-
+      <a href="cart.html" class="header__cart active">
+        <svg width="30" height="30" viewBox="0 0 26 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M25.7767 4.198C25.5851 3.94947 25.2843 3.78379 24.9558 3.78379H6.12953L5.39066 0.800869C5.28129 0.331361 4.8707 0 4.37825 0H1.03987C0.465135 0 0 0.469508 0 1.04959C0 1.62968 0.465159 2.09919 1.03987 2.09919H3.5846L7.79872 19.4443C7.90809 19.9138 8.31868 20.2452 8.81113 20.2452H20.8238C21.3985 20.2452 21.8637 19.7757 21.8637 19.1956C21.8637 18.6155 21.3985 18.146 20.8238 18.146H9.60468L9.00267 15.6878H22.4656C22.9308 15.6878 23.3414 15.3565 23.478 14.9145L25.9682 5.08191C26.0505 4.77828 25.9684 4.4467 25.7767 4.19818V4.198Z"
+            fill="#2F4085" />
+          <path
+            d="M12.4233 22.7861C12.4233 23.7165 11.676 24.4707 10.7541 24.4707C9.83236 24.4707 9.08508 23.7165 9.08508 22.7861C9.08508 21.8556 9.83236 21.1013 10.7541 21.1013C11.676 21.1013 12.4233 21.8556 12.4233 22.7861Z"
+            fill="#2F4085" />
+          <path
+            d="M21.0428 22.7861C21.0428 23.7165 20.2956 24.4707 19.3737 24.4707C18.4517 24.4707 17.7045 23.7165 17.7045 22.7861C17.7045 21.8556 18.4517 21.1013 19.3737 21.1013C20.2956 21.1013 21.0428 21.8556 21.0428 22.7861Z"
+            fill="#2F4085" />
         </svg>
+        <p class="amount cart__amount">1</p>
       </a>
       <button class="header__burger" aria-label="Открыть меню" aria-expanded="false" data-burger>
         <span class="burger__line"></span>
@@ -88,19 +88,20 @@
 
     <main class="main">
       <!-- offer -->
-
-      <section class="offer">
+      <h1 class="visually-hidden">Інтернет магазин систем та обладнання для очищення води, водопостачання та опалення
+      </h1>
+      <section class="offer" id="offer">
         <div class="container">
           <div class="offer__inner">
             <div class="offer__content">
               <div class="offer__info">
-                <h1 class="offer__title">Шукаєте рішення
+                <h2 class="offer__title">Шукаєте рішення
                   для фільтрації води?
-                </h1>
+                </h2>
                 <p>Замовте безкоштовну консультацію і дізнайтеся про найкращий спосіб</p>
               </div>
               <picture>
-                <source media="(max-width:1200px)" srcset="img/content/woman-tablet.svg">
+                <source media="(max-width:1199px)" srcset="img/content/woman-tablet.svg">
                 <source media="(max-width:768px)" srcset="img/content/woman-phone.svg">
                 <img class="offer__img" src="img/content/woman.svg" width="400" height="510" alt="Жінка">
               </picture>
