@@ -5,17 +5,50 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <meta name="theme-color" content="#111111">
+
+  <meta name="theme-color" content="#ffffff">
+  <title>Aquaro</title>
   <!-- favicons -->
+
   <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
   <!-- favicons -->
 
-  <meta name="theme-color" content="#ffffff">
-  <title>Aquaro</title>
+  <!-- fonts preloading -->
+  <link rel="preload" href="fonts/Montserrat-Regular.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/Montserrat-SemiBold.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/Montserrat-Bold.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/Montserrat-Black.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/NunitoSans-Regular.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/NunitoSans-Black.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/NunitoSans-Bold.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/NunitoSans-ExtraBold.woff2" as="font" type="font/woff2" crossorigin>
+
+  <!-- fonts preloading -->
+
   <link rel="stylesheet" href="css/vendor.css">
   <link rel="stylesheet" href="css/main.css">
+  <!-- adding script asynchronously -->
+  <script>
+    let isAsyncLoaded = false;
 
-  <script defer src="js/main.js"></script>
+    function createAsyncScript() {
+      const script = document.createElement("script");
+      script.setAttribute("defer", "");
+      script.src = "js/main.js";
+      document.head.append(script);
+    }
+
+    document.addEventListener("DOMContentLoaded", () => {
+      createAsyncScript();
+      isAsyncLoaded = true;
+    }, {
+      once: true
+    })
+
+  </script>
+  <!-- adding script asynchronously -->
+
 </head>
 
 <body class="page__body">
