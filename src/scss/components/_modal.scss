@@ -45,6 +45,7 @@
     background-color: var(--text-secondary);
     color: var(--white);
     transition: .5s all ease;
+    border: 1px solid transparent;
 
     &:hover {
       border: 1px solid var(--text-secondary);

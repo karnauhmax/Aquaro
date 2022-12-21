@@ -180,7 +180,8 @@
   //filter styles. making filter sticky where top 110 is header height + initial top valuefor being sticky
   &__filter {
     position: sticky;
-    top: rem(110);
+    // 15px + header height
+    top: calc(15px + 96px);
     align-self: start;
 
     @media screen and (max-width: $md) {
@@ -206,13 +207,6 @@
       background-color: var(--white);
       bottom: 20%;
       right: 10px;
-    }
-
-    .amount {
-      @media screen and (max-width: $sm) {
-        top: em(34);
-        left: em(40);
-      }
     }
   }
 }

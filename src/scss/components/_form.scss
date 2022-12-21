@@ -54,7 +54,7 @@
 
   textarea {
     resize: none;
-    height: 66px;
+    min-height: 66px;
 
     @media screen and (max-width: $lg) {
       height: 60px;

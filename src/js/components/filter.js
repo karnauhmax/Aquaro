@@ -1,5 +1,3 @@
-//filter
-
 const filter = document.querySelector(".filter");
 const filterItems = document.querySelectorAll(".filter__item");
 
