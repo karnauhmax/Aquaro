@@ -225,6 +225,10 @@
       .menu__arrow {
         transform: rotate(45deg);
       }
+
+      .menu__link {
+        color: var(--text-secondary);
+      }
     }
   }
 

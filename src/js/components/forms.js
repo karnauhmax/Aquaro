@@ -6,7 +6,6 @@ import Inputmask from "inputmask";
 //input mask for tel inputs
 
 const telInputs = document.querySelectorAll("input[type=tel]");
-console.log(telInputs);
 
 telInputs.forEach((input) => {
   const inputMask = new Inputmask("+38 (999) 999 99 99");

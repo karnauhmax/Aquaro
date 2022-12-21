@@ -1075,6 +1075,9 @@ a {
   -ms-transform: rotate(45deg);
   transform: rotate(45deg);
 }
+.menu__item.sub-menu__active .menu__link {
+  color: var(--text-secondary);
+}
 .menu__link {
   max-width: 9.375rem;
   font-family: var(--font-family-secondary);

@@ -65,7 +65,6 @@ if (menuLinks.length > 0) {
 if (header) {
   const menuObserver = new IntersectionObserver((entries, observer) => {
     entries.forEach((entry) => {
-      console.log(entry.intersectionRatio);
       if (entry.intersectionRatio <= 0.1) {
         entry.target.classList.add("fixed");
       }

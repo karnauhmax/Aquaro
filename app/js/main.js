@@ -4023,7 +4023,6 @@ __webpack_require__.r(__webpack_exports__);
 //input mask for tel inputs
 
 const telInputs = document.querySelectorAll("input[type=tel]");
-console.log(telInputs);
 telInputs.forEach(input => {
   const inputMask = new (inputmask__WEBPACK_IMPORTED_MODULE_0___default())("+38 (999) 999 99 99");
   inputMask.mask(input);
@@ -4416,7 +4415,6 @@ if (menuLinks.length > 0) {
 if (header) {
   const menuObserver = new IntersectionObserver((entries, observer) => {
     entries.forEach(entry => {
-      console.log(entry.intersectionRatio);
       if (entry.intersectionRatio <= 0.1) {
         entry.target.classList.add("fixed");
       }
