@@ -307,7 +307,7 @@
       font-size: rem(16);
     }
 
-    &:hover {
+    @include hover {
       font-weight: 700;
       color: var(--text-secondary);
     }

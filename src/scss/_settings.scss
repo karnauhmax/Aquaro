@@ -47,7 +47,7 @@ li {
   height: 100%;
   font-size: 18px;
   font-weight: 400;
-  font-family: var(--font-family-primary), sans-serif;
+  font-family: var(--font-family-primary);
   background-color: var(--white);
   color: var(--text);
   @include adaptiveValue(padding-top, 102, 80, 1920, 1200, 1);

@@ -65,6 +65,7 @@
       font-weight: 900;
       text-align: center;
       grid-area: title;
+      word-break: break-word;
 
       @media screen and (max-width: $xsm) {
         text-align: left;

@@ -355,8 +355,8 @@ template {
   --primary-light: #41D4FF;
   --input-bg: #68DDFF;
   --text: #353434;
-  --font-family-primary: "Nunito Sans";
-  --font-family-secondary: "Montserrat";
+  --font-family-primary: "Nunito Sans", Arial, Helvetica, sans-serif;
+  --font-family-secondary: "Montserrat", Arial, Helvetica, sans-serif;
   --black: #000;
   --bg-light: #B4EBFF;
   --bg-grey: #EEEFF3;
@@ -500,7 +500,7 @@ li {
   height: 100%;
   font-size: 18px;
   font-weight: 400;
-  font-family: var(--font-family-primary), sans-serif;
+  font-family: var(--font-family-primary);
   background-color: var(--white);
   color: var(--text);
 }
@@ -1176,9 +1176,11 @@ a {
   visibility: hidden;
   font-size: 1rem;
 }
-.sub-menu__link:hover {
-  font-weight: 700;
-  color: var(--text-secondary);
+@media (any-hover: hover) {
+  .sub-menu__link:hover {
+    font-weight: 700;
+    color: var(--text-secondary);
+  }
 }
 
 @-webkit-keyframes headerFixed {
@@ -1958,9 +1960,9 @@ a {
   z-index: 5000;
   visibility: hidden;
   opacity: 0;
-  -webkit-transition: opacity 0.5s ease;
-  -o-transition: opacity 0.5s ease;
-  transition: opacity 0.5s ease;
+  -webkit-transition: 0.5s all ease;
+  -o-transition: 0.5s all ease;
+  transition: 0.5s all ease;
   overflow: auto;
   height: 100%;
   width: 100%;
@@ -2494,6 +2496,7 @@ a {
   border-radius: var(--radius-primary);
   background-color: var(--bg-light);
   height: 100%;
+  overflow: hidden;
 }
 @media screen and (max-width: 1199px) {
   .offer__content {
@@ -3593,6 +3596,7 @@ a {
   font-weight: 900;
   text-align: center;
   grid-area: title;
+  word-break: break-word;
 }
 @supports (font-size: clamp( 1.125rem , 0.8653846154rem  +  1.1538461538vw , 2.25rem )) {
   .benefits__item h3 {
@@ -4377,7 +4381,7 @@ a {
 }
 .catalog__filter {
   position: sticky;
-  top: 111px;
+  top: calc(0.9375rem + 6rem);
   -ms-flex-item-align: start;
   -ms-grid-row-align: start;
   align-self: start;

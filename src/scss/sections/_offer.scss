@@ -24,6 +24,7 @@
     border-radius: var(--radius-primary);
     background-color: var(--bg-light);
     height: 100%;
+    overflow: hidden;
 
     @media screen and (max-width: $lg) {
       grid-column: unset;

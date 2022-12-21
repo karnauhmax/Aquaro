@@ -75,15 +75,14 @@
     }
 
     //showing catalog specs on hover, if users device supports hover
-    @media (any-hover: hover) {
-      &:hover {
-        box-shadow: 0px 4px 15px rgba(33, 185, 229, 0.2);
 
-        .catalog__specs {
-          visibility: visible;
-          opacity: 1;
-          transform: translateY(80%);
-        }
+    @include hover {
+      box-shadow: 0px 4px 15px rgba(33, 185, 229, 0.2);
+
+      .catalog__specs {
+        visibility: visible;
+        opacity: 1;
+        transform: translateY(80%);
       }
     }
   }
@@ -181,7 +180,7 @@
   &__filter {
     position: sticky;
     // 15px + header height
-    top: calc(15px + 96px);
+    top: calc(rem(15) + rem(96));
     align-self: start;
 
     @media screen and (max-width: $md) {
@@ -210,3 +209,5 @@
     }
   }
 }
+
+//skeleton animation
