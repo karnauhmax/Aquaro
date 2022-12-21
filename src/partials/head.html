@@ -26,25 +26,7 @@
 
   <link rel="stylesheet" href="css/vendor.css">
   <link rel="stylesheet" href="css/main.css">
-  <!-- adding script asynchronously -->
-  <script>
-    let isAsyncLoaded = false;
 
-    function createAsyncScript() {
-      const script = document.createElement("script");
-      script.setAttribute("defer", "");
-      script.src = "js/main.js";
-      document.head.append(script);
-    }
-
-    document.addEventListener("DOMContentLoaded", () => {
-      createAsyncScript();
-      isAsyncLoaded = true;
-    }, {
-      once: true
-    })
-
-  </script>
-  <!-- adding script asynchronously -->
+  <script defer src="js/main.js"></script>
 
 </head>
