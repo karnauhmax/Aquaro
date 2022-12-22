@@ -121,7 +121,9 @@ a {
 .container {
   margin: 0 auto;
   max-width: var(--container-width);
-  padding: 0 20px;
+  // padding: 0 20px;
+  @include adaptiveValue(padding-right, 100, 20, 1400, 768, 1);
+  @include adaptiveValue(padding-left, 100, 20, 1400, 768, 1);
 }
 
 .js-focus-visible :focus:not(.focus-visible) {

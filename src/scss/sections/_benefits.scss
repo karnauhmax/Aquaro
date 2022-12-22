@@ -150,9 +150,6 @@
     height: 100%;
     object-fit: contain;
 
-    @media screen and (max-width: $xlg) {
-      max-width: 500px;
-    }
 
     @media screen and (max-width: $md) {
       grid-column: 1/2;
