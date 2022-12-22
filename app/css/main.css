@@ -1795,14 +1795,14 @@ a {
   font-weight: 900;
   color: var(--text-secondary);
 }
-@supports (font-size: clamp( 1.125rem , 1.0384615385rem  +  0.3846153846vw , 1.5rem )) {
+@supports (font-size: clamp( 1rem , 0.8846153846rem  +  0.5128205128vw , 1.5rem )) {
   .section-heading h2 {
-    font-size: clamp( 1.125rem , 1.0384615385rem  +  0.3846153846vw , 1.5rem );
+    font-size: clamp( 1rem , 0.8846153846rem  +  0.5128205128vw , 1.5rem );
   }
 }
-@supports not (font-size: clamp( 1.125rem , 1.0384615385rem  +  0.3846153846vw , 1.5rem )) {
+@supports not (font-size: clamp( 1rem , 0.8846153846rem  +  0.5128205128vw , 1.5rem )) {
   .section-heading h2 {
-    font-size: calc(1.125rem + 0.375 * (100vw - 22.5rem) / 97.5);
+    font-size: calc(1rem + 0.5 * (100vw - 22.5rem) / 97.5);
   }
 }
 .section-heading p {
@@ -1811,14 +1811,14 @@ a {
   color: var(--black);
   line-height: 135%;
 }
-@supports (font-size: clamp( 1.5rem , 1.2403846154rem  +  1.1538461538vw , 2.625rem )) {
+@supports (font-size: clamp( 1.125rem , 0.7788461538rem  +  1.5384615385vw , 2.625rem )) {
   .section-heading p {
-    font-size: clamp( 1.5rem , 1.2403846154rem  +  1.1538461538vw , 2.625rem );
+    font-size: clamp( 1.125rem , 0.7788461538rem  +  1.5384615385vw , 2.625rem );
   }
 }
-@supports not (font-size: clamp( 1.5rem , 1.2403846154rem  +  1.1538461538vw , 2.625rem )) {
+@supports not (font-size: clamp( 1.125rem , 0.7788461538rem  +  1.5384615385vw , 2.625rem )) {
   .section-heading p {
-    font-size: calc(1.5rem + 1.125 * (100vw - 22.5rem) / 97.5);
+    font-size: calc(1.125rem + 1.5 * (100vw - 22.5rem) / 97.5);
   }
 }
 
@@ -3601,19 +3601,31 @@ a {
   grid-area: title;
   word-break: break-word;
 }
-@supports (font-size: clamp( 1.125rem , 0.8653846154rem  +  1.1538461538vw , 2.25rem )) {
+@supports (font-size: clamp( 1.25rem , -1.2157039711rem  +  2.8880866426vw , 2.25rem )) {
   .benefits__item h3 {
-    font-size: clamp( 1.125rem , 0.8653846154rem  +  1.1538461538vw , 2.25rem );
+    font-size: clamp( 1.25rem , -1.2157039711rem  +  2.8880866426vw , 2.25rem );
   }
 }
-@supports not (font-size: clamp( 1.125rem , 0.8653846154rem  +  1.1538461538vw , 2.25rem )) {
+@supports not (font-size: clamp( 1.25rem , -1.2157039711rem  +  2.8880866426vw , 2.25rem )) {
   .benefits__item h3 {
-    font-size: calc(1.125rem + 1.125 * (100vw - 22.5rem) / 97.5);
+    font-size: calc(1.25rem + 1 * (100vw - 85.375rem) / 34.625);
   }
 }
 @media screen and (max-width: 575px) {
   .benefits__item h3 {
     text-align: left;
+  }
+}
+@media screen and (max-width: 1199px) {
+  @supports (font-size: clamp( 1.125rem , 1.0802683897rem  +  0.1988071571vw , 1.25rem )) {
+    .benefits__item h3 {
+      font-size: clamp( 1.125rem , 1.0802683897rem  +  0.1988071571vw , 1.25rem );
+    }
+  }
+  @supports not (font-size: clamp( 1.125rem , 1.0802683897rem  +  0.1988071571vw , 1.25rem )) {
+    .benefits__item h3 {
+      font-size: calc(1.125rem + 0.125 * (100vw - 22.5rem) / 62.875);
+    }
   }
 }
 .benefits__item p {
@@ -3756,6 +3768,11 @@ a {
   height: 100%;
   -o-object-fit: contain;
   object-fit: contain;
+}
+@media screen and (max-width: 1399px) {
+  .benefits__img {
+    max-width: 500px;
+  }
 }
 @media screen and (max-width: 991px) {
   .benefits__img {
@@ -4172,7 +4189,7 @@ a {
   grid-template-columns: 18.75rem 1fr;
   gap: 1.875rem;
 }
-@media screen and (max-width: 991px) {
+@media screen and (max-width: 1199px) {
   .catalog__inner {
     -ms-grid-columns: 1fr;
     grid-template-columns: 1fr;
@@ -4389,7 +4406,7 @@ a {
   -ms-grid-row-align: start;
   align-self: start;
 }
-@media screen and (max-width: 991px) {
+@media screen and (max-width: 1399px) {
   .catalog__filter {
     position: static;
     top: unset;

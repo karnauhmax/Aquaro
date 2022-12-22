@@ -7,7 +7,7 @@
   row-gap: rem(10);
 
   h2 {
-    @include adaptiveValue(font-size, 24, 18, 1920, 360, 1);
+    @include adaptiveValue(font-size, 24, 16, 1920, 360, 1);
     line-height: 135%;
     text-transform: uppercase;
     font-weight: 900;
@@ -15,7 +15,7 @@
   }
 
   p {
-    @include adaptiveValue(font-size, 42, 24, 1920, 360, 1);
+    @include adaptiveValue(font-size, 42, 18, 1920, 360, 1);
     font-weight: 900;
     text-align: center;
     color: var(--black);

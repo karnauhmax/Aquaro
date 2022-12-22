@@ -22,8 +22,8 @@
     grid-template-columns: rem(300) 1fr;
     gap: rem(30);
 
-    //making layout in one column  on <=992px devices
-    @media screen and (max-width: $md) {
+    //making layout in one column  on <=1199px devices
+    @media screen and (max-width: $lg) {
       grid-template-columns: 1fr;
     }
   }
@@ -183,7 +183,7 @@
     top: calc(rem(15) + rem(96));
     align-self: start;
 
-    @media screen and (max-width: $md) {
+    @media screen and (max-width: $xlg) {
       position: static;
       top: unset;
     }
