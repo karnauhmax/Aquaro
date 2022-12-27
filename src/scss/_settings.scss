@@ -123,9 +123,9 @@ a {
   max-width: var(--container-width);
   padding: 0 20px;
 
-  @media screen and (max-width: 1400px) {
-    @include adaptiveValue(padding-right, 100, 20, 1400, 768, 1);
-    @include adaptiveValue(padding-left, 100, 20, 1400, 768, 1);
+  @media screen and (max-width: 1600px) {
+    @include adaptiveValue(padding-right, 80, 20, 1400, 768, 1);
+    @include adaptiveValue(padding-left, 80, 20, 1400, 768, 1);
   }
 }
 
