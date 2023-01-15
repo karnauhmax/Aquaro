@@ -3336,12 +3336,18 @@ a {
   -o-object-fit: contain;
   object-fit: contain;
 }
-@media screen and (max-width: 1080px) {
+@media screen and (max-width: 1150px) {
+  .services__image img {
+    -o-object-position: left;
+    object-position: left;
+  }
+}
+@media screen and (max-width: 1150px) {
   .services__image {
+    padding-bottom: 100%;
     -webkit-transform: scale(1.1);
     -ms-transform: scale(1.1);
     transform: scale(1.1);
-    padding-bottom: 130%;
   }
 }
 @media screen and (max-width: 767px) {
