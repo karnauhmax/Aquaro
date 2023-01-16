@@ -10,8 +10,10 @@
 
 html {
   line-height: 1.15;
+
   /* 1 */
   -webkit-text-size-adjust: 100%;
+
   /* 2 */
 }
 
@@ -40,8 +42,8 @@ main {
  */
 
 h1 {
-  font-size: 2em;
   margin: 0.67em 0;
+  font-size: 2em;
 }
 
 /* Grouping content
@@ -53,11 +55,13 @@ h1 {
  */
 
 hr {
-  box-sizing: content-box;
-  /* 1 */
-  height: 0;
   /* 1 */
   overflow: visible;
+
+  /* 1 */
+  height: 0;
+  box-sizing: content-box;
+
   /* 2 */
 }
 
@@ -68,8 +72,10 @@ hr {
 
 pre {
   font-family: monospace, monospace;
+
   /* 1 */
   font-size: 1em;
+
   /* 2 */
 }
 
@@ -91,10 +97,12 @@ a {
 
 abbr[title] {
   border-bottom: none;
+
   /* 1 */
-  text-decoration: underline;
+
   /* 2 */
   text-decoration: underline dotted;
+
   /* 2 */
 }
 
@@ -116,8 +124,10 @@ code,
 kbd,
 samp {
   font-family: monospace, monospace;
+
   /* 1 */
   font-size: 1em;
+
   /* 2 */
 }
 
@@ -136,10 +146,10 @@ small {
 
 sub,
 sup {
-  font-size: 75%;
-  line-height: 0;
   position: relative;
   vertical-align: baseline;
+  font-size: 75%;
+  line-height: 0;
 }
 
 sub {
@@ -174,13 +184,16 @@ input,
 optgroup,
 select,
 textarea {
-  font-family: inherit;
-  /* 1 */
-  font-size: 100%;
-  /* 1 */
-  line-height: 1.15;
   /* 1 */
   margin: 0;
+  font-family: inherit;
+
+  /* 1 */
+  font-size: 100%;
+
+  /* 1 */
+  line-height: 1.15;
+
   /* 2 */
 }
 
@@ -256,17 +269,22 @@ fieldset {
  */
 
 legend {
-  box-sizing: border-box;
-  /* 1 */
-  color: inherit;
   /* 2 */
   display: table;
-  /* 1 */
-  max-width: 100%;
+
   /* 1 */
   padding: 0;
+
+  /* 1 */
+  max-width: 100%;
+  box-sizing: border-box;
+
   /* 3 */
   white-space: normal;
+
+  /* 1 */
+  color: inherit;
+
   /* 1 */
 }
 
@@ -293,9 +311,10 @@ textarea {
 
 [type="checkbox"],
 [type="radio"] {
-  box-sizing: border-box;
   /* 1 */
   padding: 0;
+  box-sizing: border-box;
+
   /* 2 */
 }
 
@@ -315,8 +334,10 @@ textarea {
 
 [type="search"] {
   -webkit-appearance: textfield;
+
   /* 1 */
   outline-offset: -2px;
+
   /* 2 */
 }
 
@@ -335,8 +356,10 @@ textarea {
 
 ::-webkit-file-upload-button {
   -webkit-appearance: button;
+
   /* 1 */
   font: inherit;
+
   /* 2 */
 }
 

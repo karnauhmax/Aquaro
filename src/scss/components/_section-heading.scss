@@ -8,19 +8,19 @@
 
   h2 {
     @include adaptiveValue(font-size, 24, 16, 1920, 360, 1);
+
+    font-weight: 900;
     line-height: 135%;
     text-transform: uppercase;
-    font-weight: 900;
     color: var(--text-secondary);
   }
 
   p {
     @include adaptiveValue(font-size, 42, 18, 1920, 360, 1);
+
     font-weight: 900;
+    line-height: 135%;
     text-align: center;
     color: var(--black);
-    line-height: 135%;
   }
-
-
 }

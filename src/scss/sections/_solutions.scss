@@ -1,10 +1,11 @@
 .solutions {
   &__heading {
-    max-width: rem(897);
     @include adaptiveValue(margin-bottom, 34, 19, 1920, 360, 1);
+
+    max-width: rem(897);
   }
 
-  //solutions layout
+  // solutions layout
   &__inner {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
@@ -23,20 +24,20 @@
     }
   }
 
-  //solutions info styling
+  // solutions info styling
   &__info {
-    padding: 10px 20px 10px 0;
     align-self: center;
+    padding: 10px 20px 10px 0;
 
     h3 {
       @include adaptiveValue(font-size, 24, 18, 1920, 360, 1);
+
       font-weight: 900;
     }
 
     @media screen and (max-width: $md) {
       justify-self: end;
       padding: 15px 20px 10px 0;
-
     }
 
     @media screen and (max-width: $xxsm) {
@@ -44,15 +45,15 @@
     }
   }
 
-  //solutions item styling
+  // solutions item styling
   &__item {
     display: grid;
-    grid-template-columns: auto 1fr;
-    min-height: rem(280);
-    grid-column: span 4;
     column-gap: rem(20);
-    box-shadow: var(--boxshadow-primary);
+    grid-column: span 4;
+    grid-template-columns: auto 1fr;
     border-radius: var(--radius-primary);
+    min-height: rem(280);
+    box-shadow: var(--boxshadow-primary);
 
     img {
       @media screen and (max-width: $md) {
@@ -66,9 +67,53 @@
       @media screen and (max-width: $xxsm) {
         order: 1;
       }
-
     }
 
+    // styling certain elements by modificators
+    &-house {
+      background-color: var(--bg-light);
+    }
+
+    &-hospital {
+      background-color: var(--bg-grey);
+    }
+
+    &-energetics {
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+
+      img {
+        justify-self: end;
+        order: 2;
+      }
+
+      .solutions__info {
+        order: 1;
+        padding-right: 0;
+        padding-left: 30px;
+
+        @media screen and (max-width: $md) {
+          justify-self: start;
+          padding-right: 15px;
+        }
+      }
+
+      @media screen and (max-width: $md) {
+        grid-template-columns: 1fr 3fr;
+      }
+    }
+
+    &-carwashing {
+      background-color: var(--bg-light);
+    }
+
+    &-agrarian {
+      @media screen and (max-width: $md) {
+        img {
+          order: 1;
+        }
+      }
+    }
 
     @media screen and (max-width: $lg) {
       min-height: unset;
@@ -87,67 +132,13 @@
       min-height: rem(170);
     }
 
-
     @media screen and (max-width: $xxsm) {
       grid-template-columns: 1fr;
     }
-
-    //styling certain elements by modificators
-    &-house {
-      background-color: var(--bg-light);
-    }
-
-    &-hospital {
-      background-color: var(--bg-grey);
-
-      @media screen and (max-width: $md) {}
-    }
-
-    &-energetics {
-      display: grid;
-      grid-template-columns: 1fr 2fr;
-
-      @media screen and (max-width: $md) {
-        grid-template-columns: 1fr 3fr;
-      }
-
-      img {
-        order: 2;
-        justify-self: end;
-      }
-
-      .solutions__info {
-        order: 1;
-        padding-left: 30px;
-        padding-right: 0;
-
-        @media screen and (max-width: $md) {
-          padding-right: 15px;
-          justify-self: start;
-        }
-
-      }
-    }
-
-    &-carwashing {
-      background-color: var(--bg-light);
-
-    }
-
-    &-agrarian {
-      @media screen and (max-width: $md) {
-        img {
-          order: 1;
-        }
-      }
-    }
-
-
   }
 
   &__extended {
     grid-column: span 6;
-
 
     img {
       @media screen and (max-width: $md) {
@@ -157,16 +148,12 @@
       @media screen and (max-width: $xsm) {
         max-width: 290px;
       }
-
     }
 
     @media screen and (max-width: $md) {
       grid-column: unset;
       grid-template-columns: 1fr;
-
     }
-
-    @media screen and (max-width: $sm) {}
   }
 
   &__img {

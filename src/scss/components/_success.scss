@@ -1,9 +1,10 @@
 .success {
   &__item {
-    box-shadow: var(--boxshadow-primary);
     border-radius: var(--radius-secondary);
     padding: rem(13) rem(13) 0 rem(13);
+    box-shadow: var(--boxshadow-primary);
     background-color: var(--white);
+
     @media screen and (max-width: $md) {
       @include adaptiveValue(padding-top, 40, 20, 1920, 360, 1);
       @include adaptiveValue(padding-bottom, 40, 20, 1920, 360, 1);
@@ -14,9 +15,10 @@
 
   &__inner {
     display: flex;
+    column-gap: rem(40);
     align-items: center;
     justify-content: space-around;
-    column-gap: rem(40);
+
     @media screen and (max-width: $md) {
       flex-direction: column;
       row-gap: rem(20);
@@ -24,10 +26,11 @@
   }
 
   &__info {
-    flex: 0 1 40%;
     display: grid;
+    flex: 0 1 40%;
     grid-auto-flow: row;
     row-gap: rem(15);
+
     @media screen and (max-width: $md) {
       justify-items: center;
     }
@@ -35,6 +38,7 @@
 
   &__link {
     justify-self: start;
+
     @media screen and (max-width: $md) {
       justify-self: center;
     }
@@ -42,6 +46,7 @@
 
   &__text {
     @include adaptiveValue(font-size, 18, 14, 1920, 360, 1);
+
     @media screen and (max-width: $md) {
       text-align: center;
     }
@@ -49,22 +54,25 @@
 
   &__title {
     @include adaptiveValue(font-size, 36, 18, 1920, 360, 1);
+
     font-weight: 700;
     color: var(--black);
   }
 
   &__img {
+    flex: 0 1 rem(415);
+
     // width: 100%;
     padding-bottom: 25%;
-    flex: 0 1 rem(415);
+
     img {
       object-fit: contain;
     }
 
     @media screen and (max-width: $md) {
       flex: 0 1 auto;
-      width: 100%;
       padding-bottom: 50%;
+      width: 100%;
     }
   }
 }

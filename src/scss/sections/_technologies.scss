@@ -1,73 +1,72 @@
 .technologies {
-
   &__heading {
-    max-width: rem(969);
     @include adaptiveValue(margin-bottom, 52, 37, 1920, 360, 1);
+
+    max-width: rem(969);
   }
 
   &__inner {
-    display: grid;
-    gap: rem(30);
     counter-reset: counter;
+    display: grid;
     grid-template-columns: auto auto 1fr;
+    gap: rem(30);
 
     @media screen and (max-width: $md) {
-      grid-template-columns: repeat(2, 1fr);
-      grid-auto-rows: min-content;
       column-gap: rem(15);
+      grid-auto-rows: min-content;
+      grid-template-columns: repeat(2, 1fr);
     }
 
     @media screen and (max-width: $xsm) {
       grid-template-columns: 1fr;
-
     }
   }
 
   &__img {
-    grid-row: 1/6;
     grid-column: 3/4;
-    width: 100%;
+    grid-row: 1/6;
     padding-bottom: 75%;
-
-    @media screen and (max-width: $md) {
-      grid-row: 3/8;
-      grid-column: 2/3;
-    }
-
-    @media screen and (max-width: $xsm) {
-      grid-column: 1/2;
-      grid-row: unset;
-      justify-self: center;
-    }
+    width: 100%;
 
     img {
       object-fit: contain;
     }
+
+    @media screen and (max-width: $md) {
+      grid-column: 2/3;
+      grid-row: 3/8;
+    }
+
+    @media screen and (max-width: $xsm) {
+      justify-self: center;
+      grid-column: 1/2;
+      grid-row: unset;
+    }
   }
-
-
 
   &__item {
     display: grid;
-    grid-template-columns: auto 1fr;
-    align-items: center;
     column-gap: rem(15);
+    align-items: center;
     align-self: start;
+    grid-template-columns: auto 1fr;
     max-width: 430px;
+
+    &::before {
+      @include adaptiveValue(font-size, 45, 30, 1920, 360, 1);
+
+      counter-increment: counter;
+      content: counter(counter, decimal-leading-zero);
+      align-self: start;
+      font-weight: 900;
+      color: var(--primary-light);
+    }
 
     p {
       @include adaptiveValue(font-size, 24, 18, 1920, 360, 1);
+
       font-weight: 800;
       line-height: 135%;
-    }
-
-    &::before {
-      content: counter(counter, decimal-leading-zero);
-      counter-increment: counter;
-      color: var(--primary-light);
-      @include adaptiveValue(font-size, 45, 30, 1920, 360, 1);
-      font-weight: 900;
-      align-self: start;
     }
   }
 }

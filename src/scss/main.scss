@@ -1,4 +1,4 @@
-//importing  base styles
+// importing  base styles
 @import "vendor";
 @import "vars";
 @import "mixins";
@@ -18,14 +18,13 @@
 @import "./components/counter";
 @import "./components/success";
 
-//importing sections styles
+// importing sections styles
 @import "./sections/offer";
 @import "./sections/catalog-preview";
 @import "./sections/services";
 @import "./sections/benefits";
 @import "./sections/solutions";
 @import "./sections/technologies";
-@import "./sections/individual";
 @import "./sections/catalog";
 @import "./sections/cart";
 @import "./sections/product";

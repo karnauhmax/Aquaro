@@ -1,40 +1,39 @@
 .filter {
   border-radius: var(--radius-primary);
-  background-color: var(--white);
   box-shadow: var(--boxshadow-primary);
+  background-color: var(--white);
 
-  //filter wrapper styling
+  // filter wrapper styling
   &__content {
     display: flex;
     flex-direction: column;
-    row-gap: rem(5);
     padding: 0 rem(20);
+    row-gap: rem(5);
   }
 
-  //one filter item styling
+  // one filter item styling
   &__item {
     display: grid;
-    grid-template-columns: 1fr min-content;
     align-items: center;
-    row-gap: rem(10);
+    grid-template-columns: 1fr min-content;
     padding: rem(10) 0;
     cursor: pointer;
+    row-gap: rem(10);
 
     &.active {
-      color: var(--text-secondary);
       font-weight: 900;
+      color: var(--text-secondary);
     }
   }
 
-  //filter list stylng
+  // filter list stylng
   &__list {
-    padding-left: rem(15);
     display: flex;
     flex-direction: column;
+    padding-left: rem(15);
     row-gap: rem(10);
 
     li {
-
       &.active {
         font-weight: 700;
       }
@@ -46,8 +45,8 @@
   }
 
   &__details {
-    grid-column: span 2;
     display: none;
+    grid-column: span 2;
 
     &.active {
       display: block;
@@ -55,20 +54,20 @@
   }
 
   &__arrow {
-    background-image: url("../img/svg/spoller-arrow.svg");
     width: 15px;
     height: 15px;
-    background-repeat: no-repeat;
-    background-size: contain;
+    background-image: url("../img/svg/spoller-arrow.svg");
     background-position: center center;
+    background-size: contain;
+    background-repeat: no-repeat;
   }
 
-  //filter title styling
+  // filter title styling
   &__title {
+    font-weight: 600;
     font-size: rem(18);
     line-height: 135%;
     color: var(--text);
-    font-weight: 600;
 
     &.active {
       font-weight: 800;
@@ -76,16 +75,16 @@
     }
   }
 
-  //filter heading styling
+  // filter heading styling
   &__heading {
+    border-radius: 5px 5px 0 0;
     padding: rem(10);
     background-color: var(--text-secondary);
-    border-radius: 5px 5px 0 0;
 
     p {
+      font-weight: 900;
       font-size: rem(18);
       line-height: 135%;
-      font-weight: 900;
       text-transform: uppercase;
       color: var(--white);
     }

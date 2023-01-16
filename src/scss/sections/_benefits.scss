@@ -7,39 +7,39 @@
     }
   }
 
-  //benefits layout styling
+  //  benefits layout styling
+
   &__inner {
+    @include adaptiveValue(column-gap, 59, 30, 1920, 992, 1);
+
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     grid-template-rows: repeat(3, minmax(150px, min-content));
-    @include adaptiveValue(column-gap, 59, 30, 1920, 992, 1);
     row-gap: rem(49);
 
     @media screen and (max-width: $md) {
+      grid-auto-rows: min-content;
       grid-template-columns: repeat(2, 1fr);
       grid-template-rows: min-content;
-      grid-auto-rows: min-content;
     }
 
     @media screen and (max-width: $xsm) {
       row-gap: rem(20);
-
     }
   }
 
-  //one benefits item styling
+  //  one benefits item styling
   &__item {
     display: grid;
-    grid-auto-flow: row;
-    grid-template-rows: repeat(3, min-content);
-    row-gap: rem(14);
-    justify-items: center;
     align-self: start;
+    justify-items: center;
+    grid-auto-flow: row;
     grid-template-areas:
       "image"
       "title"
       "text";
-
+    grid-template-rows: repeat(3, min-content);
+    row-gap: rem(14);
 
     &-img {
       grid-area: image;
@@ -50,22 +50,23 @@
     }
 
     @media screen and (max-width: $xsm) {
-      justify-items: start;
-      row-gap: rem(10);
       column-gap: rem(5);
-      grid-template-columns: 35px 1fr;
+      align-items: center;
+      justify-items: start;
       grid-template-areas:
         "image title"
         "text text";
-      align-items: center;
+      grid-template-columns: 35px 1fr;
+      row-gap: rem(10);
     }
 
     h3 {
       @include adaptiveValue(font-size, 36, 20, 1920, 1366, 1);
-      font-weight: 900;
-      text-align: center;
+
       grid-area: title;
+      font-weight: 900;
       word-break: break-word;
+      text-align: center;
 
       @media screen and (max-width: $xsm) {
         text-align: left;
@@ -78,11 +79,12 @@
 
     p {
       @include adaptiveValue(font-size, 18, 14, 1920, 360, 1);
-      text-align: center;
+
       grid-area: text;
       max-width: rem(327);
-      color: var(--black);
       line-height: 136%;
+      text-align: center;
+      color: var(--black);
 
       @media screen and (max-width: $xsm) {
         max-width: 100%;
@@ -98,8 +100,8 @@
       }
 
       @media screen and (max-width: $xsm) {
-        grid-column: span 2;
         justify-self: start;
+        grid-column: span 2;
         grid-template-rows: repeat(2, min-content);
       }
     }
@@ -112,16 +114,16 @@
       }
 
       @media screen and (max-width: $xsm) {
-        grid-column: span 2;
         justify-self: start;
+        grid-column: span 2;
         grid-template-rows: repeat(2, min-content);
       }
     }
 
     &-approach {
       @media screen and (max-width: $md) {
-        grid-row: 1/2;
         grid-column: 1/2;
+        grid-row: 1/2;
       }
 
       @media screen and (max-width: $xsm) {
@@ -131,8 +133,8 @@
 
     &-consultation {
       @media screen and (max-width: $md) {
-        grid-row: 1/2;
         grid-column: 2/3;
+        grid-row: 1/2;
       }
 
       @media screen and (max-width: $xsm) {
@@ -142,14 +144,12 @@
     }
   }
 
-
-  //benefits image styling
+  //  benefits image styling
   &__img {
     grid-column: 1/7;
     grid-row: span 3;
     height: 100%;
     object-fit: contain;
-
 
     @media screen and (max-width: $md) {
       grid-column: 1/2;

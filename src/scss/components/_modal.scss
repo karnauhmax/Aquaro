@@ -1,22 +1,17 @@
 .modal {
   position: fixed;
-  top: 0;
   left: 0;
-  bottom: 0;
   right: 0;
+  top: 0;
+  bottom: 0;
   z-index: 5000;
-  visibility: hidden;
-  opacity: 0;
-  transition: 0.5s all ease;
   overflow: auto;
-  height: 100%;
   width: 100%;
-  background: rgba(53, 52, 52, 0.7);
-
-  &.modal__active {
-    opacity: 1;
-    visibility: visible;
-  }
+  height: 100%;
+  background: rgb(53 52 52 / 70%);
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.5s all ease;
 
   &__wrapper {
     display: flex;
@@ -30,11 +25,11 @@
 
   //modal close button
   &__close {
+    position: absolute;
+    right: 5%;
+    top: 4%;
     width: 25px;
     height: 25px;
-    position: absolute;
-    top: 4%;
-    right: 5%;
     background-image: url("../img/svg/close.svg");
     background-position: center center;
     background-repeat: no-repeat;
@@ -42,37 +37,36 @@
 
   //modal form button
   &__btn {
-    background-color: var(--text-secondary);
-    color: var(--white);
-    transition: 0.5s all ease;
     border: 1px solid transparent;
+    color: var(--white);
+    background-color: var(--text-secondary);
+    transition: 0.5s all ease;
 
     &:hover {
       border: 1px solid var(--text-secondary);
-      background-color: transparent;
       color: var(--black);
+      background-color: transparent;
     }
   }
 
   //modal item
   &__item {
     position: relative;
-    padding: 35px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    overflow: auto;
+    border-radius: var(--radius-primary);
+    padding: 35px;
     width: 100%;
     max-width: 420px;
     background-color: var(--white);
-    border-radius: var(--radius-primary);
-    overflow: auto;
 
     p {
-      font-weight: 900;
-      margin-bottom: 25px;
-      text-transform: uppercase;
-      font-size: rem(20);
       margin-bottom: rem(25);
+      font-weight: 900;
+      font-size: rem(20);
+      text-transform: uppercase;
     }
   }
 
@@ -95,16 +89,16 @@
 
     input,
     textarea {
-      background-color: #eefbff;
       border: 1px solid #68ddff;
+      border-radius: var(--radius-secondary);
       padding: 20px;
       width: 100%;
-      border-radius: var(--radius-secondary);
+      background-color: #eefbff;
       transition: box-shadow 0.5s ease;
 
       &:focus {
         outline: none;
-        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        box-shadow: 0 4px 4px rgb(0 0 0 / 25%);
       }
     }
 
@@ -114,11 +108,16 @@
     }
   }
 
+  &.modal__active {
+    opacity: 1;
+    visibility: visible;
+  }
+
   &.success-modal {
     .modal__item {
+      align-items: unset;
       max-width: unset;
       background-color: transparent;
-      align-items: unset;
     }
 
     .success__item {
@@ -126,8 +125,8 @@
     }
 
     .modal__close {
-      top: 20px;
       right: 20px;
+      top: 20px;
     }
 
     .success__text {

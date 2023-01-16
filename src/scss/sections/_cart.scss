@@ -6,34 +6,31 @@
   }
 
   &__border-link {
-    display: inline-block;
     @include adaptiveValue(margin-bottom, 40, 20, 1920, 360, 1);
+
+    display: inline-block;
   }
 
   &__title {
     @include adaptiveValue(font-size, 36, 18, 1920, 360, 1);
-    font-weight: 900;
     @include adaptiveValue(margin-bottom, 30, 15, 1920, 360, 1);
+
+    font-weight: 900;
   }
 
   &__inner {
+    @include adaptiveValue(margin-bottom, 70, 25, 1920, 360, 1);
+
     display: grid;
     grid-template-columns: 1fr;
     row-gap: rem(30);
-    @include adaptiveValue(margin-bottom, 70, 25, 1920, 360, 1);
   }
-
-
 
   &__labels {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     font-weight: 700;
     font-size: rem(16);
-
-    @media screen and (max-width: $md) {
-      display: none;
-    }
 
     .cart__name {
       grid-column: 3/5;
@@ -49,6 +46,10 @@
 
     .cart__total {
       grid-column: 10/12;
+    }
+
+    @media screen and (max-width: $md) {
+      display: none;
     }
   }
 
@@ -85,43 +86,25 @@
   }
 
   &__item {
-    display: grid;
-    grid-template-columns: minmax(auto, rem(150)) minmax(auto, rem(240)) minmax(auto, rem(110)) auto minmax(auto, rem(110)) min-content;
-    padding: rem(30);
     @include adaptiveValue(column-gap, 122, 30, 1920, 576, 1);
+
+    display: grid;
     align-items: center;
     justify-items: center;
-    box-shadow: var(--boxshadow-primary);
+    grid-template-columns: minmax(auto, rem(150)) minmax(auto, rem(240)) minmax(auto, rem(110)) auto minmax(auto, rem(110)) min-content;
     border-radius: var(--radius-primary);
-
-    @media screen and (max-width: $md) {
-      grid-template-columns: minmax(auto, rem(150)) 2fr minmax((auto, rem(110)));
-      padding: rem(20);
-    }
-
-    @media screen and (max-width: $xsm) {
-      grid-template-columns: minmax(auto, rem(150)) 1fr;
-      row-gap: rem(15);
-      column-gap: rem(15);
-    }
-
-    @media screen and (max-width: $xxsm) {
-      grid-template-columns: 1fr;
-    }
-
-    &:hover {
-      box-shadow: 0px 4px 15px rgba(33, 185, 229, 0.2);
-    }
+    padding: rem(30);
+    box-shadow: var(--boxshadow-primary);
 
     &-spec {
       @media screen and (max-width: $md) {
         display: grid;
-        row-gap: rem(5);
+        align-items: center;
         justify-items: center;
         font-weight: 700;
         font-size: rem(16);
         text-align: center;
-        align-items: center;
+        row-gap: rem(5);
       }
 
       @media screen and (max-width: $xsm) {
@@ -156,34 +139,28 @@
       width: 30px;
       height: 30px;
 
-      @media screen and (max-width: $md) {
-        grid-row: 1/2;
-        grid-column: 3/4;
-      }
-
-      @media screen and (max-width: $xsm) {
-        grid-column: span 2;
-        justify-self: end;
-      }
-
       path {
-        transition: .5s fill ease;
+        transition: 0.5s fill ease;
       }
 
       &:hover {
         path {
-          fill: var(--text-secondary)
+          fill: var(--text-secondary);
         }
+      }
+
+      @media screen and (max-width: $md) {
+        grid-column: 3/4;
+        grid-row: 1/2;
+      }
+
+      @media screen and (max-width: $xsm) {
+        justify-self: end;
+        grid-column: span 2;
       }
     }
 
     &-quantity {
-      @media screen and (max-width: $xsm) {
-        width: 100%;
-        grid-column: span 2;
-        grid-template-columns: 1fr 1fr;
-      }
-
       .cart__amount {
         display: none;
 
@@ -191,17 +168,61 @@
           display: block;
         }
       }
+
+      @media screen and (max-width: $xsm) {
+        grid-column: span 2;
+        grid-template-columns: 1fr 1fr;
+        width: 100%;
+      }
     }
 
+    &-summary {
+      .cart__total {
+        display: none;
+
+        @media screen and (max-width: $md) {
+          display: block;
+        }
+      }
+
+      @media screen and (max-width: $xsm) {
+        grid-column: span 2;
+        grid-template-columns: 1fr 1fr;
+        width: 100%;
+      }
+    }
+
+    &-price {
+      .cart__price {
+        display: none;
+
+        @media screen and (max-width: $md) {
+          display: block;
+          font-weight: 700;
+          font-size: rem(16);
+        }
+      }
+
+      @media screen and (max-width: $xsm) {
+        grid-column: span 2;
+        grid-template-columns: 1fr 1fr;
+        width: 100%;
+      }
+    }
+
+    &:hover {
+      box-shadow: 0 4px 15px rgb(33 185 229 / 20%);
+    }
 
     &-price,
     &-summary {
       span {
+        @include adaptiveValue(font-size, 20, 14, 1920, 360, 1);
+
         display: inline-flex;
+        column-gap: 5px;
         flex-wrap: wrap;
         justify-content: center;
-        column-gap: 5px;
-        @include adaptiveValue(font-size, 20, 14, 1920, 360, 1);
         font-weight: 700;
         word-break: break-all;
         text-align: center;
@@ -212,38 +233,19 @@
       }
     }
 
-    &-summary {
-      @media screen and (max-width: $xsm) {
-        width: 100%;
-        grid-column: span 2;
-        grid-template-columns: 1fr 1fr;
-      }
-
-      .cart__total {
-        display: none;
-
-        @media screen and (max-width: $md) {
-          display: block;
-        }
-      }
+    @media screen and (max-width: $md) {
+      grid-template-columns: minmax(auto, rem(150)) 2fr minmax((auto, rem(110)));
+      padding: rem(20);
     }
 
-    &-price {
-      @media screen and (max-width: $xsm) {
-        width: 100%;
-        grid-column: span 2;
-        grid-template-columns: 1fr 1fr;
-      }
+    @media screen and (max-width: $xsm) {
+      column-gap: rem(15);
+      grid-template-columns: minmax(auto, rem(150)) 1fr;
+      row-gap: rem(15);
+    }
 
-      .cart__price {
-        display: none;
-
-        @media screen and (max-width: $md) {
-          display: block;
-          font-size: rem(16);
-          font-weight: 700;
-        }
-      }
+    @media screen and (max-width: $xxsm) {
+      grid-template-columns: 1fr;
     }
   }
 
@@ -259,9 +261,9 @@
     }
 
     &-sum {
-      font-size: rem(16);
-      font-weight: 700;
       position: relative;
+      font-weight: 700;
+      font-size: rem(16);
 
       &::after {
         content: ":";
@@ -270,11 +272,11 @@
     }
 
     &-price {
-      font-size: rem(21);
-      font-weight: 700;
       display: inline-flex;
-      flex-wrap: wrap;
       column-gap: rem(5);
+      flex-wrap: wrap;
+      font-weight: 700;
+      font-size: rem(21);
 
       &::after {
         content: "грн";
@@ -285,8 +287,8 @@
       justify-self: center;
 
       @media screen and (max-width: $xsm) {
-        min-width: unset;
         width: 100%;
+        min-width: unset;
         max-width: 100%;
       }
     }
@@ -294,8 +296,8 @@
 
   &__form {
     display: grid;
-    row-gap: rem(30);
     grid-template-columns: 1fr;
+    row-gap: rem(30);
 
     &-inner {
       display: grid;
@@ -312,17 +314,18 @@
     }
 
     &-item {
-      display: grid;
-      grid-auto-flow: row;
-      grid-template-rows: min-content 1fr;
-      row-gap: rem(20);
-      min-height: rem(310);
       @include adaptiveValue(padding-top, 30, 20, 1920, 360, 1);
       @include adaptiveValue(padding-right, 30, 20, 1920, 360, 1);
       @include adaptiveValue(padding-left, 30, 20, 1920, 360, 1);
       @include adaptiveValue(padding-bottom, 30, 20, 1920, 360, 1);
-      filter: drop-shadow(0px 4px 16px rgba(0, 0, 0, 0.06));
+
+      display: grid;
+      grid-auto-flow: row;
+      grid-template-rows: min-content 1fr;
       border-radius: var(--radius-secondary);
+      min-height: rem(310);
+      filter: drop-shadow(0 4px 16px rgb(0 0 0 / 6%));
+      row-gap: rem(20);
 
       &:nth-child(odd) {
         background-color: var(--white);
@@ -339,31 +342,32 @@
 
     &-heading {
       @include adaptiveValue(font-size, 23, 18, 1920, 360, 1);
+
       font-weight: 700;
       color: var(--text-secondary);
     }
 
     textarea {
-      background-color: transparent;
-      resize: none;
-      border: 1px solid #C4C4C4;
+      border: 1px solid #c4c4c4;
       border-radius: var(--radius-secondary);
-      height: 100%;
       padding: rem(10);
-      font-size: rem(16);
+      height: 100%;
       font-weight: 400;
-      color: #C4C4C4;
-      transition: .2s box-shadow ease;
-
-      &:focus {
-        box-shadow: 0px 4px 4px rgb(0 0 0 / 25%);
-        outline: none;
-      }
+      font-size: rem(16);
+      color: #c4c4c4;
+      background-color: transparent;
+      transition: 0.2s box-shadow ease;
+      resize: none;
 
       &::placeholder {
-        opacity: 0.5;
-        font-size: rem(16);
         font-weight: 400;
+        font-size: rem(16);
+        opacity: 0.5;
+      }
+
+      &:focus {
+        outline: none;
+        box-shadow: 0 4px 4px rgb(0 0 0 / 25%);
       }
 
       @media screen and (max-width: $sm) {
@@ -373,46 +377,46 @@
 
     &-inputs {
       display: grid;
-      row-gap: rem(10);
       grid-auto-rows: min-content;
+      row-gap: rem(10);
     }
 
     &-radios {
       display: grid;
-      row-gap: rem(20);
       grid-auto-rows: min-content;
+      row-gap: rem(20);
     }
 
     &-radio {
-      position: relative;
-      padding-left: rem(20);
-      padding-bottom: rem(20);
       @include adaptiveValue(font-size, 18, 16, 1920, 360, 1);
+
+      position: relative;
+      padding-bottom: rem(20);
+      padding-left: rem(20);
       cursor: pointer;
 
       &:not(:last-child) {
-        border-bottom: 1px solid #F7F8F9;
+        border-bottom: 1px solid #f7f8f9;
       }
 
       input[type="radio"] {
         appearance: none;
         position: absolute;
 
-        &:checked+.radio {
+        &:checked + .radio {
           background-image: url("../img/svg/checked-radio.svg");
         }
       }
 
-
       .radio {
         position: absolute;
+        left: 0;
+        top: em(4);
         width: 10px;
         height: 10px;
         background-image: url("../img/svg/radio.svg");
         background-size: cover;
         background-repeat: no-repeat;
-        left: 0;
-        top: em(4);
       }
     }
 
@@ -421,24 +425,23 @@
     }
 
     &-input {
-      padding: rem(10);
+      border: 1px solid #c4c4c4;
       border-radius: var(--radius-secondary);
-      border: 1px solid #C4C4C4;
+      padding: rem(10);
       width: 100%;
-      transition: .2s box-shadow ease;
-      color: #C4C4C4;
       font-size: rem(16);
-
-
-      &:focus {
-        box-shadow: 0px 4px 4px rgb(0 0 0 / 25%);
-        outline: none;
-      }
+      color: #c4c4c4;
+      transition: 0.2s box-shadow ease;
 
       &::placeholder {
-        opacity: 0.5;
-        font-size: rem(16);
         font-weight: 400;
+        font-size: rem(16);
+        opacity: 0.5;
+      }
+
+      &:focus {
+        outline: none;
+        box-shadow: 0 4px 4px rgb(0 0 0 / 25%);
       }
     }
 
@@ -446,11 +449,10 @@
       justify-self: center;
 
       @media screen and (max-width: $xsm) {
-        min-width: unset;
         width: 100%;
+        min-width: unset;
         max-width: 100%;
       }
     }
   }
-
 }

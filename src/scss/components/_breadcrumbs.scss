@@ -8,28 +8,28 @@
     position: relative;
     padding-right: rem(15);
 
-    &.active {
-      color: var(--text-secondary);
-      pointer-events: none;
-    }
-
     &::before {
       content: "";
       position: absolute;
-      background-image: url("../img/svg/black-arrow.svg");
-      background-repeat: no-repeat;
-      background-size: contain;
-      width: rem(10);
-      height: rem(10);
       right: 0;
       top: em(7);
       display: none;
+      width: rem(10);
+      height: rem(10);
+      background-image: url("../img/svg/black-arrow.svg");
+      background-size: contain;
+      background-repeat: no-repeat;
     }
 
     &:not(:last-child) {
       &::before {
         display: block;
       }
+    }
+
+    &.active {
+      color: var(--text-secondary);
+      pointer-events: none;
     }
   }
 

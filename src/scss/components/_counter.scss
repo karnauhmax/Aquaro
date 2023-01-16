@@ -1,46 +1,44 @@
 .counter {
   display: flex;
   align-items: center;
-  gap: rem(5);
-  max-width: 110px;
-  height: 40px;
-  border-radius: 4px;
   border: 1px solid var(--text-secondary);
+  border-radius: 4px;
   padding: rem(10);
+  height: 40px;
+  max-width: 110px;
+  gap: rem(5);
 
-  input[type=number]::-webkit-outer-spin-button,
-  input[type=number]::-webkit-inner-spin-button {
+  input[type="number"]::-webkit-outer-spin-button,
+  input[type="number"]::-webkit-inner-spin-button {
     -webkit-appearance: none;
     margin: 0;
   }
 
-  input[type=number] {
+  input[type="number"] {
     -moz-appearance: textfield;
   }
 
   input {
+    appearance: none;
     width: 100%;
     text-align: center;
     color: var(--text-secondary);
-    appearance: none;
 
     &::placeholder {
       color: var(--text-secondary);
     }
   }
 
-
-
   .plus,
   .minus {
-    width: 20px;
-    height: 20px;
     display: inline-flex;
     align-items: center;
+    width: 20px;
+    height: 20px;
 
     &.active {
       path {
-        fill: #21B9E5;
+        fill: #21b9e5;
       }
     }
   }

@@ -57,6 +57,7 @@
     "postcss-scss": "^4.0.2",
     "sass": "^1.45.1",
     "stylelint": "^14.2.0",
+    "stylelint-config-prettier-scss": "^0.0.1",
     "stylelint-config-standard-scss": "^3.0.0",
     "stylelint-order": "^5.0.0",
     "webpack": "^5.65.0",

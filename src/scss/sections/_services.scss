@@ -1,6 +1,7 @@
 .services {
   @include adaptiveValue(padding-top, 100, 40, 1920, 360, 1);
   @include adaptiveValue(padding-bottom, 100, 40, 1920, 360, 1);
+
   background-color: var(--bg-grey);
 
   &__inner {
@@ -18,20 +19,21 @@
   }
 
   &__image {
-    align-self: start;
-    width: 100%;
-    padding-bottom: 167%;
-    transform: scale(1.2);
-    transform-origin: 100%;
     align-self: center;
     grid-area: image;
+    padding-bottom: 167%;
+    width: 100%;
+    transform: scale(1.2);
+    transform-origin: 100%;
 
     img {
       object-fit: contain;
+
       @media screen and (max-width: 1153px) {
         object-position: left;
       }
     }
+
     @media screen and (max-width: 1153px) {
       padding-bottom: 100%;
       transform: scale(1.1);
@@ -47,50 +49,30 @@
   }
 
   &__item {
-    display: grid;
-    grid-template-columns: 1fr 3fr 51px;
-    grid-template-areas: "image info arrow";
-    align-items: center;
-    gap: rem(30);
-    background-color: var(--white);
-    border-radius: var(--radius-primary);
     position: relative;
+    display: grid;
+    align-items: center;
+    grid-template-areas: "image info arrow";
+    grid-template-columns: 1fr 3fr 51px;
+    overflow: hidden;
+    border-radius: var(--radius-primary);
     padding-right: 30px;
     min-height: rem(250);
-    overflow: hidden;
+    background-color: var(--white);
     transition: 0.5s box-shadow ease;
-
-    &:hover {
-      box-shadow: 0px 4px 15px rgba(88, 203, 236, 0.73);
-    }
-
-    @media screen and (max-width: $lg) {
-      min-height: unset;
-    }
-
-    @media screen and (max-width: $xsm) {
-      column-gap: rem(10);
-      grid-template-columns: 100px 2fr 30px;
-      grid-auto-rows: 50px;
-      grid-template-areas:
-        "image info info"
-        "image info arrow";
-    }
-
-    @media screen and (max-width: $xxsm) {
-      grid-template-columns: 70px 2fr 30px;
-    }
+    gap: rem(30);
 
     h3 {
       @include adaptiveValue(font-size, 24, 14, 1920, 360, 1);
-      font-weight: 900;
-      font-family: var(--font-family-secondary);
-      max-width: rem(438);
-      display: -webkit-box;
-      -webkit-line-clamp: 5;
-      -webkit-box-orient: vertical;
-      text-overflow: ellipsis;
+
+      display: box;
       overflow: hidden;
+      max-width: rem(438);
+      font-family: var(--font-family-secondary);
+      font-weight: 900;
+      text-overflow: ellipsis;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 5;
 
       @media screen and (max-width: $xsm) {
         font-weight: 700;
@@ -99,18 +81,40 @@
 
     p {
       @include adaptiveValue(font-size, 18, 14, 1920, 768, 1);
+
+      display: box;
+      overflow: hidden;
       font-family: var(--font-family-secondary);
       font-weight: 400;
-      color: var(--black);
-      display: -webkit-box;
-      -webkit-line-clamp: 4;
-      -webkit-box-orient: vertical;
       text-overflow: ellipsis;
-      overflow: hidden;
+      color: var(--black);
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 4;
 
       @media screen and (max-width: $xsm) {
         display: none;
       }
+    }
+
+    &:hover {
+      box-shadow: 0 4px 15px rgb(88 203 236 / 73%);
+    }
+
+    @media screen and (max-width: $lg) {
+      min-height: unset;
+    }
+
+    @media screen and (max-width: $xsm) {
+      column-gap: rem(10);
+      grid-auto-rows: 50px;
+      grid-template-areas:
+        "image info info"
+        "image info arrow";
+      grid-template-columns: 100px 2fr 30px;
+    }
+
+    @media screen and (max-width: $xxsm) {
+      grid-template-columns: 70px 2fr 30px;
     }
   }
 
@@ -121,23 +125,23 @@
     @media screen and (max-width: $xsm) {
       justify-self: end;
       grid-column: 3/4;
-      max-width: 30px;
       grid-row: 2/3;
+      max-width: 30px;
     }
   }
 
   &__info {
-    max-width: rem(470);
     display: grid;
-    grid-auto-flow: row;
-    row-gap: rem(10);
     align-self: center;
-    padding: 20px 0;
     grid-area: info;
+    grid-auto-flow: row;
+    padding: 20px 0;
+    max-width: rem(470);
+    row-gap: rem(10);
 
     @media screen and (max-width: $xsm) {
-      padding: 0;
       grid-row: 1/3;
+      padding: 0;
     }
   }
 }
