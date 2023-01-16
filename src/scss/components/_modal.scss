@@ -7,13 +7,13 @@
   z-index: 5000;
   visibility: hidden;
   opacity: 0;
-  transition: .5s all ease;
+  transition: 0.5s all ease;
   overflow: auto;
   height: 100%;
   width: 100%;
+  background: rgba(53, 52, 52, 0.7);
 
   &.modal__active {
-    background: rgba(53, 52, 52, 0.7);
     opacity: 1;
     visibility: visible;
   }
@@ -44,7 +44,7 @@
   &__btn {
     background-color: var(--text-secondary);
     color: var(--white);
-    transition: .5s all ease;
+    transition: 0.5s all ease;
     border: 1px solid transparent;
 
     &:hover {
@@ -96,11 +96,11 @@
     input,
     textarea {
       background-color: #eefbff;
-      border: 1px solid #68DDFF;
+      border: 1px solid #68ddff;
       padding: 20px;
       width: 100%;
       border-radius: var(--radius-secondary);
-      transition: box-shadow .5s ease;
+      transition: box-shadow 0.5s ease;
 
       &:focus {
         outline: none;
@@ -112,6 +112,29 @@
       min-height: 120px;
       resize: none;
     }
+  }
 
+  &.success-modal {
+    visibility: visible;
+    opacity: 1;
+    .modal__item {
+      max-width: unset;
+      background-color: transparent;
+      align-items: unset;
+    }
+
+    .success__item {
+      position: relative;
+    }
+
+    .modal__close {
+      top: 20px;
+      right: 20px;
+    }
+
+    .success__text {
+      font-weight: 400;
+      text-transform: unset;
+    }
   }
 }
