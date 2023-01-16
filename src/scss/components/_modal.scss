@@ -115,8 +115,6 @@
   }
 
   &.success-modal {
-    visibility: visible;
-    opacity: 1;
     .modal__item {
       max-width: unset;
       background-color: transparent;
