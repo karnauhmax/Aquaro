@@ -28,11 +28,11 @@
 
     img {
       object-fit: contain;
-      @media screen and (max-width: 1150px) {
+      @media screen and (max-width: 1153px) {
         object-position: left;
       }
     }
-    @media screen and (max-width: 1150px) {
+    @media screen and (max-width: 1153px) {
       padding-bottom: 100%;
       transform: scale(1.1);
     }
