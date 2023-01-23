@@ -378,7 +378,7 @@
                       </div>
                       <button
                         class="btn reviews__btn btn-primary"
-                        data-open-reviews
+                        data-open-item-reviews
                       >
                         Залишити відклик
                       </button>
@@ -560,7 +560,10 @@
                   </ul>
                 </div>
               </div>
-              <button class="btn reviews__btn btn-primary" data-open-reviews>
+              <button
+                class="btn reviews__btn btn-primary"
+                data-open-item-reviews
+              >
                 Залишити відклик
               </button>
             </div>
@@ -569,7 +572,7 @@
 
         <!-- reviews slider -->
 
-        @include("partials/modal.html", { "data": "data-modal-reviews" })
+        @include("partials/modal.html", { "data": "data-modal-item-reviews" })
       </main>
       @include('partials/footer.html')
     </div>

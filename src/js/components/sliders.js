@@ -9,7 +9,6 @@ if (document.querySelector(".reviews__slider")) {
     gap: "1rem",
     arrows: false,
     pagination: false,
-    type: "loop",
     breakpoints: {
       991: {
         perPage: 1,
@@ -36,7 +35,6 @@ if (document.querySelector(".reviews__specs-slider")) {
     gap: "1rem",
     arrows: false,
     pagination: false,
-    type: "loop",
     breakpoints: {
       991: {
         perPage: 1,

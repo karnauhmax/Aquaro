@@ -1,5 +1,5 @@
 .cart {
-  @include adaptiveValue(padding-top, 60, 40, 1920, 360, 1, );
+  @include adaptiveValue(padding-top, 60, 40, 1920, 360, 1);
 
   &__breadcrumbs {
     margin-bottom: rem(16);
@@ -19,7 +19,7 @@
   }
 
   &__inner {
-    @include adaptiveValue(margin-bottom, 70, 25, 1920, 360, 1);
+    @include adaptiveValue(margin-bottom, 30, 25, 1920, 360, 1);
 
     display: grid;
     grid-template-columns: 1fr;
@@ -33,7 +33,7 @@
     font-size: rem(16);
 
     .cart__name {
-      grid-column: 3/5;
+      grid-column: 4/5;
     }
 
     .cart__price {
@@ -91,7 +91,9 @@
     display: grid;
     align-items: center;
     justify-items: center;
-    grid-template-columns: minmax(auto, rem(150)) minmax(auto, rem(240)) minmax(auto, rem(110)) auto minmax(auto, rem(110)) min-content;
+    grid-template-columns:
+      rem(150) minmax(auto, rem(240)) minmax(auto, rem(110))
+      auto minmax(auto, rem(110)) min-content;
     border-radius: var(--radius-primary);
     padding: rem(30);
     box-shadow: var(--boxshadow-primary);
@@ -136,6 +138,9 @@
     }
 
     &-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
       width: 30px;
       height: 30px;
 

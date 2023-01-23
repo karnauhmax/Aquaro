@@ -67,7 +67,7 @@
     &-title {
       @include adaptiveValue(font-size, 18, 14, 1920, 360, 1);
 
-      display: box;
+      display: -webkit-box;
       overflow: hidden;
       font-weight: 700;
       text-align: center;

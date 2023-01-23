@@ -76,9 +76,9 @@ if (header) {
 
 //cutting cart amount
 
-let amount = document.querySelector(".cart__amount");
+let amount = document.querySelector(".cart__amount").textContent;
 
-if (amount.textContent.length > 2) {
+if (amount.trim().length > 2) {
   const cutted = `${amount.textContent.substring(0, 2)}+`;
   amount.innerText = cutted;
 }

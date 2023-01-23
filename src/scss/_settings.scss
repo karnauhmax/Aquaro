@@ -180,7 +180,7 @@ a {
   justify-content: center;
   border-radius: var(--radius-secondary);
   padding: 18px;
-  min-width: 350px;
+  min-width: rem(350);
   min-height: 60px;
   font-weight: 900;
   font-size: rem(18);
@@ -225,7 +225,9 @@ a {
 }
 
 section {
-  @include adaptiveValue(margin-bottom, 100, 40, 1920, 360, 1);
+  &:not(:last-of-type) {
+    @include adaptiveValue(margin-bottom, 100, 40, 1920, 360, 1);
+  }
 }
 
 .btn-primary {

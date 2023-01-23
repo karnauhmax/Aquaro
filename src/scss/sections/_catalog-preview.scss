@@ -33,7 +33,7 @@
     h3 {
       @include adaptiveValue(font-size, 36, 18, 1920, 360, 1);
 
-      display: box;
+      display: -webkit-box;
       overflow: hidden;
       font-weight: 900;
       line-height: 105%;
@@ -45,7 +45,7 @@
     p {
       @include adaptiveValue(font-size, 18, 16, 1920, 360, 1);
 
-      display: box;
+      display: -webkit-box;
       overflow: hidden;
       line-height: 135%;
       text-overflow: ellipsis;
@@ -94,6 +94,10 @@
         @media screen and (max-width: $md) {
           order: 2;
           max-width: 300px;
+        }
+
+        @media screen and (max-width: $xsm) {
+          max-width: 250px;
         }
       }
 
@@ -166,6 +170,13 @@
       img,
       picture {
         align-self: end;
+
+        @media screen and (max-width: $sm) {
+          max-width: 300px;
+        }
+        @media screen and (max-width: $xsm) {
+          max-width: 250px;
+        }
       }
 
       .catalog-preview__info {
@@ -199,12 +210,31 @@
         justify-self: center;
       }
 
-      @media screen and (max-width: $sm) {
-        grid-template-rows: min-content auto;
+      picture {
+        @media screen and (max-width: $sm) {
+          justify-self: end;
+        }
+      }
 
-        img {
+      img {
+        object-fit: contain;
+
+        @media screen and (max-width: $sm) {
           height: 100%;
         }
+
+        @media screen and (max-width: $sm) {
+          max-width: 350px;
+          object-position: bottom;
+        }
+
+        @media screen and (max-width: $xsm) {
+          max-width: 300px;
+        }
+      }
+
+      @media screen and (max-width: $sm) {
+        grid-template-rows: min-content auto;
       }
     }
 
@@ -276,7 +306,10 @@
         }
 
         @media screen and (max-width: $sm) {
-          margin: 0 auto;
+          max-width: 250px;
+        }
+
+        @media screen and (max-width: $xsm) {
           max-width: 200px;
         }
       }
@@ -321,7 +354,8 @@
         }
       }
 
-      @media screen and (max-width: $md) {}
+      @media screen and (max-width: $md) {
+      }
     }
 
     &:hover {

@@ -79,8 +79,18 @@ import { burger } from "./functions/burger";
 
 // Подключение ООП модалок
 import Modal from "./functions/modals";
-if (document.querySelector("[data-modal-reviews]")) {
-  new Modal("[data-modal-reviews]", "[data-open-reviews]").renderModal();
+if (document.querySelector("[data-modal-item-reviews]")) {
+  new Modal(
+    "[data-modal-item-reviews]",
+    "[data-open-item-reviews]"
+  ).renderModal();
+}
+
+if (document.querySelector("[data-modal-shop-reviews]")) {
+  new Modal(
+    "[data-modal-shop-reviews]",
+    "[data-open-shop-reviews]"
+  ).renderModal();
 }
 
 //Подключение ООП табов

@@ -902,7 +902,10 @@
                   </ul>
                 </div>
               </div>
-              <button class="btn reviews__btn btn-primary" data-open-reviews>
+              <button
+                class="btn reviews__btn btn-primary"
+                data-open-item-reviews
+              >
                 Залишити відклик
               </button>
             </div>
@@ -913,7 +916,7 @@
 
         <!-- inserting modal  markup -->
 
-        @include("partials/modal.html", { "data": "data-modal-reviews" })
+        @include("partials/modal.html", { "data": "data-modal-item-reviews" })
 
         <!-- inserting modal  markup -->
 
