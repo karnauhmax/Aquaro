@@ -3879,8 +3879,11 @@ __webpack_require__.r(__webpack_exports__);
 
 // Подключение ООП модалок
 
-if (document.querySelector("[data-modal-reviews]")) {
-  new _functions_modals__WEBPACK_IMPORTED_MODULE_1__["default"]("[data-modal-reviews]", "[data-open-reviews]").renderModal();
+if (document.querySelector("[data-modal-item-reviews]")) {
+  new _functions_modals__WEBPACK_IMPORTED_MODULE_1__["default"]("[data-modal-item-reviews]", "[data-open-item-reviews]").renderModal();
+}
+if (document.querySelector("[data-modal-shop-reviews]")) {
+  new _functions_modals__WEBPACK_IMPORTED_MODULE_1__["default"]("[data-modal-shop-reviews]", "[data-open-shop-reviews]").renderModal();
 }
 
 //Подключение ООП табов
@@ -4016,17 +4019,15 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var inputmask__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! inputmask */ "./node_modules/inputmask/dist/inputmask.js");
 /* harmony import */ var inputmask__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(inputmask__WEBPACK_IMPORTED_MODULE_0__);
 
-
-// const inputMask = new Inputmask('+7 (999) 999-99-99');
-// inputMask.mask(telSelector);
-
-//input mask for tel inputs
-
 const telInputs = document.querySelectorAll("input[type=tel]");
-telInputs.forEach(input => {
-  const inputMask = new (inputmask__WEBPACK_IMPORTED_MODULE_0___default())("+38 (999) 999 99 99");
-  inputMask.mask(input);
-});
+if (telInputs) {
+  telInputs.forEach(input => {
+    const inputMask = new (inputmask__WEBPACK_IMPORTED_MODULE_0___default())("+38 (999) 999 99 99");
+    if (input) {
+      inputMask.mask(input);
+    }
+  });
+}
 
 /***/ }),
 
@@ -4050,7 +4051,6 @@ if (document.querySelector(".reviews__slider")) {
     gap: "1rem",
     arrows: false,
     pagination: false,
-    type: "loop",
     breakpoints: {
       991: {
         perPage: 1,
@@ -4074,7 +4074,6 @@ if (document.querySelector(".reviews__specs-slider")) {
     gap: "1rem",
     arrows: false,
     pagination: false,
-    type: "loop",
     breakpoints: {
       991: {
         perPage: 1,
@@ -4421,8 +4420,8 @@ if (header) {
 
 //cutting cart amount
 
-let amount = document.querySelector(".cart__amount");
-if (amount.textContent.length > 2) {
+let amount = document.querySelector(".cart__amount").textContent;
+if (amount.trim().length > 2) {
   const cutted = `${amount.textContent.substring(0, 2)}+`;
   amount.innerText = cutted;
 }
@@ -4438,9 +4437,6 @@ if (amount.textContent.length > 2) {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _functions_tabs__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../functions/tabs */ "./src/js/functions/tabs.js");
-
-
-//tabs
 
 if (document.querySelector(".product__details")) {
   new _functions_tabs__WEBPACK_IMPORTED_MODULE_0__["default"](".product__details").renderTab();
