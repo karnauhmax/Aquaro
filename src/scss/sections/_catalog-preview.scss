@@ -210,7 +210,8 @@
         justify-self: center;
       }
 
-      picture {
+      picture,
+      img {
         @media screen and (max-width: $sm) {
           justify-self: end;
         }

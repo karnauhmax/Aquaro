@@ -3296,7 +3296,8 @@ a {
   justify-self: center;
 }
 @media screen and (max-width: 767px) {
-  .catalog-preview__item-membranes picture {
+  .catalog-preview__item-membranes picture,
+  .catalog-preview__item-membranes img {
     -ms-grid-column-align: end;
     justify-self: end;
   }
