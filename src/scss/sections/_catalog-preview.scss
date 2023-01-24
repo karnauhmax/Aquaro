@@ -232,6 +232,10 @@
         @media screen and (max-width: $xsm) {
           max-width: 300px;
         }
+
+        @media screen and (max-width: $xxsm) {
+          max-width: 250px;
+        }
       }
 
       @media screen and (max-width: $sm) {
