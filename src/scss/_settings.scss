@@ -41,7 +41,23 @@ main {
   height: 100%;
   font-family: var(--font-family, sans-serif);
   -webkit-text-size-adjust: 100%;
+  @include scrollbarSettingsForFirefox(
+    var(--text-secondary),
+    rgb(236, 235, 235),
+    thin
+  );
+
+  @include scrollbar(
+    rgb(236, 235, 235),
+    var(--text-secondary),
+    12px,
+    horizontal,
+    3px,
+    var(--primary-dark)
+  );
 }
+
+// custom scrollbar
 
 .page__body {
   @include adaptiveValue(padding-top, 102, 80, 1920, 1200, 1);
