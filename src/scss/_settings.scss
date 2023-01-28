@@ -43,8 +43,7 @@ main {
   -webkit-text-size-adjust: 100%;
   @include scrollbarSettingsForFirefox(
     var(--text-secondary),
-    rgb(236, 235, 235),
-    thin
+    rgb(236, 235, 235)
   );
 
   @include scrollbar(

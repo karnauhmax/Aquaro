@@ -121,6 +121,9 @@
     &-img {
       padding-bottom: 72%;
       width: 100%;
+      & img {
+        object-fit: contain;
+      }
     }
 
     &-title {

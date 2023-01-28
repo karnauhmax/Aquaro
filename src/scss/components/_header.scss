@@ -54,7 +54,11 @@
     &-social {
       width: 25px;
       height: 25px;
+      transition: 0.5s transform ease;
 
+      &:hover {
+        transform: rotate(360deg);
+      }
       @media screen and (max-width: $xxsm) {
         width: 15px;
         height: 15px;
@@ -62,12 +66,17 @@
     }
 
     &-phone {
+      border-bottom: 1px solid transparent;
       max-width: rem(280);
       font-family: var(--font-family-secondary);
       font-weight: 700;
       font-size: rem(18);
       color: var(--text-secondary);
+      transition: 0.5s border-bottom ease;
 
+      &:hover {
+        border-bottom: 1px solid var(--text-secondary);
+      }
       @media screen and (max-width: $sm) {
         font-size: rem(16);
       }

@@ -12,6 +12,7 @@
     gap: rem(30);
 
     @media screen and (max-width: $lg) {
+      grid-template-columns: repeat(2, 1fr);
       gap: rem(20);
     }
 
@@ -33,6 +34,9 @@
       @include adaptiveValue(font-size, 24, 18, 1920, 360, 1);
 
       font-weight: 900;
+      @media screen and (max-width: $md) {
+        text-align: right;
+      }
     }
 
     @media screen and (max-width: $md) {
@@ -49,7 +53,6 @@
   &__item {
     display: grid;
     column-gap: rem(20);
-    grid-column: span 4;
     grid-template-columns: auto 1fr;
     border-radius: var(--radius-primary);
     min-height: rem(280);
@@ -108,11 +111,19 @@
     }
 
     &-agrarian {
-      @media screen and (max-width: $md) {
+      @media screen and (max-width: $lg) {
         img {
           order: 1;
         }
+
+        .solutions__info {
+          padding-left: 20px;
+        }
       }
+    }
+
+    @media screen and (min-width: $lg) {
+      grid-column: span 4;
     }
 
     @media screen and (max-width: $lg) {
@@ -120,7 +131,6 @@
     }
 
     @media screen and (max-width: $md) {
-      grid-column: unset;
       row-gap: rem(30);
     }
 
@@ -138,8 +148,6 @@
   }
 
   &__extended {
-    grid-column: span 6;
-
     img {
       @media screen and (max-width: $md) {
         max-width: 350px;
@@ -150,9 +158,13 @@
       }
     }
 
-    @media screen and (max-width: $md) {
-      grid-column: unset;
+    @media screen and (min-width: $lg) {
+      grid-column: span 6;
+    }
+
+    @media screen and (max-width: $lg) {
       grid-template-columns: 1fr;
+      row-gap: rem(15);
     }
   }
 

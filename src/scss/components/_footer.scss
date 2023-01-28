@@ -15,7 +15,10 @@
 
     @media screen and (max-width: $md) {
       column-gap: 15px;
-      grid-template-rows: 42px minmax(auto, max-content) minmax(auto, max-content);
+      grid-template-rows: 42px minmax(auto, max-content) minmax(
+          auto,
+          max-content
+        );
     }
 
     @media screen and (max-width: $sm) {
@@ -177,7 +180,16 @@
     }
   }
 
-  //footer lists styling
+  &__social {
+    transition: transform 0.5s ease;
+
+    &:hover {
+      transform: rotate(360deg);
+    }
+  }
+
+  // footer lists styling
+
   &__lists {
     @include adaptiveValue(column-gap, 120, 30, 1920, 768, 1);
 
@@ -186,6 +198,7 @@
     grid-row: span 3;
 
     &-title {
+      max-width: rem(300);
       font-family: var(--font-family-secondary);
       font-weight: 900;
       font-size: rem(24);

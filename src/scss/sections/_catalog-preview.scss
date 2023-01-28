@@ -17,6 +17,10 @@
     grid-template-rows: repeat(3, minmax(rem(465), auto));
     gap: rem(30);
 
+    @media screen and (max-width: $lg) {
+      grid-template-rows: auto;
+    }
+
     @media screen and (max-width: $md) {
       grid-template-rows: repeat(3, minmax(rem(330), auto));
     }

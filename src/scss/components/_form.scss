@@ -61,6 +61,11 @@
     @media screen and (max-width: $lg) {
       height: 60px;
     }
+
+    @media screen and (max-width: $lg) {
+      height: 100%;
+    }
+
   }
 
   // form button styling

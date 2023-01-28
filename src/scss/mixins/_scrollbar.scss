@@ -1,5 +1,9 @@
 // firefox
-@mixin scrollbarSettingsForFirefox($thumb-color, $track-color, $thickness) {
+@mixin scrollbarSettingsForFirefox(
+  $thumb-color,
+  $track-color,
+  $thickness: thin
+) {
   scrollbar-color: $thumb-color $track-color;
   scrollbar-width: $thickness;
 }

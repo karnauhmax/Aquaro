@@ -102,7 +102,7 @@
     color: var(--white);
     background-color: var(--text-secondary);
     transition: 0.5s all ease;
-
+    text-align: center;
     &:hover {
       border: 1px solid var(--text-secondary);
       color: var(--text-secondary);
@@ -120,6 +120,10 @@
   &__img {
     padding-bottom: 65%;
     width: 100%;
+
+    img {
+      object-fit: contain;
+    }
   }
 
   // catalog product price span
