@@ -1,6 +1,10 @@
 .footer {
-  @include adaptiveValue(padding-top, 56, 20, 1920, 360, 1);
-  @include adaptiveValue(padding-bottom, 173, 20, 1920, 360, 1);
+  @include adaptiveValue(padding-top, 56, 50, 1920, 992, 1);
+  @include adaptiveValue(padding-bottom, 120, 50, 1920, 992, 1);
+
+  @media screen and (max-width: $xsm) {
+    padding: rem(20) 0;
+  }
 
   background-color: var(--primary-dark);
 
@@ -193,7 +197,8 @@
   &__lists {
     @include adaptiveValue(column-gap, 120, 30, 1920, 768, 1);
 
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
     grid-column: 4/10;
     grid-row: span 3;
 
@@ -210,6 +215,7 @@
       display: grid;
       grid-auto-flow: row;
       grid-template-rows: min-content max-content;
+      max-width: rem(300);
       row-gap: 17px;
     }
 
@@ -221,7 +227,11 @@
     }
 
     li {
-      max-width: rem(300);
+      word-break: break-all;
+    }
+
+    h3 {
+      word-break: break-all;
     }
 
     a {

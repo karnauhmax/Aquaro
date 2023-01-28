@@ -121,7 +121,6 @@
       }
 
       @media screen and (max-width: $xsm) {
-        grid-column: span 2;
         min-width: unset;
         min-height: 50px;
         font-size: 0;
@@ -137,6 +136,10 @@
 
       @media screen and (max-width: $lg) {
         grid-template-columns: repeat(2, 1fr);
+      }
+
+      @media screen and (max-width: $xsm) {
+        grid-template-columns: 1fr;
       }
     }
 
