@@ -1600,10 +1600,10 @@ a {
   row-gap: 15px;
 }
 .footer__lists li {
-  word-break: break-all;
+  word-break: break-word;
 }
 .footer__lists h3 {
-  word-break: break-all;
+  word-break: break-word;
 }
 .footer__lists a {
   line-height: 1.3333333333;
